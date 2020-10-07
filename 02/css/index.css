@@ -1,0 +1,48 @@
+/* 
+   Todo fichero css se inicia reinicializando los valores de las propiedades:
+   - margin
+   - padding
+   - border
+   Indicamos la propiedad box-sizing que sea 'border-box' para el ancho y alto de una caja se aplique al contenido, borde y relleno (padding)
+   El comportamiento estándar es que se aplica el ancho y alto exclusivamente al contenido, ampliándose con el borde y el relleno
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+ }
+
+*/
+
+ div {
+     width: 200px;
+     height: 200px;
+     background-color: red;
+     
+     /* box-sizing: border-box; -> siempre tiene 200x200*/
+
+     /* 
+        la etiqueta tiene un tamaño de 200x200 
+        la etiqueta ocupa 200x200 
+     */
+
+     margin: 50px;
+     /* 
+        la etiqueta tiene un tamaño de 200x200 
+        la etiqueta ocupa 300x300 
+     */
+
+    padding: 50px;
+     /* 
+        la etiqueta tiene un tamaño de 300x300 
+        la etiqueta ocupa 400x400 
+     */
+
+    border: 50px solid black;
+     /* 
+        la etiqueta tiene un tamaño de 400x400 
+        la etiqueta ocupa 500x500 
+     */
+ }
+ 
