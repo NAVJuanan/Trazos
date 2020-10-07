@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+ }
+ 
+div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+header {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+footer {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+main {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+section {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+article {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+nav {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+ul {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+p {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}

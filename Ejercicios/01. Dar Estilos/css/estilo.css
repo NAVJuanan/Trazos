@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+ }
+ 
+div.contenedor {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+main.principal {
+    width: 400px;
+    height: 150px;
+    background-color: blue;
+}
+
+header.cabecera {
+    width: 100%;
+    height: 300px;
+    background-color: yellow;
+}
+
+footer.pie {
+    width: 50%;
+    height: 100px;
+    background-color: blue;
+}
+
+nav.navegacion {
+    width: 75%;
+    height: 500px;
+    background-color: purple;
+}
