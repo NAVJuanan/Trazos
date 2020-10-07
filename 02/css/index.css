@@ -15,34 +15,34 @@
 
 */
 
- div {
-     width: 200px;
-     height: 200px;
-     background-color: red;
+div {
+   width: 200px;
+   height: 200px;
+   background-color: red;
      
-     /* box-sizing: border-box; -> siempre tiene 200x200*/
+   /* box-sizing: border-box; -> siempre tiene 200x200*/
 
-     /* 
-        la etiqueta tiene un tamaño de 200x200 
-        la etiqueta ocupa 200x200 
-     */
+   /* 
+      la etiqueta tiene un tamaño de 200x200 
+      la etiqueta ocupa 200x200 
+   */
 
-     margin: 50px;
-     /* 
-        la etiqueta tiene un tamaño de 200x200 
-        la etiqueta ocupa 300x300 
-     */
+   margin: 50px;
+   /* 
+      la etiqueta tiene un tamaño de 200x200 
+      la etiqueta ocupa 300x300 
+   */
 
-    padding: 50px;
-     /* 
-        la etiqueta tiene un tamaño de 300x300 
-        la etiqueta ocupa 400x400 
-     */
+   padding: 50px;
+   /* 
+      la etiqueta tiene un tamaño de 300x300 
+      la etiqueta ocupa 400x400 
+   */
 
-    border: 50px solid black;
-     /* 
-        la etiqueta tiene un tamaño de 400x400 
-        la etiqueta ocupa 500x500 
-     */
- }
+   border: 50px solid black;
+   /* 
+      la etiqueta tiene un tamaño de 400x400 
+      la etiqueta ocupa 500x500 
+   */
+}
  

@@ -1,77 +1,93 @@
+/* css reset */
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box; 
- }
+}
 
- div, a {
-     width: 200px;
-     height: 200px;
-     background-color: red;
+a {
+    display: block;
+}
 
-     /* margin: distancia del borde de la etiqueta hacia afuera */
-     /* Hay 4 posibles márgenes */
-     margin-top: 50px;
-     margin-right: 50px;
-     margin-bottom: 50px;
-     margin-left: 50px;
-
-     /* top - right - bottom - left */ 
-     margin: 50px 50px 50px 50px;
-
-     /* top - right & left - bottom */ 
-     margin: 50px 50px 50px;
-
-     /* top & bottom - right & left */ 
-     margin: 50px 50px;
-
-     /* all sides */ 
-     margin: 50px;
+p a {
+    display: inline;
+}
 
 
-     /* padding: distancia del borde de la etiqueta hacia dentro */
-     /* Hay 4 posibles rellenos */
-     padding-top: 50px;
-     padding-right: 50px;
-     padding-bottom: 50px;
-     padding-left: 50px;
 
-     /* top - right - bottom - left */ 
-     padding: 50px 50px 50px 50px;
+div, a {
+    width: 200px;
+    height: 200px;
+    background-color: red;
 
-     /* top - right & left - bottom */ 
-     padding: 50px 50px 50px;
+    /* margin: distancia del borde de la etiqueta hacia afuera */
+    /* Hay 4 posibles márgenes */
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+
+    /* top - right - bottom - left */ 
+    margin: 50px 50px 50px 50px;
+
+    /* top - right & left - bottom */ 
+    margin: 50px 50px 50px;
+
+    /* top & bottom - right & left */ 
+    margin: 50px 50px;
+
+    /* all sides */ 
+    margin: 50px;
+
+
+    /* padding: distancia del borde de la etiqueta hacia dentro */
+    /* Hay 4 posibles rellenos */
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+
+    /* top - right - bottom - left */ 
+    padding: 50px 50px 50px 50px;
+
+    /* top - right & left - bottom */ 
+    padding: 50px 50px 50px;
      
-     /* top & bottom - right & left */ 
-     padding: 50px 50px;
+    /* top & bottom - right & left */ 
+    padding: 50px 50px;
      
-     /* all sides */ 
-     padding: 50px;
+    /* all sides */ 
+    padding: 50px;
 
      
-     /* Hay 4 posibles bordes */
-     border-top: 10px;
-     border-right: 10px;
-     border-bottom: 10px;
-     border-left: 10px;
+    /* Hay 4 posibles bordes */
+    border-top: 10px;
+    border-right: 10px;
+    border-bottom: 10px;
+    border-left: 10px;
 
-     border-style: dotted; /* estilo punteado */
-     border-style: dashed; /* estilo a rayas */
+    border-style: dotted; /* estilo punteado */
+    border-style: dashed; /* estilo a rayas */
 
-     /* damos un estilo sólido */
-     border-style: solid;
+    /* damos un estilo sólido */
+    border-style: solid;
 
-     /* damos un color */
-     border-color: black;
+    /* damos un color */
+    border-color: black;
+    
+    /* bordes, estilo y color */
+    border: 10px solid black;
 
-     /* bordes, estilo y color */
-     border: 10px solid black;
 
+    /* La propiedad display define el comportamiento de un elemento
+       - Si es 'block' se comporta como una caja 
+       - Si es 'inline' se comporta como un texto: no tiene ancho, ni alto
+       - Si es 'none' se oculta
+       - Si es 'inline-block' se comporta como un texto con ancho y alto
+       También puede ser 'grid' y 'flex' 
+    */
 
-     /* La propiedad display define el comportamiento de un elemento
-        - Si es 'block' se comporta como una caja 
-        - Si es 'inline' se comporta como un texto: no tiene ancho, ni alto
-     */
-     display: block;
- }
+    display: block;
+}
