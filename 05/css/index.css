@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+
+div.etiqueta {
+    width: 100%;
+    height: 120px;
+    background-color: lightgrey;
+}
+
+/* 
+    Pseudoelementos 
+    - la propiedad 'content' es obligatoria
+    - por defecto su display es 'inline'
+*/
+
+div.etiqueta::before {
+    content: '_pseudoelemento antes_ ';
+    width: 25%;
+    height: 50px;
+    background-color: lightyellow;
+}
+
+div.etiqueta::after {
+    content: ' _pseudoelemento después_';
+    width: 25%;
+    height: 50px;
+    background-color: lightseagreen;
+}
+
+div.etiqueta02::before {
+    content: '_pseudoelemento antes_ ';
+    width: 25%;
+    height: 50px;
+    background-color: lightyellow;
+    display: block;
+}
+
+div.etiqueta02::after {
+    content: ' _pseudoelemento después_';
+    width: 25%;
+    height: 50px;
+    background-color: lightseagreen;
+    display: block;
+}

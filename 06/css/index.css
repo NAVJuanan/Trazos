@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+section.primera {
+    width: 90%;
+    background-color: red;
+    margin: 0 auto; /* centrar el elemento */
+}
+
+section.primera article {
+    width: 100%; /* 100% de la etiqueta contenedora */
+    background-color: skyblue;
+}
+
+section.segunda {
+    width: 90%;
+    background-color: springgreen;
+    margin: 0 auto;
+}
+
+section.segunda article {
+    width: 50%; /* 50% de la etiqueta contenedora */
+    background-color: burlywood;
+    float: left; /* flotamos a la izquierda las etiquetas para un orden normal */
+}
+
+section.tercera {
+    width: 90%;
+    background-color: violet;
+    margin: 0 auto;
+}
+
+section.tercera article {
+    width: 33.33%; /* 33,33% de la etiqueta contenedora */
+    background-color: yellow;
+    float: right; /* flotamos a la derecha las etiquetas para un order inverso */
+}
+
+section.cuarta {
+    width: 90%;
+    background-color: tomato;
+    margin: 0 auto;
+}
+
+section.cuarta article {
+    width: 25%; /* 25% de la etiqueta contenedora */
+    background-color: pink;
+    /* sin float el comportamiento por defecto es una debajo de otra */
+}
+
+section.quinta {
+    width: 90%;
+    background-color: yellowgreen;
+    margin: 0 auto;
+}
+
+section.quinta article {
+    width: 10%; /* 10% de la etiqueta contenedora */
+    background-color: aqua;
+    float: left; /* al flotar, el ancho del contenedor desaparece */
+}
+
+/* una solución es usar un div denominado clear que limpia el float */
+div.clear {
+    clear: both; /* se recomienda usar 'both' y no 'left' o 'right' */
+}
+
+section.sexta {
+    width: 90%;
+    background-color: goldenrod;
+    margin: 0 auto;
+}
+
+section.sexta article {
+    width: 15%; /* 15% de la etiqueta contenedora */
+    background-color: bisque;
+    float: left;
+}
+
+/* la mejor solución es usar un pseudoelemento con el contenido vacío */
+section.sexta::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* si usamos una clase para el pseudoelemento, no tendremos que repetir */
+/*
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+*/
