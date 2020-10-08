@@ -1,0 +1,49 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+
+div {
+    width: 50%; /* la propiedad 'width' va casi siempre en % (relativo a la ventana) */
+    width: 50vw; /* el valor 'vw' es viewport width (ancho de la ventana) y apenas se usa */
+    height: 100px; /* la propiedad 'height' apenas se usa y va en px */
+    height: 50vh; /* el valor 'vh' es viewport height (alto de la ventana) y apenas se usa */
+    background-color: red;
+
+    width: 70%; /* 70% de la página */
+    height: 100px;
+
+    /* con margin-right y margin-left a 'auto' los elementos se centran */
+    margin-right: auto;
+    margin-left: auto;
+
+    /* reduciendo la expresión */
+    margin: 0 auto;
+}
+
+header {
+    width: 60%; /* 60% de div */
+    width: 60vw; /* 60% de la ventana */
+    height: 100px;
+    background-color: lightblue;
+}
+
+main {
+    width: 40%; /* 40% de header */
+    width: 40vw; /* 40% de la ventana */
+    height: 100px;
+    background-color: pink;
+}
