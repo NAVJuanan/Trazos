@@ -99,9 +99,9 @@ div.septimo {
 }
 
 div.septimo div.columna {
-    width: 90%;
+    width: 45%;
     background-color: darkkhaki;
-    margin: 0 auto;
+    float: left;
 }
 
 div.septimo div.columna p {
@@ -129,9 +129,9 @@ main.novena {
 }
 
 main.novena div.columna {
-    width: 90%;
+    width: 40%;
     background-color: firebrick;
-    margin: 0 auto;
+    float: left;
 }
 
 main.novena div.columna p {
@@ -147,19 +147,19 @@ main.decima {
 }
 
 main.decima section {
-    width: 80%;
+    width: 48%;
     background-color: gold;
-    margin: 0 auto;
+    float: left;
 }
 
 main.decima section article {
-    width: 80%;
+    width: 31%;
     background-color: lightblue;
-    margin: 0 auto;
+    float: left;
 }
 
 main.decima section article div.columna {
-    width: 40%;
+    width: 48%;
     background-color: lightcoral;
     float: left;
 }
