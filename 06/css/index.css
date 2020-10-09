@@ -43,7 +43,7 @@ section.tercera {
 }
 
 section.tercera article {
-    width: 33.33%; /* 33,33% de la etiqueta contenedora */
+    width: calc(100% / 3); /* 33,33% de la etiqueta contenedora */
     background-color: yellow;
     float: right; /* flotamos a la derecha las etiquetas para un order inverso */
 }
