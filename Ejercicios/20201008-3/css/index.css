@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+section.primero {
+    width: 80%;
+    background-color: salmon;
+    margin: 0 auto;
+}
+
+section.primero article {
+    width: calc(100% / 2);
+    background-color: sandybrown;
+    float: left;
+}
+
+main.segunda {
+    width: 90%;
+    background-color: seagreen;
+    margin: 0 auto;
+}
+
+main.segunda article {
+    width: calc(100% / 3);
+    background-color: springgreen;
+    float: left;
+}
+
+section.tercera {
+    width: 80%;
+    background-color: steelblue;
+    margin: 0 auto;
+}
+
+section.tercera article {
+    width: calc(100% / 4);
+    background-color: turquoise;
+    float: left;
+}
+
+div.cuarta {
+    width: 90%;
+    background-color: violet;
+    margin: 0 auto;
+}
+
+div.cuarta article {
+    width: calc(100% / 5);
+    background-color: wheat;
+    float: left;
+}
+
+article.quinta {
+    width: 80%;
+    background-color: yellowgreen;
+    margin: 0 auto;
+}
+
+article.quinta p {
+    width: calc(100% / 4);
+    background-color: yellow;
+    float: left;
+}
+
+article.sexta {
+    width: 90%;
+    background-color: blueviolet;
+    margin: 0 auto;
+}
+
+article.sexta h2 {
+    width: calc(100% / 3);
+    background-color: cornflowerblue;
+    float: left;
+}
+
+div.septimo {
+    width: 80%;
+    background-color: darkgrey;
+    margin: 0 auto;
+}
+
+div.septimo div.columna {
+    width: calc(100% / 2);
+    background-color: darkkhaki;
+    float: left;
+}
+
+div.septimo div.columna p {
+    width: calc(100% / 2);
+    background-color: darkolivegreen;
+    float: left;
+}
+
+div.octava {
+    width: 90%;
+    background-color: darkorange;
+    margin: 0 auto;
+}
+
+div.octava a {
+    width: calc(100% / 3);
+    background-color: darksalmon;
+    float: left;
+}
+
+main.novena {
+    width: 80%;
+    background-color: deeppink;
+    margin: 0 auto;
+}
+
+main.novena div.columna {
+    width: calc(100% / 2);
+    background-color: firebrick;
+    float: left;
+}
+
+main.novena div.columna p {
+    width: calc(100% / 3);
+    background-color: darkorchid;
+    float: left;
+}
+
+main.decima {
+    width: 90%;
+    background-color: goldenrod;
+    margin: 0 auto;
+}
+
+main.decima section {
+    width: calc(100% / 2);
+    background-color: gold;
+    float: left;
+}
+
+main.decima section article {
+    width: calc(100% / 3);
+    background-color: lightblue;
+    float: left;
+}
+
+main.decima section article div.columna {
+    width: calc(100% / 2);
+    background-color: lightcoral;
+    float: left;
+}
