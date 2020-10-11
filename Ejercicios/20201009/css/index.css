@@ -1,0 +1,106 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+header {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 40px 0;
+}
+
+header h1 {
+    width: 40%;
+    background-color: lightblue;
+    float: left;
+    margin-left: 10%;
+}
+
+header div.lista {
+    width: 40%;
+    background-color: lightcoral;
+    float: right;
+    margin-right: 10%;
+}
+
+header div.lista div.item {
+    width: calc(100% / 6);
+    background-color: lightcyan;
+    float: left;
+}
+
+main {
+    width: 100%;
+    background-color: black;
+}
+
+main section.starring {
+    background-color: blue;
+    padding: 250px 0;
+}
+
+main section.starring h2 {
+    width: 40%;
+    background-color: lime;
+    margin: 0 auto;
+}
+
+main div.columnas {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 100px 0;
+}
+
+main div.columnas div.centrado {
+    width: 80%;
+    background-color: orange;
+    margin: 0 auto;
+}
+
+main div.columnas div.centrado section {
+    width: calc((100% / 3) - (10px * 2));
+    height: 100px;
+    background-color: orchid;
+    float: left;
+    margin: 0 10px;
+}
+
+footer {
+    width: 100%;
+    background-color: wheat;
+}
+
+footer div.lista {
+    width: 20%;
+    background-color: orange;
+    margin: 0 auto;
+}
+
+footer div.lista div.item {
+    width: calc(100% / 4);
+    background-color: orchid;
+    float: left;
+}
+
+footer p {
+    width: 40%;
+    background-color: orange;
+    margin: 10px auto;
+}
