@@ -1,4 +1,5 @@
 /* css reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +15,30 @@ p a {
     display: inline;
 }
 
+/* quitamos el separador a las listas */
+li {
+    list-style-type: none;
+}
+
+/* reseteamos el tamaño y grosor de las cabeceras para que hereden */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+body {
+    font-size: 16px; /* = 1rem/1em para todo el estilo */
+    font-weight: normal;
+}
+
 .clear::after {
     content: '';
     clear: both;
     display: block;
 }
+
+/* fin de css reset */
+
 
 body {
     background-color: lightblue;
@@ -59,3 +79,37 @@ article {
     height: 100px;
     background-color: lightseagreen;
 }
+
+nav {
+    background-color: coral;
+}
+
+ul {
+    margin-left: 50px;
+    background-color: wheat;
+    list-style-type: circle;
+}
+
+ol {
+    margin-left: 30px;
+    background-color: turquoise;
+    list-style-type: lower-latin;
+}
+
+dl {
+    margin-left: 70px;
+    background-color: thistle;
+}
+
+h1 {
+    font-size: 2rem; /* tamaño */
+    font-weight: bold; /* grosor */
+    color: maroon; /* color */
+}
+
+/* 
+    Tamaños de fuente: 
+        - 1em = 16px declarados en el body. Hereda, con lo que el tamaño cambia
+        - 1rem = 16px declarados en el body. No hereda con lo que el tamaño es el definido 
+            y permite mejorar la accesibilidad
+*/
