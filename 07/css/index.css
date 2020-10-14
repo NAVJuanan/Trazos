@@ -9,10 +9,13 @@
 
 a {
     display: block;
+    color: inherit; /* reseteamos el color para que herede */
+    text-decoration: none; /* quitamos el subrayado fuera de un párrafo */
 }
 
 p a {
     display: inline;
+    text-decoration: underline; /* añadimos el subrayado dentro de un párrafo */
 }
 
 /* quitamos el separador a las listas */
@@ -24,6 +27,16 @@ li {
 h1, h2, h3, h4, h5, h6 {
     font-size: inherit; 
     font-weight: inherit;
+}
+
+img {
+    width: 100%; /* recomendación de Google */
+    display: block; /* para quitar el pequeño margen entre imágenes */
+    object-fit: cover; /* redimensiona la imagen si tiene altura para ajustarse */
+}
+
+html {
+    scroll-behavior: smooth; /* navegación suave */
 }
 
 body {
@@ -113,3 +126,21 @@ h1 {
         - 1rem = 16px declarados en el body. No hereda con lo que el tamaño es el definido 
             y permite mejorar la accesibilidad
 */
+
+a {
+    width: 20%;
+    height: 2rem;
+    background-color: lavender;
+    color: #78cc189f; /* cambia el color del enlace */
+}
+
+#enlace1, #enlace2, #enlace3 {
+    height: 20rem;
+    background-color: darkcyan;
+
+}
+
+img {
+    height: 25rem;
+    object-position: center; /* posicionamos la imagen en el contenedor */
+}
