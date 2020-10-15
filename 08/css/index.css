@@ -1,0 +1,110 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit; /* reseteamos el color para que herede */
+    text-decoration: none; /* quitamos el subrayado fuera de un párrafo */
+}
+
+p a {
+    display: inline;
+    text-decoration: underline; /* añadimos el subrayado dentro de un párrafo */
+}
+
+/* quitamos el separador a las listas */
+li {
+    list-style-type: none;
+}
+
+/* reseteamos el tamaño y grosor de las cabeceras para que hereden */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%; /* recomendación de Google */
+    display: block; /* para quitar el pequeño margen entre imágenes */
+    object-fit: cover; /* redimensiona la imagen si tiene altura para ajustarse */
+}
+
+html {
+    scroll-behavior: smooth; /* navegación suave */
+}
+
+body {
+    font-size: 16px; /* = 1rem/1em para todo el estilo */
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+p.parrafo1 {
+    width: 80%;
+    margin: 2rem;
+
+    font-size: 1.1rem; /* tamaño del texto */
+    font-weight: bold; /* grosor del texto */
+
+    /*
+        lighter = 100
+        normal = 400
+        bold = 700
+        bolder = 900
+    */
+
+    font-family: Arial, Helvetica, sans-serif; /* tipo de la fuente */
+    font-style: italic; /* estilo de la fuente. Se usa para cursiva */
+
+    text-transform: uppercase; /* transformar el texto a mayúsculas */
+    text-decoration: underline; /* decorar el texto con líneas */
+
+    text-shadow: -5px 3px 20px red; /* activa sombras, auqnue está en desuso */
+
+    /*
+    - valor 1: distancia horizontal
+    - valor 2: distancia vertical
+    - valor 3: desenfoque
+    - valor 4: color
+    */
+
+    text-align: right; /* alineación del texto */
+    line-height: 3rem; /* alto de línea */
+    word-spacing: 2rem; /* distancia entre palabras */
+    letter-spacing: 0.7rem; /* distancia entre letras */
+    hyphens: auto; /* divide una palabra larga con un guión si no cabe */
+}
+
+p.parrafo2 {
+    width: 50%;
+    margin: 2rem;
+
+    font-size: 1.5rem; 
+    font-weight: 100; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 2rem; /* indenta la primera línea */
+}
+
+p.parrafo3 {
+    width: 50%;
+    margin: 2rem;
+
+    font-size: 1.5rem; 
+    font-weight: 300; 
+    font-family: 'Lobster', cursive; /* Google Fonts */
+    text-align: center;
+}
