@@ -1,0 +1,194 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+body {
+    background-color: whitesmoke;
+    text-transform: uppercase;
+}
+
+
+header {
+    width: 100%;
+    padding: 2rem 5%;
+    /* background-color: wheat; */
+}
+
+header h1 {
+    width: 30%;
+    float: left;
+    /* background-color: tomato; */
+}
+
+/*
+header h1 a {
+    
+}
+
+header h1 a img {
+
+}
+*/
+
+header nav {
+    width: 70%;
+    float: right;
+    /* background-color: thistle; */
+}
+
+header nav ul {
+    width: 100%;
+    /* background-color: turquoise; */
+}
+
+header nav ul li {
+    width: calc(100% / 6);
+    float: left;
+    /* background-color: yellowgreen; */
+}
+
+header nav ul li a {
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    /* background-color: lightblue; */
+}
+
+main section.soul {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: lightgreen;
+}
+
+/*
+main section.soul a{
+
+}
+
+main section.soul a img{
+
+}
+*/
+
+main section.soul h2 {
+    width: 40%;
+    margin: 0 auto;
+    /* background-color: lightslategrey; */
+}
+
+main div.centrado {
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    /* background-color: lightsalmon; */
+}
+
+main div.centrado section.columna {
+    width: calc(100% / 3) - (2.5rem * 2);
+    margin: 0 2.5rem;
+    float: left;
+    /* background-color: lightslategray; */
+}
+
+/*
+main div.centrado section.columna a {
+   
+}
+*/
+
+/*
+main div.centrado section.columna a img {
+
+}
+*/
+
+main div.centrado section.columna h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer {
+    width: 100%;
+    padding: 2rem 0;
+    /* background-color: lightgoldenrodyellow; */
+}
+
+footer ul.rrss {
+    width: 20%;
+    margin: 0 auto;
+    /* background-color: burlywood; */
+}
+
+footer ul.rrss li {
+    width: calc(100% / 4);
+    float: left;
+    /* background-color: cornflowerblue; */
+}
+
+footer ul.policy {
+    width: 25%;
+    margin: 3rem auto 1rem auto;
+    /* background-color: coral; */
+}
+
+footer ul.policy li {
+    width: 100%;
+    /* background-color: darkcyan; */
+}
+
+footer p.copyright {
+    width: 25%;
+    margin: 0 auto;
+    /* background-color: chocolate; */
+}
