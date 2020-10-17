@@ -83,6 +83,7 @@ header h1 a img {
 header nav {
     width: 50%;
     float: right;
+    padding: 1rem 0;
     /* background-color: thistle; */
 }
 
@@ -103,13 +104,13 @@ header nav ul li a {
 
 main {
     width: 100%;
-    /* background-color: lightblue; */
+    /* background-color: lightgreen; */
 }
 
 main section.soul {
     width: 100%;
     padding: 3.5rem 0;
-    background-color: lightgreen;
+    background-color: lightblue;
 }
 
 main section.soul h2 {
