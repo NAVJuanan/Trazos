@@ -59,12 +59,13 @@ body {
 
 header {
     width: 100%;
-    padding: 2rem 5%;
+    padding: 1rem 5%;
     /* background-color: wheat; */
 }
 
 header h1 {
-    width: 30%;
+    width: 20%;
+    max-width: 150px;
     float: left;
     /* background-color: tomato; */
 }
@@ -80,7 +81,7 @@ header h1 a img {
 */
 
 header nav {
-    width: 70%;
+    width: 50%;
     float: right;
     /* background-color: thistle; */
 }
@@ -107,35 +108,37 @@ main {
 
 main section.soul {
     width: 100%;
-    padding: 4rem 0;
+    padding: 3.5rem 0;
     background-color: lightgreen;
 }
 
-/*
-main section.soul a{
-
-}
-
-main section.soul a img{
-
-}
-*/
-
 main section.soul h2 {
     width: 40%;
+    max-width: 500px;
     margin: 0 auto;
     /* background-color: lightslategrey; */
 }
 
+/*
+main section.soul h2 a{
+
+}
+
+main section.soul h2 a img{
+
+}
+*/
+
 main div.centrado {
     width: 60%;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 1rem 0;
     /* background-color: lightsalmon; */
 }
 
 main div.centrado section.columna {
     width: calc(100% / 3) - (2.5rem * 2);
+    max-width: 250px;
     margin: 0 2.5rem;
     float: left;
     /* background-color: lightslategray; */
@@ -145,9 +148,7 @@ main div.centrado section.columna {
 main div.centrado section.columna a {
    
 }
-*/
 
-/*
 main div.centrado section.columna a img {
 
 }
@@ -155,12 +156,11 @@ main div.centrado section.columna a img {
 
 main div.centrado section.columna h3 {
     font-weight: bold;
-    font-size: 1.2rem;
 }
 
 footer {
     width: 100%;
-    padding: 2rem 0;
+    padding: 1rem 0;
     /* background-color: lightgoldenrodyellow; */
 }
 
@@ -178,7 +178,7 @@ footer ul.rrss li {
 
 footer ul.policy {
     width: 25%;
-    margin: 3rem auto 1rem auto;
+    margin: 1rem auto;
     /* background-color: coral; */
 }
 
