@@ -1,0 +1,155 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+}
+
+header h1 {
+    width: 25%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    text-align: right;
+    padding: 1rem 0 ;
+    margin: 0 5% 0 0;
+    float: left;
+    /* background-color: violet; */
+}
+
+/* 
+header h1 a {
+    
+}
+*/
+
+header nav {
+    width: 70%;
+    float: right;
+    padding: 1.2rem 0 ;
+    /* background-color: wheat; */
+}
+
+header nav ul.lista1 {
+    width: 60%;
+    float: left;
+    /* background-color: slategrey; */
+}
+
+header nav ul.lista1 li {
+    display: inline-block;
+    margin: 0 3rem 0 0;
+}
+
+/* 
+header nav ul.lista1 li a {
+    
+}
+*/
+
+header nav ul.lista2 {
+    width: 40%;
+    float: right;
+    /* background-color: thistle; */
+}
+
+header nav ul.lista2 li {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    font-size: 0.8rem;
+}
+
+/* 
+header nav ul.lista2 li a {
+    
+}
+*/
+
+main {
+    width: 100%;
+    background-color: blue;
+}
+
+main section {
+    width: 100%;
+    padding: 25rem 0;
+    background-image: url("../img/background.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main section div.texto-centro {
+    width: 20%;
+    margin: 0 0 0 20%;
+    /* background-color: tan; */
+}
+
+main section div.texto-centro p {
+    font-size: 2rem;
+}
+
+main section div.texto-centro div.boton-centro {
+    width: 50%;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: slateblue;
+}
