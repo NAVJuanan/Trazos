@@ -1,0 +1,96 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+/* css general de la caja */
+div.cuadrado {
+    width: 50%; /* recomendable usar % */
+    max-width: 1328px; /* recomendable usarlo */
+    min-height: 100px; /* recomendable no usar 'height' pero sí usar 'min-height' */
+    background-color: khaki;
+}
+
+/* para una pantalla entre 0 y 960px (tablet), reescribimos el css de la caja */
+@media screen and (max-width:960px) {
+
+    div.cuadrado {
+        background-color: lightblue;
+    }
+
+    body {
+        font-size: 20px; /* si usamos em/rem sólo necesitamos cambiar 'font-size' */
+    }
+}
+
+/* para una pantalla entre 0 y 480px (móvil), reescribimos el css de la caja */
+@media screen and (max-width:480px) {
+
+    div.cuadrado {
+        background-color: lightpink;
+    }
+
+    body {
+        font-size: 12px;
+    }
+}
+
+/* para una pantalla entre 0 y 320px (móvil pequeño), reescribimos el css de la caja */
+@media screen and (max-width:320px) {
+
+    div.cuadrado {
+        background-color: lightslategrey;
+    }
+
+    body {
+        font-size: 10px;
+    }
+}
