@@ -1,0 +1,283 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+body {
+    background-color: whitesmoke;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+header {
+    width: 100%;
+    padding: 1rem 5%;
+    /* background-color: wheat; */
+}
+
+header h1 {
+    width: 20%;
+    max-width: 150px;
+    float: left;
+    /* background-color: tomato; */
+}
+
+/*
+header h1 a {
+    
+}
+
+header h1 a img {
+
+}
+*/
+
+header nav {
+    width: 50%;
+    float: right;
+    padding: 1rem 0;
+    /* background-color: thistle; */
+}
+
+header nav ul {
+    width: 100%;
+    text-align: left;
+    /* background-color: turquoise; */
+}
+
+header nav ul li {
+    display: inline-block; /* cuando tenemos ul > li con textos dentro, usamos el display: inline-block */
+    margin: 0 1rem;
+    /*
+    width: calc(100% / 6);
+    float: left;
+    */
+    /* background-color: yellowgreen; */
+}
+
+header nav ul li a {
+    font-weight: bold;
+}
+
+header nav div.fa-bars {
+    display: none; /* ocultamos el despliegue en resolución normal */
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: right;
+    /* background-color: turquoise; */
+}
+
+main {
+    width: 100%;
+    /* background-color: lightgreen; */
+}
+
+main section.soul {
+    width: 100%;
+    padding: 20rem 0;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color: lightblue; */
+}
+
+main section.soul h2 {
+    width: 40%;
+    max-width: 700px;
+    margin: 0 auto;
+    /* background-color: lightslategrey; */
+}
+
+/*
+main section.soul h2 a{
+
+}
+
+main section.soul h2 a img{
+
+}
+*/
+
+main div.centrado {
+    width: 60%;
+    max-width: 1328px;
+    margin: 0 auto;
+    padding: 6rem 0;
+    /* background-color: lightsalmon; */
+}
+
+main div.centrado section.columna {
+    width: calc(100% / 3) - (2.5rem * 2);
+    max-width: 250px;
+    margin: 0 2.5rem;
+    float: left;
+    /* background-color: lightslategray; */
+}
+
+/*
+main div.centrado section.columna a {
+   
+}
+
+main div.centrado section.columna a img {
+
+}
+*/
+
+main div.centrado section.columna h3 {
+    padding: 1rem 0 0;
+    font-weight: bold;
+    font-size: .7rem;
+    letter-spacing: .2rem;
+}
+
+footer {
+    width: 100%;
+    padding: 5rem 0;
+    /* background-color: lightgoldenrodyellow; */
+}
+
+footer ul.rrss {
+    width: 20%;
+    margin: 0 auto;
+    /* background-color: burlywood; */
+}
+
+footer ul.rrss li {
+    display: inline-block; /* cuando tenemos ul > li con textos dentro, usamos el display: inline-block */
+    margin: 0 1rem;
+    /*
+    width: calc(100% / 4);
+    float: left;
+    */
+    /* background-color: cornflowerblue; */
+}
+
+/*
+footer ul.rrss li a {
+
+}
+*/
+
+footer ul.rrss li a i.fab {
+    font-size: 2rem;
+}
+
+footer ul.rrss li a i.fa-facebook-f:hover {
+    color: blue;
+}
+
+footer ul.rrss li a i.fa-twitter:hover {
+    color: lightblue;
+}
+
+footer ul.rrss li a i.fa-instagram:hover {
+    color: coral;
+}
+
+footer ul.rrss li a i.fa-youtube:hover {
+    color: red;
+}
+
+footer ul.policy {
+    width: 45%;
+    margin: 2rem auto;
+    /* background-color: coral; */
+}
+
+footer ul.policy li {
+    display: inline-block;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    margin: 0 1rem;
+    /* background-color: darkcyan; */
+}
+
+footer ul.policy li a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+footer ul.policy li::after {
+    content: '|';
+    display: inline-block;
+    color: darkgray;
+    margin: 0 0 0 1.9rem;
+}
+
+footer p.copyright {
+    width: 25%;
+    margin: 0 auto;
+    /* background-color: chocolate; */
+}
+
+
+/* responsive design */
+
+@media screen and (max-width:960px) {
+
+    header nav ul {
+        display: none; /* ocultamos la lista en resolución inferior a 960px */
+    }
+
+    header nav div.fa-bars {
+        display: block; /* mostramos el despliegue en resolución inferior a 960px */
+    }
+
+    main div.centrado section.columna {
+        width: calc(100% - (2.5rem * 2));
+        max-width: 400px;
+    }
+}
