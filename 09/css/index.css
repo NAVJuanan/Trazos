@@ -63,6 +63,7 @@ div.cuadrado {
 @media screen and (max-width:960px) {
 
     div.cuadrado {
+        background-image: url("../img/1.jpg");
         background-color: lightblue;
     }
 
@@ -71,8 +72,20 @@ div.cuadrado {
     }
 }
 
-/* para una pantalla entre 0 y 480px (móvil), reescribimos el css de la caja */
-@media screen and (max-width:480px) {
+/* para una pantalla entre 0 y 480px (móvil vertical), reescribimos el css de la caja */
+@media screen and (max-width:480px) and (orientation:portrait) {
+
+    div.cuadrado {
+        background-color: lightgreen;
+    }
+
+    body {
+        font-size: 12px;
+    }
+}
+
+/* para una pantalla entre 0 y 480px (móvil horizontal), reescribimos el css de la caja */
+@media screen and (max-width:480px) and (orientation:landscape) {
 
     div.cuadrado {
         background-color: lightpink;

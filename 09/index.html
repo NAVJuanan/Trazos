@@ -11,5 +11,12 @@
 </head>
 <body>
     <div class="cuadrado">CUADRADO</div>
+
+    <!-- Responsive design para imágenes con las etiquetas <picture> y <source> -->
+    <picture>
+        <source srcset="img/io2.jpg" media="(max-width:480px)"> <!-- imágen hasta 480px -->
+        <source srcset="img/image-asset.jpeg" media="(min-width:481px) and (max-width:960px)"> <!-- imágen hasta 960px -->
+        <img src="img/1.jpg" alt="imagen" loading="lazy"> <!-- imagen por defecto que la descarga a petición -->
+    </picture>
 </body>
 </html>
