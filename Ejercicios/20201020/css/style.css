@@ -1,0 +1,374 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 1rem 0 ;
+    background-color: #1f2024;
+}
+
+header div.centrado {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-color: khaki; */
+}
+
+header div.centrado div.menu-icono{
+    display: none;
+}
+
+header div.centrado div.izquierda {
+    width: 60%;
+    float: left;
+    /* background-color: lawngreen; */
+}
+
+header div.centrado div.izquierda h1 {
+    width: 20%;
+    float: left; 
+    /* font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    text-align: center; */
+    /* background-color: violet; */
+}
+
+/* header div.centrado div.izquierda h1 a {} */
+
+header div.centrado div.izquierda h1 a img {
+    width: 75%;
+}
+
+header div.centrado div.izquierda nav {
+    width: 80%;
+    float: right;
+    padding: .3rem 0 ;
+    /* background-color: wheat; */
+}
+
+header div.centrado div.izquierda nav ul.lista1 {
+    width: 100%;
+    /* background-color: slategrey;  */
+}
+
+header div.centrado div.izquierda nav ul.lista1 li {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+}
+
+header div.centrado div.izquierda nav ul.lista1 li i.fas {
+    color: gray;
+}
+
+header div.centrado div.izquierda nav ul.lista1 li i.fas:hover {
+    color: white;
+}
+
+/* header div.centrado div.izquierda nav ul.lista1 li a {} */
+
+header div.centrado div.derecha {
+    width: 40%;
+    float: right;
+    /* background-color: lightsalmon; */
+}
+
+header div.centrado div.derecha ul.lista2 {
+    width: 100%;
+    text-align: right;
+    font-size: 0.8rem;
+    /* background-color: thistle; */
+}
+
+header div.centrado div.derecha ul.lista2 li {
+    display: inline-block;
+    margin: 0 .3rem;
+}
+
+header div.centrado div.derecha ul.lista2 li i.fa-caret-down {
+    color: gray;
+}
+
+header div.centrado div.derecha ul.lista2 li i.fa-caret-down:hover {
+    color: white;
+}
+
+/* header div.centrado div.derecha ul.lista2 li a {} */
+
+header div.centrado div.derecha ul.lista2 li a.search {
+    background-color: #504d56;
+    padding: .5rem;
+}
+
+header div.centrado div.derecha ul.lista2 li a.search span.search-text {
+    margin: 0 .5rem 0 0;
+}
+
+header div.centrado div.derecha ul.lista2 li a.search:hover {
+    background-color: #5d58f5;
+}
+
+header div.centrado div.derecha ul.lista2 li a.web {
+    background-color: #504d56;
+    padding: .5rem;
+}
+
+main {
+    width: 100%;
+    background-color: blue;
+}
+
+main section {
+    width: 100%;
+    padding: 25rem 0;
+    background-image: url("../img/background.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main section div.texto-centro {
+    width: 20%;
+    margin: 0 0 0 20%;
+    /* background-color: tan; */
+}
+
+main section div.texto-centro p {
+    font-size: 2rem;
+}
+
+main section div.texto-centro div.boton-centro {
+    width: 50%;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: #5d58f5;
+}
+
+footer {
+    width: 100%;
+    background-color: #1f2024;
+    padding: 5rem 0;
+}
+
+footer div.superior {
+    width: 100%;
+    padding: 0 0 5rem 40rem;
+}
+
+footer div.superior section {
+    width: calc(100% / 3) - 50rem;
+    float: left;
+    margin-right: 5rem;
+}
+
+footer div.superior section h5 {
+    color: #878792;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+footer div.superior section ul li {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+footer div.superior section ul li:hover {
+    color: #878792;
+}
+
+/* footer div.superior section ul li a {} */
+
+footer div.inferior {
+    width: 100%;
+    margin: 3rem 20rem;
+}
+
+footer div.inferior ul.contacto {
+    width: calc(50% - 2rem);
+    float: left;
+    text-align: right;
+    margin: .5rem 2rem 0 0;
+}
+
+footer div.inferior ul.contacto li {
+    display: inline-block;
+    font-size: .8rem;
+    margin-right: 1rem;
+}
+
+footer div.inferior ul.contacto li:hover {
+    color: #878792;
+}
+
+/* footer div.inferior ul.contacto li a {} */
+
+footer div.inferior ul.rrss {
+    width: 50%;
+    float: right;
+}
+
+footer div.inferior ul.rrss li {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+/* footer div.inferior ul.rrss li a {} */
+
+footer div.inferior ul.rrss li a i.fab {
+    padding: .5rem;
+    background-color: #3c3c42;
+}
+
+footer div.inferior ul.rrss li a i.fa-pinterest:hover {
+    background-color: coral;
+}
+
+footer div.inferior ul.rrss li a i.fa-facebook-f:hover {
+    background-color: blue;
+}
+
+footer div.inferior ul.rrss li a i.fa-youtube:hover {
+    background-color: red;
+}
+
+footer div.inferior ul.rrss li a i.fa-twitter:hover {
+    background-color: lightblue;
+}
+
+footer section.pie {
+    width: 100%;
+    padding: 3rem 0 0 20rem;
+    border-top: .1rem solid gray;
+    text-transform: uppercase;
+}
+
+footer section.pie p {
+    font-size: .7rem;
+    color: #878792;
+}
+
+footer section.pie ul li {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: .6rem;
+}
+
+footer section.pie ul li:hover {
+    color: #878792;
+}
+
+/* footer section.pie ul li {} */
+
+
+@media screen and (max-width:1200px) {
+
+    header div.centrado div.derecha ul.lista2 li a.like {
+        display: none;
+    }  
+    
+    header div.centrado div.derecha ul.lista2 li a.web {
+        display: none;
+    }    
+
+    header div.centrado div.derecha ul.lista2 li a.search span.search-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width:680px) {
+
+    header {
+        padding: 0;
+    }
+
+    header div.centrado {
+        margin: 0;
+    }
+
+    header div.centrado div.izquierda nav {
+        display: none;
+    }
+
+    header div.centrado div.derecha {
+        display: none;
+    }
+
+    header div.centrado div.menu-icono {
+        display: block;
+        font-size: 1.2rem;
+        text-align: left;
+        padding: .7rem;
+        border-right: .1rem solid grey ;
+        float: left;
+    }
+
+    header div.centrado div.izquierda {
+        width: 90%;
+    }
+
+    header div.centrado div.izquierda h1 {
+        margin: .5rem auto;
+        float: none;
+    }
+
+    footer div.superior section ul {
+        display: none;
+    }
+}
