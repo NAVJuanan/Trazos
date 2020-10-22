@@ -1,0 +1,85 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+/* css inicial */
+div.perro {}
+div.perro div.pata {}
+div.perro div.rota {}
+
+div.gato {}
+div.gato div.pata {}
+div.gato div.rota {}
+
+
+/* css mejorado */
+.perro {}
+.perro .pata {}
+.perro .rota {}
+
+.gato {}
+.gato .pata {}
+.gato .rota {}
+
+
+/* BEM */
+.bloque {}
+.bloque__elemento {}
+.bloque__elemento--modificador {}
+
+.perro {}
+.perro__pata {}
+.perro__pata--rota {}
+
+.gato {}
+.gato__pata {}
+.gato__pata--rota {}
