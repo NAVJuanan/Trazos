@@ -1,0 +1,226 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+section {
+    width: 600px;
+    height: 600px;
+    background-color: salmon;
+}
+
+/* propiedad 'position'
+
+    - static: las etiquetas hermanas se colocan debajo o al lado y podemos flotar.
+                No funcionan las propiedades: 'left', 'right', 'top', 'bottom'
+    
+    - relative: las etiquetas hermanas se colocan debajo o al lado y podemos flotar.
+                Podemos usar las propiedades 'left', 'right', 'top', 'bottom' para moverlas
+                desde su posición original sin afectar a las demás etiquetas.
+                Es un movimiento visual, no estructural.
+
+    - absolute: las etiquetas hermanas se superponen. No se puede flotar.
+                Podemos usar las propiedades 'left', 'right', 'top', 'bottom' para moverlas
+                desde el borde de la etiqueta contenedora.
+                Es un movimiento estructural. La etiqueta contenedora no puede ser 'static'.
+                Se suele usar para alinear una etiqueta al borde de su contenedor 'relative'.
+
+    - fixed: las etiquetas hermanas se superponen. No se puede flotar.
+                Podemos usar las propiedades 'left', 'right', 'top', 'bottom' para moverlas
+                desde el borde de la ventana/viewport.
+                Es un movimiento estructural.
+                Se suele usar para mantener una etiqueta fija en la ventana constantemente.
+*/
+
+body {
+    background-color: mediumslateblue;
+}
+
+section.seccion1 {
+    position: relative;
+    background-color: magenta;
+}
+
+section.seccion1 div.cuadrado1 {
+    width: 150px;
+    height: 150px;
+    background-color: sandybrown;
+
+    position: static; /* valor por defecto */
+}
+
+section.seccion1 div.cuadrado2 {
+    width: 150px;
+    height: 150px;
+    background-color: khaki;
+
+    position: relative;
+
+    left: 50px; /* se mueve 50px hacia la derecha desde su borde izquierdo */
+    bottom: 50px; /* se mueve 50px hacia arriba desde su borde inferior */
+}
+
+section.seccion1 div.cuadrado3 {
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+
+    position: absolute;
+    
+    top: 400px; /* se mueve 400px hacia abajo desde el borde superior de la etiqueta contenedora */
+    right: 100px; /* se mueve 100px hacia la izquierda desde el borde derecho de la etiqueta contenedora */
+}
+
+section.seccion1 div.cuadrado4 {
+    width: 150px;
+    height: 150px;
+    background-color: lightskyblue;
+    
+    position: fixed; /* aparece superpuesto en todas las secciónes */
+
+    top: 100px; /* se mueve 100px hacia abajo desde el borde superior de la ventana */
+    right: 400px; /* se mueve 400px hacia la izquierda desde el borde derecho de la ventana */
+}
+
+
+section.seccion2 {
+    position: absolute;
+    background-color: lightpink;
+}
+
+section.seccion2 div.cuadrado1 {
+    width: 150px;
+    height: 150px;
+    background-color: sandybrown;
+
+    position: static; /* valor por defecto */
+}
+
+section.seccion2 div.cuadrado2 {
+    width: 150px;
+    height: 150px;
+    background-color: khaki;
+
+    position: relative;
+
+    left: 50px; /* se mueve 50px hacia la derecha desde su borde izquierdo */
+    bottom: 50px; /* se mueve 50px hacia arriba desde su borde inferior */
+}
+
+section.seccion2 div.cuadrado3 {
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+
+    position: absolute;
+    z-index: 1; /* propiedad para superponer un elemento sobre otro */
+
+    top: 400px; /* se mueve 400px hacia abajo desde el borde superior de la etiqueta contenedora */
+    right: 100px; /* se mueve 100px hacia la izquierda desde el borde derecho de la etiqueta contenedora */
+}
+
+section.seccion2 div.cuadrado4 {
+    width: 150px;
+    height: 150px;
+    background-color: lightskyblue;
+    
+    position: fixed; /* aparece superpuesto en todas las secciónes */
+
+    top: 100px; /* se mueve 100px hacia abajo desde el borde superior de la ventana */
+    right: 400px; /* se mueve 400px hacia la izquierda desde el borde izquierdo de la ventana */
+}
+
+
+section.seccion3 {
+    position: fixed;
+    background-color: lightslategrey;
+}
+
+section.seccion3 div.cuadrado1 {
+    width: 150px;
+    height: 150px;
+    background-color: sandybrown;
+
+    position: static; /* valor por defecto */
+}
+
+section.seccion3 div.cuadrado2 {
+    width: 150px;
+    height: 150px;
+    background-color: khaki;
+
+    position: relative;
+
+    left: 50px; /* se mueve 50px hacia la derecha desde su borde izquierdo */
+    bottom: 50px; /* se mueve 50px hacia arriba desde su borde inferior */
+}
+
+section.seccion3 div.cuadrado3 {
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+
+    position: absolute;
+    
+    top: 400px; /* se mueve 400px hacia abajo desde el borde superior de la etiqueta contenedora */
+    right: 100px; /* se mueve 100px hacia la izquierda desde el borde derecho de la etiqueta contenedora */
+}
+
+section.seccion3 div.cuadrado4 {
+    width: 150px;
+    height: 150px;
+    background-color: lightskyblue;
+    
+    position: fixed; /* aparece superpuesto en todas las secciónes */
+
+    top: 100px; /* se mueve 100px hacia abajo desde el borde superior de la ventana */
+    right: 400px; /* se mueve 400px hacia la izquierda desde el borde izquierdo de la ventana */
+}
