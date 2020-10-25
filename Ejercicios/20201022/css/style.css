@@ -80,7 +80,7 @@ body {
     font-size: 2rem;
 }
 
-/* .header__h1 {} */
+/* .header__h1 a {} */
 
 .header__nav {
     float: right;
