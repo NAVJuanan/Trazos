@@ -161,7 +161,7 @@ section.seccion2 div.cuadrado3 {
     background-color: lightgreen;
 
     position: absolute;
-    z-index: 1; /* propiedad para superponer un elemento sobre otro */
+    z-index: 1; /* propiedad para superponer un elemento sobre otro en posiciones absolute y fixed */
 
     top: 400px; /* se mueve 400px hacia abajo desde el borde superior de la etiqueta contenedora */
     right: 100px; /* se mueve 100px hacia la izquierda desde el borde derecho de la etiqueta contenedora */
