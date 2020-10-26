@@ -53,10 +53,15 @@ body {
 
 body {
     font-family: 'Raleway', sans-serif;
+
+    /* alternativa flotando header y main a izquierda y derecha para calcular menos valores */
+    /* alternativa para las secciones, crear una lista con 4 elementos y cada uno con su img, h y p */
 }
 
 
 /* css header */
+
+/* header {} */
 
 header .lateral {
     width: 15%;
@@ -64,7 +69,10 @@ header .lateral {
     height: 100vh;
     padding: 4.5rem 0 0 3.5rem;
     background-color: #ffffff;
+    
     position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header .lateral__titulo {
@@ -149,7 +157,7 @@ header .superior__titulo {
 main {
     width: 100%;
     max-width: 1920px;
-    height: 150vh;
+    min-height: 100vh;
     padding-left: 15%;
     background-color: #ffffff;
 }
@@ -238,7 +246,7 @@ main .seccion4__columna img:hover {
 
 /* css responsive */
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:960px) {
 
     header .lateral {
         display: none;
@@ -249,6 +257,13 @@ main .seccion4__columna img:hover {
     }
 
     main .seccion1, main .seccion2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    main .seccion2__columna, main .seccion4__columna {
         width: 100%;
     }
 }
