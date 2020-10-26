@@ -72,6 +72,7 @@ section {
                 desde el borde de la etiqueta contenedora.
                 Es un movimiento estructural. La etiqueta contenedora no puede ser 'static'.
                 Se suele usar para alinear una etiqueta al borde de su contenedor 'relative'.
+                También se suele usar para superponer etiquetas hermanas.
 
     - fixed: las etiquetas hermanas se superponen. No se puede flotar.
                 Podemos usar las propiedades 'left', 'right', 'top', 'bottom' para moverlas
