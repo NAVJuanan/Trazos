@@ -1,0 +1,97 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/* css body */
+
+.self {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    background-color: powderblue;
+    transition: all .4s ease .1s;
+}
+
+.change1:hover {
+    color: white;
+    text-transform: uppercase;
+    background-color: sandybrown;
+}
+
+.change2:hover {
+    text-decoration: underline;
+    text-transform: lowercase;
+    font-weight: 700;
+    background-color: magenta;
+}
+
+.parent {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    background-color: wheat;
+}
+
+.parent a {
+    width: 150px;
+    background-color: white;
+}
+
+.change3:hover a {
+    color: tomato;
+    text-transform: uppercase;
+    background-color: yellow;
+}
+
+.change4:hover a {
+    color: white;
+    text-transform: uppercase;
+    background-color: violet;
+}
