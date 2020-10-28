@@ -1,0 +1,85 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+.proyecto {
+    width: calc(100% / 4 (- 2rem));
+    background-color: coral;
+    margin: 2rem;
+    float: left;
+    position: relative; /* necesario para superponer la imagen */
+}
+
+.proyecto .imagen {
+    background-color: purple;
+}
+
+.proyecto .banana {
+    width: 100%;
+    height: 15%; /* se puede dar altura en porcentaje al tener en cuenta la etiqueta contenedora */
+    text-align: center;
+    background-color: orange;
+    position: absolute; /* superponemos el texto sobre la imagen */
+    bottom: 0;
+    opacity: 0; /* desaparece */
+    transition: all .4s ease;
+    overflow: hidden; /* lo que sobresalga de la etiqueta no se muestra */
+    
+    /* 
+        se puede ocultar en horizontal mediante 'overflow-x' y aparece una barra de scroll abajo
+        o en vertical mediante 'overflow-y' y aparece una barra de scroll en el lateral
+    */
+}
+
+.proyecto:hover .banana {
+    opacity: 1; /* aparece */
+}

@@ -68,7 +68,7 @@ body {
     */
 }
 
- /* hover: al pasar el ratón por encima de un elemento */
+ /* hover: al pasar el ratón por encima de un elemento. No funciona en modo responsive */
 .cuadrado1:hover {
     width: 400px;
     height: 400px;
