@@ -1,0 +1,124 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+.cuadrado1 {
+    width: 200px;
+    min-height: 200px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    text-align: center;
+    background-color: purple;
+
+    transition: all 2s ease;
+
+    /* rotamos el elemento hacia la derecha (+) o izquierda (-) */
+    transform: rotate(45deg);
+
+    /* 
+        podemos rotar en los ejes x, y, z
+        
+        transform: rotateX(45deg);
+        transform: rotateY(45deg);
+        transform: rotateZ(45deg);
+    */
+}
+
+
+.cuadrado2 {
+    width: 200px;
+    min-height: 200px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    text-align: center;
+    background-color: lightcoral;
+
+    transition: all 2s ease;
+
+    /* movemos el elemento hacia la derecha (+) o izquierda (-) */
+    transform: translate(400px);
+
+    /* 
+        podemos trasladar en los ejes x, y, z
+
+        transform: translateX(400px);
+        transform: translateY(-400px);
+        transform: translateZ(400px); // no funciona bien en Z
+
+        transform: translate(10px,20px); // trasladamos x e y
+    */
+}
+
+
+.cuadrado3 {
+    width: 100px;
+    min-height: 100px;
+    padding-top: 50px;
+    text-align: center;
+    background-color: gray;
+
+    transition: all 2s ease;
+
+    /* escalamos el elemento */
+    transform: scale(2);
+
+    /* 
+        podemos escalar en los ejes x, y, z
+
+        transform: scaleX(2);
+        transform: scaleY(2);
+        transform: scaleZ(2); // no funciona bien en Z
+    */
+
+    /* varias transformaciones a la vez */
+    /* transform: rotate(45deg) scale(2) translate(400px);  */
+}
