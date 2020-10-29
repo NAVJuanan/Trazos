@@ -1,0 +1,128 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/* css style */
+
+.primera {
+    width: 90%;
+    margin: 20px auto;
+    background-color: lightgoldenrodyellow;
+}
+
+.primera .efecto {
+    width: calc(100% / 5 - 2rem);
+    margin: 1rem;
+    float: left;
+    position: relative;
+}
+
+/* .primera .efecto .imagen {} */
+
+.primera .efecto .texto {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: .3;
+    background-color: lightblue;
+}
+
+
+.segunda {
+    width: 70%;
+    margin: 20px auto;
+    background-color: lightblue;
+}
+
+.segunda .efecto {
+    width: calc(100% / 3 - 2rem);
+    margin: 1rem;
+    float: left;
+    position: relative;
+}
+
+/* .segunda .efecto .imagen {} */
+
+.segunda .efecto .texto {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: .7;
+    background-color: lightgoldenrodyellow;
+}
+
+
+.tercera {
+    width: 90%;
+    margin: 20px auto;
+    background-color: lightgoldenrodyellow;
+}
+
+.tercera .efecto {
+    width: calc(100% / 5 - 2rem);
+    margin: 1rem;
+    float: left;
+    position: relative;
+}
+
+/* .tercera .efecto .imagen {} */
+
+.tercera .efecto .texto {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: lightblue;
+}
