@@ -1,0 +1,171 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/* css style */
+
+
+.primera {
+    width: 90%;
+    margin: 20px auto;
+    background-color: lightgoldenrodyellow;
+}
+
+.primera .efecto {
+    width: calc(100% / 5 - 2rem);
+    margin: 1rem;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* agrandamos la imagen y hacemos desaparecer la cortinilla de texto */
+
+.primera .efecto .texto {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    background-color: lightblue;
+    transition: all .4s ease;
+    transform: scale(1) rotate(0deg) translateX(0%);
+}
+
+.primera .efecto:hover .texto {
+    transform: translateY(100%);
+}
+
+.primera .efecto .imagen {
+    transition: all .4s ease;
+    transform: scale(1) rotate(0deg) translateX(0%);
+}
+
+.primera .efecto:hover .imagen {
+    transform: scale(1.5);
+}
+
+
+.segunda {
+    width: 70%;
+    margin: 20px auto;
+    background-color: lightblue;
+}
+
+.segunda .efecto {
+    width: calc(100% / 3 - 2rem);
+    margin: 1rem;
+    float: left;
+    position: relative;
+}
+
+/* quitamos la opacidad del texto y pasamos a blanco y negro la imagen */
+
+.segunda .efecto .imagen {
+    transition: all .4s ease;
+    transform: scale(1) rotate(0deg) translateX(0%);
+}
+
+.segunda .efecto:hover .imagen {
+    filter: grayscale(1);
+}
+
+.segunda .efecto .texto {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    background-color: lightgoldenrodyellow;
+    transition: all 2s ease;
+    transform: scale(1) rotate(0deg) translateX(0%);
+}
+
+.segunda .efecto:hover .texto {
+    opacity: 0;
+}
+
+
+.tercera {
+    width: 90%;
+    margin: 20px auto;
+    background-color: lightgoldenrodyellow;
+}
+
+.tercera .efecto {
+    width: calc(100% / 5 - 2rem);
+    margin: 1rem;
+    float: left;
+    position: relative;
+}
+
+/* giramos la imagen y la desenfocamos */
+
+.tercera .efecto .imagen {
+    transition: all .4s ease;
+    transform: scale(1) rotate(0deg) translateX(0%);
+}
+
+.tercera .efecto .texto {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .1;
+    background-color: lightblue;
+}
+
+.tercera .efecto:hover .imagen {
+    transform: rotateY(180deg);
+    filter: blur(5px);
+}
