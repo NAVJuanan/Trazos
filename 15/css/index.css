@@ -60,9 +60,21 @@ body {
     background-color: purple;
 
     transition: all 2s ease;
+    
+    transform: scale(1) rotate(0deg) translateX(0%); /* valores iniciales recomendados */
+    
+    transform-origin: bottom left; /* la rotación comienza desde abajo a la izquierda */
+    
+    /* compatibilidad con los motores de renderizado de los navegadores */
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    -o-transition: all 2s ease;
 
     /* rotamos el elemento hacia la derecha (+) o izquierda (-) */
     transform: rotate(45deg);
+
+    perspective: 100px; /* damos perspectiva */
 
     /* 
         podemos rotar en los ejes x, y, z
@@ -121,4 +133,11 @@ body {
 
     /* varias transformaciones a la vez */
     /* transform: rotate(45deg) scale(2) translate(400px);  */
+
+    /* 
+        matriz lineal
+    
+        matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )
+        transform: matrix(1, 2, -1, 1, 80, 80);
+    */
 }
