@@ -1,0 +1,309 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/* css body */
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+    /* alternativa flotando header y main a izquierda y derecha para calcular menos valores */
+    /* alternativa para las secciones, crear una lista con 4 elementos y cada uno con su img, h y p */
+}
+
+
+/* css header */
+
+/* header {} */
+
+header .lateral {
+    width: 15%;
+    min-width: 250px;
+    height: 100vh;
+    padding: 4.5rem 0 0 3.5rem;
+    background-color: #ffffff;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .lateral__titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: left;
+    color: #393939;
+}
+
+/* header .lateral__titulo a {} */
+
+header .lateral__menu {
+    margin: 3.5rem 0;
+}
+
+/* header .lateral__listamenu {} */
+
+header .lateral__listamenu-elemento {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    text-align: left;
+    color: #393939;
+}
+
+/* header .lateral__listamenu-elemento a {} */
+
+header .lateral__listamenu-elemento a:hover {
+    color: #e6ae48;
+}
+
+/* header .lateral__rrss {} */
+
+header .lateral__rrss-elemento {
+    display: inline-block;
+    width: 1.5rem;
+    margin-right: .5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #ffffff;
+    background-color: #d4d4d4;
+}
+
+/* header .lateral__rrss-elemento a {} */
+
+header .lateral__rrss-elemento a:hover {
+    background-color: #e6ae48;
+}
+
+
+header .superior {
+    width: 100%;
+    padding-top: 1.5rem;
+    background-color: #ffffff;
+    display: none;
+}
+
+header .superior .fa-bars {
+    width: 10%;
+    float: left;
+    padding: 1.5rem 0 0 3rem;
+}
+
+header .superior .fa-bars:hover {
+    color: #e6ae48;
+}
+
+header .superior__titulo {
+    width: 90%;
+    float: right;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    color: #393939;
+}
+
+/* header .superior__titulo a {} */
+
+
+/* css main */
+
+main {
+    width: 100%;
+    max-width: 1920px;
+    min-height: 100vh;
+    padding-left: 15%;
+    background-color: #ffffff;
+}
+
+main .seccion1 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 7vh 0;
+    text-align: left;
+}
+
+main .seccion1__subtitulo {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #8d8d8d;
+    text-transform: uppercase;
+}
+
+main .seccion1__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #393939;
+    margin: 2rem 0 3rem 0;
+}
+
+main .seccion1__texto {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #8d8d8d;
+}
+
+main .seccion2 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 7vh 0;
+    text-align: left;
+}
+
+main .seccion2__columna {
+    width: calc(100% / 3);
+    float: left;
+    margin: 0 auto;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+main .seccion2__columna-subtitulo {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #e6ae48;
+    text-transform: uppercase;
+}
+
+main .seccion2__columna-titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #393939;
+    margin: 1rem 0 2rem 0;
+}
+
+main .seccion2__columna-texto {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #8d8d8d;
+}
+
+
+main .seccion4__columna {
+    width: calc(100% / 4);
+    float: left;
+    margin: 0 auto;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+
+.efecto {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* main .seccion4__columna img {} */
+
+.efecto__rrss {
+    width: 100%;
+    height: 100%;
+    background-color: #e6ae48;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding-top: 30%;
+    padding-left: 15%;
+    transition: all .4s ease;
+    transform: scale(1) rotate(0deg) translateY(0%);
+}
+
+.efecto__rrss-elemento {
+    margin-right: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    min-width: 2rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: inline-block;
+    transition: all .4s ease;
+    transform: scale(1) rotate(0deg) translateY(0%);
+}
+
+/* mediante opacidad, mostramos fondo naranja y rrss al pasar el ratón */
+
+.efecto:hover .efecto__rrss {
+    opacity: 1;
+}
+
+/* cambiamos color y fondo de cada rrss al pasar el ratón */
+
+.efecto__rrss-elemento:hover {
+    color: #ffffff;
+    background-color: #393939;
+}
+
+
+/* css responsive */
+
+@media screen and (max-width:960px) {
+
+    header .lateral {
+        display: none;
+    }
+
+    header .superior {
+        display: block;
+    }
+
+    main .seccion1, main .seccion2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    main .seccion2__columna, main .seccion4__columna {
+        width: 100%;
+    }
+}

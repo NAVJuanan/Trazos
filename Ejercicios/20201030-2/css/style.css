@@ -1,0 +1,295 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+body {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+header {
+    width: 100%;
+    padding: 2.5rem 0;
+    background-color: lightslategray;
+}
+
+header div.menu-icono{
+    display: none;
+}
+
+header div.cabecera {
+    width: 60%;
+    max-width: 1090px;
+    margin: 0 auto;
+    /* background-color: khaki; */
+}
+
+header div.cabecera h1 {
+    /* width: 50%; */
+    font-size: 2rem;
+    font-weight: 700;
+    float: left;
+    /* background-color: lightcoral; */
+}
+
+header div.cabecera nav {
+    /* width: 50%; */
+    float: right;
+    margin-top: .7rem;
+    /* background-color: lightgreen; */
+}
+
+header div.cabecera nav ul {
+    text-align: right;
+    /* background-color: lightpink; */
+}
+
+header div.cabecera nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+    /* background-color: lightcoral; */
+}
+
+/* header div.cabecera nav ul li a {} */
+
+header div.cabecera nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+main {
+    width: 100%;
+    color: darkgrey;
+}
+
+main section.chica {
+    width: 100%;
+    /* padding: 25rem 0; */
+    padding: 40vh 0; /* más recomendable en alturas */
+    background-image: url("../img/slide-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-color: mediumaquamarine; */
+}
+
+main section.chica h2 {
+    width: 90%;
+    max-width: 760px;
+    margin: 0 auto;
+    /* background-color: mediumslateblue; */
+}
+
+main section.texto {
+    width: 50%;
+    margin: 6rem auto;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    /* background-color: darkmagenta; */
+}
+
+main div.columnas {
+    width: 60%;
+    margin: 0 auto;
+    /* background-color: lightgreen; */
+}
+
+main div.columnas div.grupo1 {
+    width: calc(100% / 2);
+    float: left;
+    /* background-color: lightsteelblue; */
+}
+
+main div.columnas div.grupo1 section p {
+    text-align: left;
+    line-height: 2rem;
+    padding-right: 5rem;
+}
+
+main div.columnas div.grupo2 {
+    width: calc(100% / 2);
+    float: right;
+    /* background-color: lightpink; */
+}
+
+main div.columnas div.grupo2 section.columna1 {
+    width: calc(100% / 2);
+    float: left;
+    /* background-color: orange; */
+}
+
+main div.columnas div.grupo2 section.columna1 h3 {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+main div.columnas div.grupo2 section.columna1 ul {
+    margin-bottom: 4rem;
+}
+
+main div.columnas div.grupo2 section.columna2 {
+    width: calc(100% / 2);
+    float: right;
+    /* background-color: plum; */
+}
+
+main div.columnas div.grupo2 section.columna2 h3 {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+main div.columnas div.grupo2 section.columna2 ul {
+    margin-bottom: 3rem;
+}
+
+
+/* imágenes y transiciones inferiores */
+
+section.cuadro {
+    margin: 10vh 0;
+}
+
+.linea {
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: khaki; */
+}
+
+.linea__caja {
+    width: calc(100% / 4 - 2rem);
+    margin: 1rem;
+    float: left;
+    position: relative;
+}
+
+/* .caja__imagen {} */
+
+.caja__texto {
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .4s ease;
+    transform: scale(1) rotate(0deg) translateY(0%);
+}
+
+.caja__texto h4 {
+    font-size: 1.5rem;
+    color: black;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transition: transform 1s ease;
+    transform: scale(1) rotate(0deg) translateY(0%);
+}
+
+.caja__texto h5 {
+    font-size: 1rem;
+    color: gray;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transition: transform 1s ease;
+    transform: scale(1) rotate(0deg) translateY(0%);
+}
+
+/* añadimos casi toda la opacidad para ver la silueta de la imagen */
+.linea__caja:hover .caja__texto {
+    opacity: .9;
+}
+
+/* movemos el texto hacia abajo */
+.linea__caja:hover h4 {
+    transform: translateY(100%);
+}
+
+.linea__caja:hover h5 {
+    transform: translateY(150%);
+}
+
+
+/* css responsive */
+
+@media screen and (max-width:1136px) {
+
+    header {
+        background-color: white;
+    }
+
+    header div.cabecera nav {
+        display: none;
+    }
+
+    header div.menu-icono {
+        width: 1rem;
+        display: block;
+        color: black;
+        float: left;
+        margin-left: 3rem;
+    }
+
+    header div.cabecera h1 {
+        width: calc(100% - 4rem);
+        font-size: 1.5rem;
+        color: black;
+        text-align: center;
+        /* background-color: lightcoral; */
+    }
+}
