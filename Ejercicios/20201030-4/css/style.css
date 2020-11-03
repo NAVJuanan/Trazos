@@ -66,35 +66,35 @@ header {
   overflow: hidden;
 }
 
-.contenedor__imagen1 {
+.contenedor__imagen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.imagen__img1 {
   opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.contenedor__imagen2 {
+.imagen__img2 {
   opacity: 0.8;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.contenedor__flechaizq {
+.contenedor__flecha {
   width: 30px;
   height: 30px;
   background-color: black;
   position: absolute;
   top: 50%;
+}
+
+.flecha__izquierda {
   left: 5%;
 }
 
-.contenedor__flechader {
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  position: absolute;
-  top: 50%;
+.flecha__derecha {
   right: 5%;
 }
 
