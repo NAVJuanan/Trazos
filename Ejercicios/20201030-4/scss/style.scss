@@ -1,0 +1,109 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/* css body */
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.contenedor {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor__imagen1 {
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenedor__imagen2 {
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenedor__flechaizq {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.contenedor__flechader {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+
+.relleno {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: gray;
+}
