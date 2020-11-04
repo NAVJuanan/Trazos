@@ -1,0 +1,136 @@
+/* inicio de css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* fin de css reset */
+
+
+section {
+    width: 80%;
+    min-height: 80vh;
+    margin: 0 auto;
+    background-color: gray;
+    
+    display: flex; /* configuramos el valor 'flex' para la etiqueta contenedora */
+    
+
+    /*
+        Dirección: flex-direction: row;
+            - el valor 'row' es en fila de izquierda a derecha y está por defecto (flotar a la izquierda)
+            - el valor 'row-reverse' es en fila de derecha a izquierda (flotar a la derecha)
+            - el valor 'column' es uno encima de otro de arriba a abajo
+            - el valor 'column-reverse' es uno encima de otro de abajo a arriba
+    */
+
+    flex-direction: row;
+
+
+    /*
+        Multilínea: flex-wrap: wrap;
+            - el valor 'nowrap' es en una única línea y está por defecto. Si no cabe, amplía el contenedor padre
+            - el valor 'wrap' es multilínea.
+            - el valor 'wrap-reverse' es multilínea de abajo a arriba
+    */
+
+    flex-wrap: wrap;
+
+
+    /*
+        Alineación horizontal (en columna sería vertical): justify-content: center;
+            - el valor 'flex-start' realiza alineación hacia donde indica el valor de flex-direction
+            - el valor 'flex-end' realiza alineación al otro lado de donde indica el valor de flex-direction
+            - el valor 'center' realiza la alineación al centro
+            - el valor 'space-between' alinea todo el ancho dejando el mismo espacio entre cada elemento y pegando el primer y último elemento al lateral
+            - el valor 'space-around' alinea todo el ancho dejando el mismo espacio entre cada elemento y NO pegando el primer y último elemento al lateral
+    */
+
+    justify-content: center;
+
+
+    /*
+        Alineación vertical (en columna sería horizontal): align-items: center;
+            - el valor 'flex-start' realiza alineación hacia donde indica el valor de flex-direction
+            - el valor 'flex-end' realiza alineación al otro lado de donde indica el valor de flex-direction
+            - el valor 'center' realiza la alineación al centro
+            - el valor 'baseline' alinea basándose en una línea
+            - el valor 'stretch' alinea de arriba a abajo ocupando todo el espacio. Es el valor por defecto
+    */
+
+    align-items: center;
+
+
+    /*
+        Alineación de contenido (cuando usamos multilínea 'wrap'): align-content: auto;
+            - el valor 'flex-start' realiza alineación hacia donde indica el valor de flex-direction
+            - el valor 'flex-end' realiza alineación al otro lado de donde indica el valor de flex-direction
+            - el valor 'center' realiza la alineación al centro
+            - el valor 'space-between' alinea todo el ancho dejando el mismo espacio entre cada elemento y pegando el primer y último elemento al lateral
+            - el valor 'space-around' alinea todo el ancho dejando el mismo espacio entre cada elemento y NO pegando el primer y último elemento al lateral
+            - el valor 'stretch' alinea de arriba a abajo ocupando todo el espacio. Es el valor por defecto
+    */
+
+    align-content: center;
+
+
+    /* 
+        Valores por defecto a usar
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: initial;
+    */
+}
+
+
+article {
+    width: 500px;
+    height: 100px;
+    background-color: coral;
+}
