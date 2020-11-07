@@ -1,0 +1,271 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/* css body */
+
+body {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+}
+
+.header {
+    width: 100%;
+    min-height: 10vh;
+}
+
+.header__div {
+    width: 85%;
+    margin: auto;
+    padding: 2rem 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: initial;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        flex-flow: column nowrap;
+    }
+}
+
+.header__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: initial;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        display: none;
+    }
+}
+
+.header__item {
+    margin: 0 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #1d1d1d;
+
+    transition: all .4s ease;
+}
+
+.header__item:hover {
+    color: grey;
+}
+
+.header__bars {
+    font-size: 1.5rem;
+    display: none;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        display: block;
+    }
+}
+
+.main {
+    width: 100%;
+}
+
+.main__soul {
+    width: 100%;
+    padding: 20rem 0;
+
+    background-image: url("../img/soul1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+
+.main__columnas {
+    width: 85%;
+    margin: auto;
+    padding: 8rem 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: initial;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }    
+}
+
+.main__columnas section {
+    width: calc(100% / 3 - 2rem);
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        width: 80%;
+    }    
+}
+
+.main__columnas h3 {
+    padding: 2rem 0;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #1d1d1d;
+}
+
+
+.footer {
+    width: 100%;
+    min-height: 10vh;
+}
+
+.footer__div {
+    width: 85%;
+    margin: auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: initial;
+}
+
+.footer__rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+  
+.footer__rrss i.fab {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: all .4s ease;
+}
+
+.footer__rrss i.fa-facebook-f:hover {
+    color: blue;
+}
+  
+.footer__rrss i.fa-twitter:hover {
+    color: lightblue;
+}
+  
+.footer__rrss i.fa-instagram:hover {
+    color: coral;
+}
+  
+.footer__rrss i.fa-youtube:hover {
+    color: red;
+}
+
+.footer__policy {
+    width: 50%;
+    margin: 4rem 0 2rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        flex-flow: column nowrap;
+    }
+}
+
+.footer__policy li {
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #1d1d1d;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+
+    transition: all .4s ease;
+}
+
+.footer__policy li::after {
+    content: "|";
+    margin: 0 1rem;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        display: none;
+    }    
+}
+
+.footer__policy li:hover {
+    color: grey;
+}
+
+.footer__copyright {
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #1d1d1d;
+}
