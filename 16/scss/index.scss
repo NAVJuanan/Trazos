@@ -50,6 +50,7 @@ body {
 
 /* fin de css reset */
 
+$color-items: coral; // declaración de una variable
 
 section {
     width: 80%;
@@ -132,5 +133,5 @@ section {
 article {
     width: 500px;
     height: 100px;
-    background-color: coral;
+    background-color: $color-items; // uso de una variable
 }
