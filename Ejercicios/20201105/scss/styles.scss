@@ -310,6 +310,10 @@ body {
     justify-content: space-between;
     align-items: center;
     align-content: initial;
+
+    @media screen and (max-width:680px) {
+        flex-flow: column nowrap;
+    }
 }
 
 .footer__country {
@@ -333,6 +337,11 @@ body {
     justify-content: flex-start;
     align-items: center;
     align-content: initial;
+
+    @media screen and (max-width:680px) {
+        flex-flow: column nowrap;
+        margin: 1rem 0;
+    }
 }
 
 .footer-contact__item {

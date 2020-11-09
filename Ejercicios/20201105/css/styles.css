@@ -301,6 +301,11 @@ body {
   align-items: center;
   align-content: initial;
 }
+@media screen and (max-width: 680px) {
+  .footer-div__down {
+    flex-flow: column nowrap;
+  }
+}
 
 .footer__country {
   padding: 1rem 3rem;
@@ -322,6 +327,12 @@ body {
   justify-content: flex-start;
   align-items: center;
   align-content: initial;
+}
+@media screen and (max-width: 680px) {
+  .footer__contact {
+    flex-flow: column nowrap;
+    margin: 1rem 0;
+  }
 }
 
 .footer-contact__item {
