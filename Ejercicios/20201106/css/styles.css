@@ -32,10 +32,11 @@ img {
   object-fit: cover;
 }
 
-form, form input, form textarea, form option {
+form, input, textarea, select, option {
   font-size: inherit;
   font-family: inherit;
   background-color: transparent;
+  outline: none;
 }
 
 html {
