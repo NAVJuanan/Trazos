@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Formularios -->
+
+    <form action="https://www.google.es" method="get" enctype="text/plain"></form>
+    <form action="" method="post" enctype="application/x-www-form-urlencoded"></form>
+
+    <!-- 
+        - la propiedad 'action' nos indica dónde enviamos los datos
+        - la propiedad 'method' nos indica la forma de envío
+            - "get": envío de consultas
+            - "post": envío de datos
+        - la propiedad 'enctype' nos indica el protocolo de la solicitud
+            - "text/plain": texto plano
+            - "application/x-www-form-urlencoded": valor por defecto para formularios
+            - "multipart/form-data": archivos 
+    -->
+
+    <form action="" method="post">
+
+        <!-- introducción de texto -->
+        <label for="userId">Introduce tu nombre</label>
+        <input type="text" name="user_name" id="userId" value="" placeholder="texto inicial">
+
+        <!-- 
+            - la propiedad 'name' nombre de la variable que contendrá el valor introducido por el usuario
+            - la propiedad 'id' identifica únicamente el control y sirve para asociarlo a una 'label'
+            - la propiedad 'value' guarda el valor que introduce el usuario
+            - la propiedad 'placeholder' define un valor inicial por defecto
+        -->
+
+        <br>
+
+        <!-- introducción de contraseña -->
+        <label for="userPwd">Introduce tu contraseña</label>
+        <input type="password" name="user_pwd" id="userPwd" placeholder="contraseña inicial">
+
+        <br>
+
+        <!-- introducción de número -->
+        <label for="userAge">Introduce tu edad</label>
+        <input type="number" name="user_age" id="userAge" placeholder="edad inicial">
+
+        <br>
+
+        <!-- introducción de fichero -->
+        <label for="userFile">Selecciona un fichero</label>
+        <input type="file" name="user_file" id="userFile">
+
+        <!-- introducción de opciones -->
+        <div class="input-genre">
+            <label for="genreMale">Hombre</label>
+            <input type="radio" name="genre_type" id="genreMale" value="hombre">
+            <label for="genreFemale">Mujer</label>
+            <input type="radio" name="genre_type" id="genreFemale" value="mujer" checked>
+            <!-- la propiedad 'checked' deja marcado el valor por defecto -->
+        </div>
+
+        <!-- introducción de casillas de verificación -->
+        <div class="input-proglang">
+            <label for="langHtml">Html</label>
+            <input type="checkbox" name="prog_lang" id="langHtml">
+            <label for="langCss">Css</label>
+            <input type="checkbox" name="prog_lang" id="langCss">
+            <label for="langJs">JavaScript</label>
+            <input type="checkbox" name="prog_lang" id="langJs">
+        </div>
+
+        <!-- introducción de cajas de texto multilínea -->
+        <div class="textarea-comments">
+            <label for="areaComments">Comentarios</label>
+            <textarea name="area_comments" id="areaComments" cols="30" rows="10" placeholder="comentarios iniciales"></textarea>
+            <!-- las propiedades 'cols' y 'rows' nos indican el ancho y alto de la caja -->
+        </div>
+
+        <!-- introducción de un selector de opciones -->
+        <div class="select-options">
+            <label for="selectOption">Elija una opción</label>
+            <select name="select-option" id="selectOption">
+                <option value="yes">Sí</option>
+                <option value="no" selected>No</option>
+                <option value="maybe">Tal vez</option>
+                <!-- la propiedad 'selected' deja marcado el valor por defecto -->
+            </select>
+        </div>
+
+        <!-- introducción de un botón de envío de datos -->
+        <input type="submit" value="Enviar">
+        <!-- <button type="submit">Enviar</button> ya no se usa el botón -->
+    </form>
+</body>
+
+</html>
