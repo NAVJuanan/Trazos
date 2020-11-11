@@ -62,6 +62,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .header__div {
@@ -138,6 +139,7 @@ body {
   align-items: center;
   align-content: initial;
   background-color: #ffffff;
+  animation: moveRight 3s ease 1 both;
   /* css responsive */
 }
 @media screen and (max-width: 960px) {
@@ -146,9 +148,20 @@ body {
   }
 }
 
+@keyframes moveRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 .main__yellow {
   flex-flow: row-reverse nowrap;
   background-color: #e6ae48;
+  animation: moveLeft 3s ease 1 both;
   /* css responsive */
 }
 @media screen and (max-width: 960px) {
@@ -157,6 +170,16 @@ body {
   }
 }
 
+@keyframes moveLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 .main__image {
   width: 40%;
   max-width: 500px;

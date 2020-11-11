@@ -65,6 +65,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .header__div {
@@ -144,9 +145,23 @@ body {
 
     background-color: #ffffff;
 
+    animation: moveRight 3s ease 1 both;
+
     /* css responsive */
     @media screen and (max-width:960px) {
         flex-flow: column nowrap;
+    }
+}
+
+// el contenido de la sección se mueve al aparecer
+@keyframes moveRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }
 
@@ -155,9 +170,23 @@ body {
     
     background-color: #e6ae48;
 
+    animation: moveLeft 3s ease 1 both;
+
     /* css responsive */
     @media screen and (max-width:960px) {
         flex-flow: column-reverse nowrap;
+    }
+}
+
+// el contenido de la sección se mueve al aparecer
+@keyframes moveLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }
 

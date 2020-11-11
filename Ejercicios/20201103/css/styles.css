@@ -58,8 +58,17 @@ body {
 .header {
   width: 100%;
   min-height: 10vh;
+  animation: moveDown 3s ease 1 both;
 }
 
+@keyframes moveDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 .header__div {
   width: 85%;
   margin: auto;
