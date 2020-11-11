@@ -57,8 +57,28 @@ body {
 
 
 /* css body */
+
+// creamos un objeto con dos parámetros y varias propiedades
+@mixin flexible($direccion, $multilinea) {
+    display: flex;
+    flex-flow: $direccion $multilinea;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: initial;
+}
+
 #cuadrado {
     width: 200px;
     height: 200px;
     background-color: khaki;
+}
+
+.cuadrado-crece {
+    padding: 50px;
+}
+
+.lista {
+    background-color: lavender;
+    
+    @include flexible(row, nowrap); // utilizamos el objeto con todas las propiedades
 }

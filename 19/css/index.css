@@ -60,3 +60,16 @@ body {
   height: 200px;
   background-color: khaki;
 }
+
+.cuadrado-crece {
+  padding: 50px;
+}
+
+.lista {
+  background-color: lavender;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: initial;
+}
