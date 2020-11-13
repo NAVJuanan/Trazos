@@ -10,7 +10,22 @@ $("#cuadrado").click(function () {
     $("#cuadrado").fadeOut(2000)
 })
 
-// añade una clase que da padding al hacer doble clic
+// añade una clase que cambia el color de fondo a la lista al hacer doble clic
 $("#cuadrado").dblclick(function () {
-    $("#cuadrado").addClass("cuadrado-crece")
+    $(".lista").addClass("lista-color")
 })
+
+// crear un objeto en JavaScript
+let movil = {
+    marca: "Apple",
+    modelo: "iPhone 11 Pro",
+    ios: 14,
+    apps: ["Whatsapp", "Spotify"],
+    garantia: false,
+    llamar: function () {
+        console.log("ring ring");
+    },
+    hacerFoto: function () {
+        console.log("click");
+    }
+}

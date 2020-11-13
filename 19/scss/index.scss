@@ -82,3 +82,32 @@ body {
     
     @include flexible(row, nowrap); // utilizamos el objeto con todas las propiedades
 }
+
+.lista-color {
+    background-color: aqua;
+    
+    @include flexible(row, nowrap); // utilizamos el objeto con todas las propiedades
+}
+
+// crear un mensaje para aceptar cookies
+.cookies {
+    width: 100%;
+    padding: 2rem;
+    color: white;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+// .cookies__p {}
+
+.cookies__btn {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+
+.cookies-hide {
+    display: none;
+}
