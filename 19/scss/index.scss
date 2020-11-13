@@ -59,11 +59,11 @@ body {
 /* css body */
 
 // creamos un objeto con dos parámetros y varias propiedades
-@mixin flexible($direccion, $multilinea) {
+@mixin flexible($direccion, $multilinea, $justify-content, $align-item) {
     display: flex;
     flex-flow: $direccion $multilinea;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify-content;
+    align-items: $align-item;
     align-content: initial;
 }
 
@@ -80,13 +80,13 @@ body {
 .lista {
     background-color: lavender;
     
-    @include flexible(row, nowrap); // utilizamos el objeto con todas las propiedades
+    @include flexible(row, nowrap, center, center); // utilizamos el objeto con todas las propiedades
 }
 
 .lista-color {
     background-color: aqua;
     
-    @include flexible(row, nowrap); // utilizamos el objeto con todas las propiedades
+    @include flexible(row, nowrap, center, center); // utilizamos el objeto con todas las propiedades
 }
 
 
@@ -131,7 +131,7 @@ body {
     top: 0;
     left: 0;
 
-    @include flexible(row, nowrap);
+    @include flexible(row, nowrap, center, center);
     display: none;
 }
 
