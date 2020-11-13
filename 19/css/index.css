@@ -69,7 +69,7 @@ body {
   background-color: lavender;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   align-content: initial;
 }
@@ -78,7 +78,7 @@ body {
   background-color: aqua;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   align-content: initial;
 }
@@ -101,4 +101,34 @@ body {
 
 .cookies-hide {
   display: none;
+}
+
+.miniatura {
+  width: 200px;
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+  display: none;
+}
+
+.lightbox img {
+  width: 50%;
+  margin: 1rem;
+}
+
+.lightbox-show {
+  display: flex;
 }
