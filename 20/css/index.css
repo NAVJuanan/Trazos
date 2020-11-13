@@ -1,0 +1,115 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+form, input, textarea, select, option {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* css body */
+.container__slider {
+  width: 40%;
+  background-color: red;
+  margin: auto;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.container__huge {
+  width: 100%;
+  background-color: lightblue;
+  margin: auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: initial;
+  transition: all 0.4s ease;
+}
+
+.container__huge-show2 {
+  transform: translateX(-100%);
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+  transition: all 0.4s ease;
+  position: absolute;
+  top: calc(50% - 20px);
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.arrow:hover {
+  transform: scale(0.9);
+}
+
+.arrow:active {
+  transform: scale(1.1);
+}
+
+.arrow__left {
+  left: 5%;
+}
+
+.arrow__right {
+  right: 5%;
+}

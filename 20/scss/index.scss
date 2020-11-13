@@ -1,0 +1,126 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+form, input, textarea, select, option {
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/* css body */
+
+// creamos un objeto con dos parámetros y varias propiedades
+@mixin flexible($direccion, $multilinea, $justify-content, $align-item) {
+    display: flex;
+    flex-flow: $direccion $multilinea;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: initial;
+}
+
+// slider
+.container__slider {
+    width: 40%;
+    background-color: red;
+    margin: auto;
+    padding: 1rem 0;
+    // overflow: hidden;
+
+    position: relative;
+}
+
+.container__huge {
+    width: 100%;
+    background-color: lightblue;
+    margin: auto;
+    padding: 1rem 0;
+
+    @include flexible(row, nowrap, flex-start, center);
+    transition: all .4s ease;
+}
+
+.container__huge-show2 {
+    transform: translateX(-100%);
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    color: white;
+    background-color: black;
+
+    @include flexible(row, nowrap, center, center);
+    transition: all .4s ease;
+
+    position: absolute;
+    top: calc(50% - 20px);
+
+    cursor: pointer; // aparece el cursor como una mano
+    opacity: .5;
+}
+
+.arrow:hover {
+    transform: scale(.9); // efecto de contraerse al pasar el cursor
+}
+
+.arrow:active {
+    transform: scale(1.1); // efecto de expandirse al pinchar
+}
+
+.arrow__left {
+    left: 5%;
+}
+
+.arrow__right {
+    right: 5%;
+}
