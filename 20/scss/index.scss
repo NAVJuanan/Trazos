@@ -69,33 +69,31 @@ body {
 
 // slider
 .container__slider {
-    width: 40%;
-    background-color: red;
-    margin: auto;
-    padding: 1rem 0;
-    // overflow: hidden;
+    width: 45%;
+    border-radius: 20px;
+    margin: 5rem auto;
+    overflow: hidden;
 
     position: relative;
 }
 
 .container__huge {
-    width: 100%;
-    background-color: lightblue;
+    width: 200%;
     margin: auto;
-    padding: 1rem 0;
 
     @include flexible(row, nowrap, flex-start, center);
     transition: all .4s ease;
 }
 
 .container__huge-show2 {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
 }
 
 .arrow {
     width: 40px;
     height: 40px;
     font-size: 2rem;
+    border-radius: 20px;
     color: white;
     background-color: black;
 
@@ -121,6 +119,14 @@ body {
     left: 5%;
 }
 
+.arrow__left-hide {
+    display: none;
+}
+
 .arrow__right {
     right: 5%;
+}
+
+.arrow__right-hide {
+    display: none;
 }
