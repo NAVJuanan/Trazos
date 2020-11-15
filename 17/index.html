@@ -25,17 +25,24 @@
             - "multipart/form-data": archivos 
     -->
 
-    <form action="" method="post">
+    <form action="dominio.com/archivo.php" method="GET">
 
         <!-- introducción de texto -->
         <label for="userId">Introduce tu nombre</label>
-        <input type="text" name="user_name" id="userId" value="" placeholder="texto inicial">
+        <input type="text" name="user_name" id="userId" value="" placeholder="texto inicial" minlength="3" maxlength="20" pattern="[A-Za-z0-9]+" autocomplete="on" required>
 
         <!-- 
             - la propiedad 'name' nombre de la variable que contendrá el valor introducido por el usuario
             - la propiedad 'id' identifica únicamente el control y sirve para asociarlo a una 'label'
             - la propiedad 'value' guarda el valor que introduce el usuario
             - la propiedad 'placeholder' define un valor inicial por defecto
+            - la propiedad 'minlength' define los caracteres mínimos a introducir
+            - la propiedad 'maxlength' define los caracteres máximos a introducir
+            - la propiedad 'pattern' define un patrón de introducción de datos. Caracteres y números: "[A-Za-z0-9]+"
+            - la propiedad 'required' hace obligatorio informar el campo
+            - la propiedad 'disabled' deshabilita el campo
+            - la propiedad 'autofocus' sitúa el foco en el campo
+            - la propiedad 'autocomplete' nos permite habilitar o deshabilitar el autocompletado
         -->
 
         <br>
@@ -56,7 +63,19 @@
         <label for="userFile">Selecciona un fichero</label>
         <input type="file" name="user_file" id="userFile">
 
-        <!-- introducción de opciones -->
+        <br>
+
+        <!-- introducción de fecha (no es compatible con todos los navegadores) -->
+        <label for="userDate">Introduce tu fecha de nacimiento</label>
+        <input type="date" name="user_date" id="userDate" placeholder="Fecha inicial">
+
+        <br>
+
+        <!-- introducción de color (no es compatible con todos los navegadores) -->
+        <label for="userColor">Introduce tu color</label>
+        <input type="color" name="user_color" id="userColor">
+
+        <!-- introducción de opciones (radio) -->
         <div class="input-genre">
             <label for="genreMale">Hombre</label>
             <input type="radio" name="genre_type" id="genreMale" value="hombre">
@@ -65,7 +84,7 @@
             <!-- la propiedad 'checked' deja marcado el valor por defecto -->
         </div>
 
-        <!-- introducción de casillas de verificación -->
+        <!-- introducción de casillas de verificación (checkbox) -->
         <div class="input-proglang">
             <label for="langHtml">Html</label>
             <input type="checkbox" name="prog_lang" id="langHtml">
@@ -78,11 +97,11 @@
         <!-- introducción de cajas de texto multilínea -->
         <div class="textarea-comments">
             <label for="areaComments">Comentarios</label>
-            <textarea name="area_comments" id="areaComments" cols="30" rows="10" placeholder="comentarios iniciales"></textarea>
+            <textarea name="area_comments" id="areaComments" cols="30" rows="10" placeholder="comentarios iniciales" autofocus></textarea>
             <!-- las propiedades 'cols' y 'rows' nos indican el ancho y alto de la caja -->
         </div>
 
-        <!-- introducción de un selector de opciones -->
+        <!-- introducción de un selector de opciones (select) -->
         <div class="select-options">
             <label for="selectOption">Elija una opción</label>
             <select name="select-option" id="selectOption">

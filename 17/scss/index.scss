@@ -1,4 +1,4 @@
-/* css reset */
+// css reset
 
 * {
     margin: 0;
@@ -57,17 +57,27 @@ body {
 }
 
 
-/* css body */
+// css body
+
+label {
+    margin-left: 1rem;
+    background-color: lightcyan;
+}
+
 input, textarea {
+    margin: .5rem;
     background-color: beige;
 }
 
-// al hacer foco en el área, cambia el colo
+// al hacer foco en el área, cambia el color
 textarea:focus {
     background-color: blueviolet;
 }
 
 // damos estilo seleccionando por atributo
 [type="submit"] {
-    background-color: cadetblue;
+    margin: 1rem;
+    padding: .5rem 1rem;
+    border: solid 2px black;
+    background-color: cornsilk;
 }
