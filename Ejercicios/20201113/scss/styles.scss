@@ -81,7 +81,7 @@ body {
     margin: auto;
     padding: 0 8rem;
     background-color: #f2f2f2;
-
+    
     @include flexible(row, nowrap, space-between, center);
 
     @media screen and (max-width:760px) {
