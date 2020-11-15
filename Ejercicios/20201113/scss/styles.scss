@@ -85,8 +85,6 @@ body {
     @include flexible(row, nowrap, space-between, center);
 
     @media screen and (max-width:760px) {
-        width: 100%;
-
         @include flexible(column, nowrap, flex-start, center);
     }
 }

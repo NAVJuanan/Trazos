@@ -73,7 +73,6 @@ body {
 }
 @media screen and (max-width: 760px) {
   .cookies {
-    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
