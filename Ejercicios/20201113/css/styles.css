@@ -173,7 +173,7 @@ body {
 }
 
 .header__logo {
-  max-width: 7.5rem;
+  width: 7.5rem;
 }
 
 .header__nav-list {
@@ -250,7 +250,7 @@ body {
 }
 
 .header__bars-logo {
-  max-width: 7.5rem;
+  width: 7.5rem;
 }
 
 .header__bars-list {
