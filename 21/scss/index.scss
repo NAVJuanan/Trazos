@@ -1,0 +1,184 @@
+// css reset
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+form, input, textarea, select, option {
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: initial;
+}
+
+
+// css body
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+// flex display
+.flex {
+    width: 80%;
+    min-height: 10vh;
+    margin: auto;
+    background-color: khaki;
+
+    @include flexible(row, nowrap, space-between, center);
+}
+
+.flex__article {
+    width: 10%;
+    min-height: 5vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+// pseudo-clase para elementos impares
+.flex__article:nth-of-type(odd) {
+    background-color: hotpink;
+}
+
+// pseudo-clase para elementos pares
+.flex__article:nth-of-type(even) {
+    background-color: lightblue;
+}
+
+// pseudo-clase para el tercer elemento
+.flex__article:nth-of-type(3) {
+    background-color: orange;
+}
+
+// pseudo-clase para el primer article
+.flex__article:first-child {
+    background-color: greenyellow;
+}
+
+// pseudo-clase para el último article
+.flex__article:last-child {
+    background-color: red;
+}
+
+// ordenar elementos
+.flex__article:nth-of-type(1) {
+    order: 1;
+}
+.flex__article:nth-of-type(2) {
+    order: 4; // lo movemos a la posición 4
+}
+.flex__article:nth-of-type(3) {
+    order: 3;
+}
+.flex__article:nth-of-type(4) {
+    order: 2; // lo movemos a la posición 2
+}
+.flex__article:nth-of-type(5) {
+    order: 5;
+}
+.flex__article:nth-of-type(6) {
+    order: 6;
+}
+.flex__article:nth-of-type(7) {
+    order: 7;
+}
+.flex__article:nth-of-type(8) {
+    order: 8;
+}
+
+
+// grid display
+.grid {
+    width: 80%;
+    min-height: 10vh;
+    margin: 1rem auto;
+    background-color: lightcyan;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    
+    /*
+        cada valor es el tamaño de una columna
+            - 1fr: 1 fracción
+        podemos usar repeat(4, 1fr) para 4 columnas iguales
+    */
+
+    grid-template-rows: repeat(3, 1fr); // 3 filas de 1 fracción
+    gap: 1rem; // separación de celdas (grid-gap)
+}
+
+.grid__article {
+    min-height: 5vh;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.grid__expand1 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    background-color: lightpink;
+}
+
+.grid__expand2 {
+    grid-column: 4 / 5;
+    grid-row: 3 / 5;
+    background-color: lightpink;
+}
