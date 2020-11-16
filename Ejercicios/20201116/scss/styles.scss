@@ -272,6 +272,10 @@ body {
     }
 }
 
+.main-section__item {
+    position: relative;
+}
+
 .main-section__img {
     transition: all .4s ease;
     transform: scale(1) rotate(0deg) translateY(0%);   
