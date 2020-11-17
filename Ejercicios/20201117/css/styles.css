@@ -392,6 +392,61 @@ body {
   }
 }
 
+.main__slider {
+  width: 50%;
+  border-radius: 20px;
+  margin: 5rem auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__image--hide {
+  display: none;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+  transition: all 0.4s ease;
+  position: absolute;
+  top: calc(50% - 20px);
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.arrow:hover {
+  transform: scale(0.9);
+}
+
+.arrow:active {
+  transform: scale(1.1);
+}
+
+.arrow__left {
+  left: 5%;
+}
+
+.arrow__left--hide {
+  display: none;
+}
+
+.arrow__right {
+  right: 5%;
+}
+
+.arrow__right--hide {
+  display: none;
+}
+
 .footer {
   width: 100%;
   min-height: 15vh;
