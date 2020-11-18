@@ -71,6 +71,9 @@ body {
     background-color: #ffffff;
 }
 
+
+// Slider múltiple
+
 .slider {
     width: 80%;
     max-width: 1600px;
@@ -94,6 +97,9 @@ body {
     }
 }
 
+
+// Contenedor de elementos
+
 .slider__container {
     width: 300%; // 3 grupos
 
@@ -108,6 +114,9 @@ body {
 .slider__container--show {
     transform: translateX(-33%);
 }
+
+
+// Imagen + Texto
 
 .slider__item {
     position: relative;
@@ -142,9 +151,13 @@ body {
     color: #ffffff;
 
     &::after {
-        content: " >";
+        content: ">";
+        margin: 0 0 0 .5rem;
     }
 }
+
+
+// Flechas
 
 .slider__arrow {
     width: 50px;
@@ -172,6 +185,9 @@ body {
 .slider__arrow-left {
     left: 1rem;
 }
+
+
+// Puntos
 
 .slider__points {
     width: 10%;
