@@ -120,6 +120,8 @@ body {
     }
 }
 
+// .slider__img {}
+
 .slider__text {
     position: absolute;
     bottom: 1rem;
@@ -138,6 +140,10 @@ body {
     font-weight: 700;
     text-align: left;
     color: #ffffff;
+
+    &::after {
+        content: " >";
+    }
 }
 
 .slider__arrow {

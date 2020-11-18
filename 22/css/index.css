@@ -114,6 +114,9 @@ body {
   text-align: left;
   color: #ffffff;
 }
+.slider__description::after {
+  content: " >";
+}
 
 .slider__arrow {
   width: 50px;
