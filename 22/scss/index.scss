@@ -69,6 +69,8 @@ body {
 // css body
 body {
     background-color: #ffffff;
+
+    overflow: hidden; // ocultamos el scroll lateral y depende de las flechas
 }
 
 
@@ -189,6 +191,10 @@ body {
     transition: all .4s ease;
 }
 
+.slider__arrow--hide {
+    display: none;
+}
+
 .slider__arrow-right {
     right: 1.5rem
 }
@@ -215,6 +221,12 @@ body {
     background-color: gray;
 
     cursor: pointer;
+
+    transition: all .4s ease;
+
+    &:hover {
+        background-color: #000000;
+    }
 }
 
 .slider__point--active {
