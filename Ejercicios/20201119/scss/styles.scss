@@ -56,10 +56,10 @@ body {
 }
 
 
-// función para posicionamiento flex
-@mixin flexible($direccion, $multilinea, $justify-content, $align-item) {
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item) {
     display: flex;
-    flex-flow: $direccion $multilinea;
+    flex-flow: $direction $wrap;
     justify-content: $justify-content;
     align-items: $align-item;
     align-content: initial;
@@ -144,6 +144,7 @@ body {
 
 .header__container {
     width: 85%;
+    max-width: 1600px;
     margin: auto;
     padding: 1rem 0;
 
@@ -256,16 +257,28 @@ body {
     margin: .5rem auto;
 }
 
-// quitamos bordes y sombras
 .bx-wrapper {
+
+    // quitamos bordes y sombras
     box-shadow: none;
     border: none;
 
-    // movemos los botones dentro del slider
-    & .bx-pager {
-        bottom: 30px;
+    transition: all .4s ease;
 
-        // cambiamos el color de fondo de cada enlace
+    // movemos los botones dentro del slider
+    & .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+        width: 49%;
+        height: 35px;
+        bottom: 30px;
+        padding-top: 0;
+        text-align: left;
+
+        @include flexible(row, nowrap, flex-end, center);
+    }
+
+    & .bx-pager {
+
+        // cambiamos el color de fondo de cada botón
         &.bx-default-pager a {
             width: 8px;
             height: 8px;
@@ -281,6 +294,27 @@ body {
         }
     }
 
+    // movemos los controles dentro del slider
+    & .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+        width: 49%;
+        height: 35px;
+        bottom: 30px;
+        padding-top: 0;
+        text-align: left;
+
+        @include flexible(row, nowrap, flex-start, center);
+    }
+
+    // mostramos los botones cuando no están activos
+    & .bx-controls-auto .bx-stop, & .bx-controls-auto .bx-start {
+        display: block;
+    }
+    
+    // ocultamos los botones cuando están activos
+    & .bx-controls-auto .bx-stop.active, & .bx-controls-auto .bx-start.active {
+        display: none;
+    }
+
     // cambiamos el aspecto de las fechas
     & .bx-controls-direction a {
         width: 50px;
@@ -288,15 +322,91 @@ body {
         border-radius: 50%;
         margin-top: -25px;
         border: solid 1px gray;
+        font-size: 1.5rem;
+        text-indent: 0;
         background-color: #fafafa;
         background-image: none;
+        opacity: 0;
 
-        transition: all .4s ease;
+        @include flexible(row, nowrap, center, center);
         
+        transition: all .4s ease;
+
         // damos sombra al pasar el ratón
         &:hover {
             box-shadow: 0 4px 8px rgba(0,0,0,.2);
         }
     }
+
+    // mostramos las flechas cuando pasamos el ratón sobre el slider
+    &:hover .bx-controls-direction a {
+        opacity: 1;
+    }
 }
 
+
+// cajas con textos
+.slider__text {
+    width: 35%;
+    color: #000000;
+    text-align: left;
+    position: absolute;
+    top: calc(40%);
+    left: 6%;
+}
+
+.slider__text2 {
+    top: calc(10%);
+}
+
+.slider__title {
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+.slider__description {
+    font-size: 1rem;
+}
+
+.link__container {
+    width: 75%;
+    margin: 1rem 0;
+
+    @include flexible(row, nowrap, flex-start, center);
+}
+
+.slider__text-link {
+    width: 50%;
+    padding: 1rem .5rem;
+    text-align: center;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #a80000;
+
+    @include flexible(row, nowrap, center, center);  
+
+    &:hover {
+
+        .slider__text-span--left {
+            transform: translateX(-5px);
+        }
+
+        .slider__text-span--right {
+            transform: translateX(5px);
+        }
+
+        .slider__text-span--underline {
+            text-decoration: underline;
+        }
+    }
+}
+
+.slider__text-link2 { 
+    color: #a80000;
+    background-color: transparent;
+}
+
+.slider__text-span {
+    margin: 0 .2rem;
+    transition: all .4s ease;
+}
