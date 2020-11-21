@@ -61,7 +61,7 @@ body {
 
 .cookies {
   width: 100%;
-  min-height: 5vh;
+  min-height: 7vh;
   margin: auto;
   padding: 0 8rem;
   background-color: #f2f2f2;
@@ -269,5 +269,37 @@ body {
 
 .main__slider {
   width: 85%;
-  margin: 1rem auto;
+  max-width: 1600px;
+  margin: 0.5rem auto;
+}
+
+.bx-wrapper {
+  box-shadow: none;
+  border: none;
+}
+.bx-wrapper .bx-pager {
+  bottom: 30px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  width: 8px;
+  height: 8px;
+  border: solid 1px #000000;
+  background: transparent;
+  transition: all 0.4s ease;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+  background: gray;
+}
+.bx-wrapper .bx-controls-direction a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -25px;
+  border: solid 1px gray;
+  background-color: #fafafa;
+  background-image: none;
+  transition: all 0.4s ease;
+}
+.bx-wrapper .bx-controls-direction a:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
