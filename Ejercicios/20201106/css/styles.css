@@ -347,6 +347,11 @@ body {
   align-items: center;
   align-content: initial;
 }
+@media screen and (max-width: 960px) {
+  .main-form__input {
+    flex-flow: column nowrap;
+  }
+}
 
 .main-input__item {
   width: calc(100% / 2 - 2rem);
@@ -358,6 +363,11 @@ body {
   background-color: #ffffff;
   opacity: 0.8;
 }
+@media screen and (max-width: 960px) {
+  .main-input__item {
+    width: calc(100% - 2rem);
+  }
+}
 
 .main-input__item--textarea {
   width: calc(100% - 2rem);
@@ -366,6 +376,7 @@ body {
 .main-input__item--submit {
   width: 20%;
   text-align: center;
+  cursor: pointer;
   transition: all 0.4s ease;
 }
 
@@ -374,6 +385,10 @@ body {
 }
 .main-input__item--submit:hover [type=submit] {
   color: #ffffff;
+}
+
+[type=text], textarea {
+  width: 100%;
 }
 
 [type=text]:focus, textarea:focus {

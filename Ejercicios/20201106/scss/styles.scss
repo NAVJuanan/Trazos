@@ -356,6 +356,10 @@ body {
     justify-content: center;
     align-items: center;
     align-content: initial;
+
+    @media screen and (max-width:960px) {
+        flex-flow: column nowrap;
+    }
 }
 
 .main-input__item {
@@ -367,6 +371,10 @@ body {
     color: #929292;
     background-color: #ffffff;
     opacity: .8;
+
+    @media screen and (max-width:960px) {
+        width: calc(100% - 2rem);
+    }
 }
 
 .main-input__item--textarea {
@@ -376,6 +384,7 @@ body {
 .main-input__item--submit {
     width: 20%;
     text-align: center;
+    cursor: pointer;
 
     transition: all .4s ease;
 }
@@ -386,6 +395,10 @@ body {
     [type=submit] {
         color: #ffffff;
     }
+}
+
+[type=text], textarea {
+    width: 100%;
 }
 
 [type=text]:focus, textarea:focus {
