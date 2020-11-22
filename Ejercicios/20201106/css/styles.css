@@ -333,26 +333,22 @@ body {
   background-attachment: fixed;
 }
 
-.main-form__input {
-  width: 40%;
+.main-form__container {
+  width: 50%;
+  max-width: 1600px;
   margin: auto;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: initial;
 }
 
-.main-input__up {
+.main-form__input {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   align-content: initial;
 }
 
-.main-input-up__item {
+.main-input__item {
   width: calc(100% / 2 - 2rem);
   padding: 1rem;
   margin: 1rem;
@@ -363,33 +359,25 @@ body {
   opacity: 0.8;
 }
 
-.main-input__down {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: initial;
+.main-input__item--textarea {
+  width: calc(100% - 2rem);
 }
 
-.main-input__down .submit {
+.main-input__item--submit {
   width: 20%;
+  text-align: center;
   transition: all 0.4s ease;
 }
 
-.main-input__down .submit:hover {
+.main-input__item--submit:hover {
+  background-color: #181111;
+}
+.main-input__item--submit:hover [type=submit] {
   color: #ffffff;
-  background-color: #929292;
 }
 
-.main-input-down__item {
-  padding: 1rem;
-  margin: 1rem;
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: #929292;
-  background-color: #ffffff;
-  opacity: 0.8;
+[type=text]:focus, textarea:focus {
+  background-color: lightgray;
 }
 
 .footer {
