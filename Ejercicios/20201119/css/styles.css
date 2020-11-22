@@ -376,7 +376,7 @@ body {
   font-size: 2.1rem;
   font-weight: 500;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1380px) {
   .slider__title {
     font-size: 1.1rem;
   }
