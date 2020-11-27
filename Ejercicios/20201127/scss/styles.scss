@@ -58,7 +58,14 @@ body {
 }
 
 .header__nav-item {
+    border-bottom: 2px solid transparent;
     margin-right: 3rem;
+
+    transition: all .5s ease;
+
+    &:hover {
+        border-bottom: 2px solid;
+    }
 }
 
 .header__contact-container {
@@ -71,5 +78,16 @@ body {
 }
 
 .header__contact-item {
+    border-bottom: 2px solid transparent;
     margin-left: 3rem;
+
+    transition: all .5s ease;
+
+    &--underline:hover {
+        border-bottom: 2px solid;
+    }
+
+    &--strike:hover {
+        text-decoration: line-through;
+    }
 }
