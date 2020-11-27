@@ -1,0 +1,75 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: initial;
+}
+
+
+// function for styling texts
+@mixin text-style($size, $weight, $transform, $spacing, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    text-transform: $transform;
+    letter-spacing: $spacing;
+    line-height: $height;
+}
+
+
+// css body
+body {
+    font-family: 'Cabin', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+
+// css header
+.header {
+    width: 100%;
+}
+
+.header__container {
+    width: 90%;
+    max-width: 1600px;
+    min-height: 15vh;
+    margin: auto;
+    @include flexible(row, nowrap, space-between, center);
+}
+
+.header__title {
+    width: 30%;
+    @include text-style(1.3rem, 700, uppercase, .2rem, 1.5rem);
+}
+
+.header__nav {
+    width: 55%;
+}
+
+.header__nav-list {
+    @include flexible(row, nowrap, flex-start, center);
+    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem);
+}
+
+.header__nav-item {
+    margin-right: 3rem;
+}
+
+.header__contact-container {
+    width: 15%;
+}
+
+.header__contact-list {
+    @include flexible(row, nowrap, flex-end, center);
+    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem);
+}
+
+.header__contact-item {
+    margin-left: 3rem;
+}
