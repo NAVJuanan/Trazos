@@ -13,12 +13,13 @@
 
 
 // function for styling texts
-@mixin text-style($size, $weight, $transform, $spacing, $height) {
+@mixin text-style($size, $weight, $transform, $spacing, $height, $align) {
     font-size: $size;
     font-weight: $weight;
     text-transform: $transform;
     letter-spacing: $spacing;
     line-height: $height;
+    text-align: $align;
 }
 
 
@@ -69,13 +70,14 @@ body {
     position: absolute;
     top: 0;
     left: 10%;
+    z-index: 1;
     background-color: transparent;
     @include flexible(row, nowrap, space-between, center);
 }
 
 .header__title {
     width: 30%;
-    @include text-style(1.3rem, 700, uppercase, .2rem, 1.5rem);
+    @include text-style(1.3rem, 700, uppercase, .2rem, 1.5rem, left);
 }
 
 .header__nav {
@@ -84,7 +86,7 @@ body {
 
 .header__nav-list {
     @include flexible(row, wrap, flex-start, center);
-    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem);
+    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem, left);
 }
 
 .header__nav-item {
@@ -106,7 +108,7 @@ body {
 
 .header__contact-list {
     @include flexible(row, nowrap, flex-end, center);
-    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem);
+    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem, left);
 }
 
 .header__contact-item {
@@ -147,9 +149,34 @@ body {
 .main__image {
     width: 100%;
     padding: 40vh 0;
+    position: relative;
     background-image: url("../assets/360-preview.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.main__text {
+    width: 25%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    @include flexible(column, nowrap, flex-start, flex-start);
+}
+
+.main__button {
+    padding: 1rem;
+    border-radius: 20px;
+    @include text-style(1rem, 700, initial, 0, 1rem, left);
+}
+
+.main__title {
+    margin: 1rem 0;
+    @include text-style(6.5rem, 700, initial, .2rem, 7.5rem, left);
+}
+
+.main__subtitle {
+    margin: 1rem 0;
+    @include text-style(1.1rem, 700, initial, .1rem, 1.5rem, left);
 }
