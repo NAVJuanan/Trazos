@@ -90,7 +90,7 @@ body {
 
 .header__nav-list {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: initial;
@@ -177,4 +177,18 @@ body {
 .header__contact-item--strike:hover::after {
   transform: scaleX(1);
   transform-origin: right;
+}
+
+.main {
+  width: 100%;
+}
+
+.main__image {
+  width: 100%;
+  padding: 40vh 0;
+  background-image: url("../assets/360-preview.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }

@@ -78,7 +78,7 @@ body {
 }
 
 .header__nav-list {
-    @include flexible(row, nowrap, flex-start, center);
+    @include flexible(row, wrap, flex-start, center);
     @include text-style(1rem, 700, capitalize, .1rem, 1.5rem);
 }
 
@@ -131,4 +131,20 @@ body {
             @include text-ending-effect();
         }
     }
+}
+
+
+// css main
+.main {
+    width: 100%;
+  }
+  
+.main__image {
+    width: 100%;
+    padding: 40vh 0;
+    background-image: url("../assets/360-preview.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
