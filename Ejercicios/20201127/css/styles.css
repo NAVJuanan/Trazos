@@ -61,13 +61,18 @@ body {
 
 .header {
   width: 100%;
+  position: relative;
 }
 
 .header__container {
   width: 90%;
   max-width: 1600px;
-  min-height: 15vh;
+  min-height: 10vh;
   margin: auto;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  background-color: transparent;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
