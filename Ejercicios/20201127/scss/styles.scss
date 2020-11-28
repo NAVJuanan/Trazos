@@ -22,6 +22,31 @@
 }
 
 
+//function for underline/strike initial effect
+@mixin text-initial-effect($bottom) {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+
+    display: flex;
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+
+    transition: all .4s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+
+//function for underline/strike ending effect
+@mixin  text-ending-effect {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+
 // css body
 body {
     font-family: 'Cabin', sans-serif;
@@ -58,13 +83,15 @@ body {
 }
 
 .header__nav-item {
-    border-bottom: 2px solid transparent;
     margin-right: 3rem;
+    position: relative;
 
-    transition: all .5s ease;
+    &::after {
+        @include text-initial-effect(0px);
+    }
 
-    &:hover {
-        border-bottom: 2px solid;
+    &:hover::after {    
+        @include text-ending-effect();
     }
 }
 
@@ -78,16 +105,30 @@ body {
 }
 
 .header__contact-item {
-    border-bottom: 2px solid transparent;
     margin-left: 3rem;
+    position: relative;
 
-    transition: all .5s ease;
+    // subrayado
+    &--underline {
 
-    &--underline:hover {
-        border-bottom: 2px solid;
+        &::after {
+            @include text-initial-effect(0px);
+        }
+
+        &:hover::after {    
+            @include text-ending-effect();
+        }
     }
 
-    &--strike:hover {
-        text-decoration: line-through;
+    // tachado
+    &--strike {
+
+        &::after {
+            @include text-initial-effect(10px);
+        }
+
+        &:hover::after {    
+            @include text-ending-effect();
+        }
     }
 }
