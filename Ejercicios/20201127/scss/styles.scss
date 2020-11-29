@@ -372,3 +372,16 @@ body {
         grid-row: 1 / 5;
     }
 }
+
+// bxSlider
+.main__slider {
+    width: 80%;
+    max-width: 1600px;
+    margin: .5rem auto;
+}
+
+.bx-wrapper {
+    box-shadow: none;
+    border: none;
+    transition: all .4s ease;
+}

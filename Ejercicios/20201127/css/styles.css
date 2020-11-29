@@ -535,3 +535,15 @@ body {
   grid-column: 2/3;
   grid-row: 1/5;
 }
+
+.main__slider {
+  width: 80%;
+  max-width: 1600px;
+  margin: 0.5rem auto;
+}
+
+.bx-wrapper {
+  box-shadow: none;
+  border: none;
+  transition: all 0.4s ease;
+}
