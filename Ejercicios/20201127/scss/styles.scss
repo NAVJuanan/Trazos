@@ -13,13 +13,14 @@
 
 
 // function for styling texts
-@mixin text-style($size, $weight, $transform, $spacing, $height, $align) {
+@mixin text-style($size, $weight, $transform, $spacing, $height, $align, $color) {
     font-size: $size;
     font-weight: $weight;
     text-transform: $transform;
     letter-spacing: $spacing;
     line-height: $height;
     text-align: $align;
+    color: $color;
 }
 
 
@@ -77,7 +78,7 @@ body {
 
 .header__title {
     width: 30%;
-    @include text-style(1.3rem, 700, uppercase, .2rem, 1.5rem, left);
+    @include text-style(1.3rem, 700, uppercase, .2rem, 1.5rem, left, #ffffff);
 }
 
 .header__nav {
@@ -86,7 +87,7 @@ body {
 
 .header__nav-list {
     @include flexible(row, wrap, flex-start, center);
-    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem, left);
+    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem, left, #ffffff);
 }
 
 .header__nav-item {
@@ -108,7 +109,7 @@ body {
 
 .header__contact-list {
     @include flexible(row, nowrap, flex-end, center);
-    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem, left);
+    @include text-style(1rem, 700, capitalize, .1rem, 1.5rem, left, #ffffff);
 }
 
 .header__contact-item {
@@ -165,23 +166,22 @@ body {
 }
 
 .main__button {
-    color: #000000;
     background-color: #ffffff;
-    width: 20%;
     padding: 1rem;
     border-radius: 20px;
+    display: inline-flex;
     cursor: pointer;
-    @include text-style(1rem, 700, initial, 0, 1rem, left);
+    @include text-style(1rem, 700, initial, 0, 1rem, left, #000000);
 }
 
 .main__title {
     margin: 1rem 0;
-    @include text-style(6.5rem, 700, initial, .2rem, 7.5rem, left);
+    @include text-style(6.5rem, 700, initial, .2rem, 7.5rem, left, #ffffff);
 }
 
 .main__subtitle {
     margin: 1rem 0;
-    @include text-style(1.1rem, 700, initial, .1rem, 1.5rem, left);
+    @include text-style(1.1rem, 700, initial, .1rem, 1.5rem, left, #ffffff);
 }
 
 .main__top1 {
@@ -192,20 +192,17 @@ body {
 
     & .top1__text1 {
         padding: 1rem 0;
-        color: #000000;
-        @include text-style(1rem, 700, initial, 0, 1.5rem, left);
+        @include text-style(1rem, 700, initial, 0, 1.5rem, left, #000000);
     }
     
     & .top1__text2 {
         padding: 1rem 0;
-        color: #000000;
-        @include text-style(1.8rem, 700, initial, 0, 1.5rem, left);
+        @include text-style(1.8rem, 700, initial, 0, 1.5rem, left, #000000);
     }
     
     & .top1__text3 {
         padding: 1rem 0;
-        color: #a7a7a7;
-        @include text-style(1.2rem, 700, initial, 0, 1.5rem, left);
+        @include text-style(1.2rem, 700, initial, 0, 1.5rem, left, #a7a7a7);
     }
 }
 
@@ -217,8 +214,7 @@ body {
 
     & .top2__text {
         padding: 1rem 0;
-        color: #000000;
-        @include text-style(1rem, 700, initial, 0, 0, left);
+        @include text-style(1rem, 700, initial, 0, 0, left, #000000);
     }
 }
 
@@ -231,29 +227,25 @@ body {
     gap: 2rem;
 
     & .top3__text1 {
-        color: #000000;
-        @include text-style(1.9rem, 700, initial, 0, 2rem, left);
+        @include text-style(1.9rem, 700, initial, 0, 2rem, left, #000000);
         grid-column: 1 / 2;
         grid-row: 1 / 4;
     }
 
     & .top3__text2 {
-        color: #000000;
-        @include text-style(2.5rem, 700, initial, 0, 3rem, left);
+        @include text-style(2.5rem, 700, initial, 0, 3rem, left, #000000);
         grid-column: 3 / 7;
         grid-row: 1 / 2;
     }
 
     & .top3__text3 {
-        color: #555c62;
-        @include text-style(1.1rem, 700, initial, 0, 2rem, left);
+        @include text-style(1.1rem, 700, initial, 0, 2rem, left, #555c62);
         grid-column: 3 / 5;
         grid-row: 2 / 3;
     }
 
     & .top3__text4 {
-        color: #555c62;
-        @include text-style(1.1rem, 700, initial, 0, 2rem, left);
+        @include text-style(1.1rem, 700, initial, 0, 2rem, left, #555c62);
         grid-column: 5 / 7;
         grid-row: 2 / 3;
     }
@@ -268,30 +260,115 @@ body {
     gap: 2rem;
 
     & .top4__text1 {
-        color: #000000;
-        @include text-style(.9rem, 700, uppercase, 0, 1.2rem, left);
+        @include text-style(.9rem, 700, uppercase, 0, 1.2rem, left, #000000);
         grid-column: 2 / 4;
         grid-row: 1 / 2;
     }
 
     & .top4__text2 {
-        color: #000000;
-        @include text-style(1.6rem, 700, initial, 0, 3rem, left);
+        @include text-style(1.6rem, 700, initial, 0, 3rem, left, #000000);
+        cursor: pointer;
         grid-column: 2 / 4;
         grid-row: 2 / 3;
     }
 
     & .top4__text3 {
-        color: #000000;
-        @include text-style(1.6rem, 700, initial, 0, 3rem, left);
+        @include text-style(1.6rem, 700, initial, 0, 3rem, left, #000000);
+        cursor: pointer;
         grid-column: 2 / 4;
         grid-row: 3 / 4;
     }
 
     & .top4__text4 {
-        color: #000000;
-        @include text-style(1.6rem, 700, initial, 0, 3rem, left);
+        @include text-style(1.6rem, 700, initial, 0, 3rem, left, #000000);
+        cursor: pointer;
         grid-column: 2 / 4;
         grid-row: 4 / 5;
+    }
+}
+
+.main__center1 {
+    width: 100%;
+    padding: 35vh 0;
+    position: relative;
+    background-image: url("../assets/360-preview.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    & .center1__button {
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 20px;
+        display: inline-flex;
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        cursor: pointer;
+        @include text-style(1.2rem, 700, initial, 0, 1rem, left, #000000);
+    }
+}
+
+.main__center2 {
+    width: 80%;
+    margin: auto;
+    padding: 5rem 0;
+    @include flexible(row, nowrap, space-between, center);
+
+    & .center2__text {
+        padding: 1rem 0;
+        @include text-style(1rem, 700, initial, 0, 0, left, #000000);
+    }
+}
+
+.main__center3 {
+    width: 80%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+
+    & .center3__text1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    & .center3__text2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    
+    & .center3__title {
+        @include text-style(1.8rem, 700, initial, 0, 3rem, left, #000000);
+    }
+
+    & .center3__description {
+        width: 60%;
+        margin: 1rem 0;
+        @include text-style(1.1rem, 700, initial, 0, 2rem, left, #555c62);
+    }
+
+    & .center3__text3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+
+        & .center3__subtitle1 {
+            margin: 2rem 0;
+            @include text-style(.9rem, 700, uppercase, 0, 1.2rem, left, #000000);
+        }
+    
+        & .center3__subtitle2 {
+            margin: 2rem 0;
+            @include text-style(1.6rem, 700, initial, 0, 3rem, left, #000000);
+            cursor: pointer;
+        }
+    }
+
+    & .center3__img {
+        grid-column: 2 / 3;
+        grid-row: 1 / 5;
     }
 }
