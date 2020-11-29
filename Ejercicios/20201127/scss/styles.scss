@@ -148,9 +148,9 @@ body {
   
 .main__image {
     width: 100%;
-    padding: 30vh 0;
+    padding: 35vh 0;
     position: relative;
-    background-image: url("../assets/360-preview.webp");
+    background-image: url("../assets/360-offices.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -187,24 +187,111 @@ body {
 .main__top1 {
     width: 80%;
     margin: auto;
-    padding: 1rem 0;
+    padding: 3rem 0;
     @include flexible(row, nowrap, space-between, center);
+
+    & .top1__text1 {
+        padding: 1rem 0;
+        color: #000000;
+        @include text-style(1rem, 700, initial, 0, 1.5rem, left);
+    }
+    
+    & .top1__text2 {
+        padding: 1rem 0;
+        color: #000000;
+        @include text-style(1.8rem, 700, initial, 0, 1.5rem, left);
+    }
+    
+    & .top1__text3 {
+        padding: 1rem 0;
+        color: #a7a7a7;
+        @include text-style(1.2rem, 700, initial, 0, 1.5rem, left);
+    }
 }
 
-.top1__text1 {
-    padding: 1rem 0;
-    color: #000000;
-    @include text-style(1rem, 400, initial, 0, 1.5rem, left);
+.main__top2 {
+    width: 80%;
+    margin: auto;
+    padding: 3rem 0;
+    @include flexible(row, nowrap, space-between, center);
+
+    & .top2__text {
+        padding: 1rem 0;
+        color: #000000;
+        @include text-style(1rem, 700, initial, 0, 0, left);
+    }
 }
 
-.top1__text2 {
-    padding: 1rem 0;
-    color: #000000;
-    @include text-style(1.8rem, 700, initial, 0, 1.5rem, left);
+.main__top3 {
+    width: 80%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+
+    & .top3__text1 {
+        color: #000000;
+        @include text-style(1.9rem, 700, initial, 0, 2rem, left);
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+    }
+
+    & .top3__text2 {
+        color: #000000;
+        @include text-style(2.5rem, 700, initial, 0, 3rem, left);
+        grid-column: 3 / 7;
+        grid-row: 1 / 2;
+    }
+
+    & .top3__text3 {
+        color: #555c62;
+        @include text-style(1.1rem, 700, initial, 0, 2rem, left);
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    }
+
+    & .top3__text4 {
+        color: #555c62;
+        @include text-style(1.1rem, 700, initial, 0, 2rem, left);
+        grid-column: 5 / 7;
+        grid-row: 2 / 3;
+    }
 }
 
-.top1__text3 {
-    padding: 1rem 0;
-    color: #a7a7a7;
-    @include text-style(1.2rem, 400, initial, 0, 1.5rem, left);
+.main__top4 {
+    width: 80%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+
+    & .top4__text1 {
+        color: #000000;
+        @include text-style(.9rem, 700, uppercase, 0, 1.2rem, left);
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+    }
+
+    & .top4__text2 {
+        color: #000000;
+        @include text-style(1.6rem, 700, initial, 0, 3rem, left);
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    & .top4__text3 {
+        color: #000000;
+        @include text-style(1.6rem, 700, initial, 0, 3rem, left);
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+    }
+
+    & .top4__text4 {
+        color: #000000;
+        @include text-style(1.6rem, 700, initial, 0, 3rem, left);
+        grid-column: 2 / 4;
+        grid-row: 4 / 5;
+    }
 }
