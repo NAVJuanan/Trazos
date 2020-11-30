@@ -31,6 +31,11 @@ img, video {
   object-fit: cover;
 }
 
+iframe {
+  width: 100%;
+  display: block;
+}
+
 form, input, textarea, select, option {
   font-size: inherit;
   font-family: inherit;
