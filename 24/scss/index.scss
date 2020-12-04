@@ -71,6 +71,12 @@ body {
 }
 
 
+// importar fuente descargada
+@font-face {
+    font-family: "Mandalorian Custom"; // damos nombre a la fuente
+    src: url("../font/mandaloretitle.ttf"); // ruta local de la fuente
+}
+
 // css body
 body {
     // necesario para contener el banner
@@ -79,6 +85,7 @@ body {
     height: 300px;
     overflow: hidden;
 
+    font-family: "Mandalorian Custom"; // uso de la fuente descargada
     background-color: #ffffff;
 }
 

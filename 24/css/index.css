@@ -58,11 +58,16 @@ body {
   display: block;
 }
 
+@font-face {
+  font-family: "Mandalorian Custom";
+  src: url("../font/mandaloretitle.ttf");
+}
 body {
   position: relative;
   width: 300px;
   height: 300px;
   overflow: hidden;
+  font-family: "Mandalorian Custom";
   background-color: #ffffff;
 }
 
