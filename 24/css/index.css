@@ -61,6 +61,7 @@ body {
 @font-face {
   font-family: "Mandalorian Custom";
   src: url("../font/mandaloretitle.ttf");
+  font-display: swap;
 }
 body {
   position: relative;
@@ -81,13 +82,22 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  animation: calltoappear 5s ease 1 both;
 }
 
+@keyframes calltoappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #caltoaction {
   position: absolute;
   bottom: 5%;
   right: 3%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -97,11 +107,9 @@ body {
 
 @keyframes calltoaction {
   from {
-    opacity: 0;
     transform: translateY(100%);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }

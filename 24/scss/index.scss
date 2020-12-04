@@ -75,7 +75,9 @@ body {
 @font-face {
     font-family: "Mandalorian Custom"; // damos nombre a la fuente
     src: url("../font/mandaloretitle.ttf"); // ruta local de la fuente
+    font-display: swap; // optimizamos la carga de la fuente
 }
+
 
 // css body
 body {
@@ -85,7 +87,7 @@ body {
     height: 300px;
     overflow: hidden;
 
-    font-family: "Mandalorian Custom"; // uso de la fuente descargada
+    font-family: "Mandalorian Custom"; // usamos la fuente
     background-color: #ffffff;
 }
 
@@ -102,29 +104,40 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+
+    // animación para que aparezca el fondo
+    animation: calltoappear 5s ease 1 both;
 }
+
+@keyframes calltoappear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 #caltoaction {
     position: absolute;
     bottom: 5%;
     right: 3%;
-    padding: .8rem;
+    padding: .9rem;
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     background-color: #e6d8d8;
 
-    // animación para que aparezca desde abajo
+    // animación para que se mueva desde abajo el botón
     animation: calltoaction 2s ease 1 both;
 }
 
 @keyframes calltoaction {
     from {
-        opacity: 0;
         transform: translateY(100%)
     }
     to {
-        opacity: 1;
         transform: translateY(0);
     }
 }
