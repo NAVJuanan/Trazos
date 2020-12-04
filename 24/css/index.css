@@ -101,6 +101,7 @@ body, #ad {
   padding: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
+  border: 1px solid #000000;
   background-color: #e6d8d8;
   animation: calltoaction 2s ease 1 both;
 }
