@@ -63,12 +63,13 @@ body {
   src: url("../font/mandaloretitle.ttf");
   font-display: swap;
 }
-body {
+body, #ad {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   overflow: hidden;
   font-family: "Mandalorian Custom";
+  font-size: 1.5rem;
   background-color: #ffffff;
 }
 
@@ -98,7 +99,6 @@ body {
   bottom: 5%;
   right: 3%;
   padding: 0.9rem;
-  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   background-color: #e6d8d8;

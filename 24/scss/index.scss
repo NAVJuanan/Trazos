@@ -79,23 +79,23 @@ body {
 }
 
 
-// css body
-body {
-    // necesario para contener el banner
+// css body & banner
+body, #ad {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
 
     font-family: "Mandalorian Custom"; // usamos la fuente
+    font-size: 1.5rem; // recomendable dar el tamaño de fuente en el contenedor
+
     background-color: #ffffff;
 }
 
-
-// banner
 #ad {
     background-color: orange;
 }
+
 
 #bn {
     width: 100%;
@@ -124,7 +124,6 @@ body {
     bottom: 5%;
     right: 3%;
     padding: .9rem;
-    font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     background-color: #e6d8d8;
