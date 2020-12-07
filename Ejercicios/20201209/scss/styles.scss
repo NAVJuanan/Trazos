@@ -1,0 +1,75 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: initial;
+}
+
+
+// function for styling texts
+@mixin text-style($size, $weight, $transform, $spacing, $height, $align, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    text-transform: $transform;
+    letter-spacing: $spacing;
+    line-height: $height;
+    text-align: $align;
+    color: $color;
+}
+
+
+// css body
+body {
+    font-family: sans-serif;
+    background-color: khaki;
+}
+
+
+// css header
+.header {
+    width: 100%;
+
+    & .header__container {
+        width: 98%;
+        max-width: 1600px;
+        min-height: 10vh;
+        margin: auto;
+    
+        @include flexible(row, nowrap, space-between, center);
+    
+        & .header__title {
+            @include text-style(2rem, 700, initial, .1rem, 1.5rem, left, #ffffff);
+        }
+        
+        & .header__nav {
+        
+            & .header__nav-list {
+                @include flexible(row, nowrap, flex-end, center);
+                @include text-style(1rem, 400, initial, .1rem, 1rem, left, #000000);
+            
+                & .header__nav-item {
+                    margin-right: .1rem;
+                    padding: 1rem;
+                    border: 1px solid gray;
+                    border-radius: 10px;
+                    background-color: #ffffff;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background-color: lightgray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// css form
