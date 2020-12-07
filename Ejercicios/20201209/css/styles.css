@@ -67,9 +67,9 @@ body {
   width: 100%;
 }
 .header .header__container {
-  width: 98%;
+  width: 95%;
   max-width: 1600px;
-  min-height: 10vh;
+  min-height: 6vh;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -102,12 +102,23 @@ body {
 }
 .header .header__container .header__nav .header__nav-list .header__nav-item {
   margin-right: 0.1rem;
-  padding: 1rem;
+  padding: 0.8rem;
   border: 1px solid gray;
   border-radius: 10px;
   background-color: #ffffff;
   cursor: pointer;
 }
 .header .header__container .header__nav .header__nav-list .header__nav-item:hover {
+  background-color: lightgray;
+}
+
+.main {
+  width: 100%;
+}
+.main .main__form {
+  width: 25%;
+  max-width: 600px;
+  min-height: 30rem;
+  margin: 10rem;
   background-color: lightgray;
 }

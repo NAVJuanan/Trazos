@@ -36,9 +36,9 @@ body {
     width: 100%;
 
     & .header__container {
-        width: 98%;
+        width: 95%;
         max-width: 1600px;
-        min-height: 10vh;
+        min-height: 6vh;
         margin: auto;
     
         @include flexible(row, nowrap, space-between, center);
@@ -55,7 +55,7 @@ body {
             
                 & .header__nav-item {
                     margin-right: .1rem;
-                    padding: 1rem;
+                    padding: .8rem;
                     border: 1px solid gray;
                     border-radius: 10px;
                     background-color: #ffffff;
@@ -73,3 +73,14 @@ body {
 
 
 // css form
+.main {
+    width: 100%;
+
+    & .main__form {
+        width: 25%;
+        max-width: 600px;
+        min-height: 30rem;
+        margin: 10rem;
+        background-color: lightgray;
+    }
+}
