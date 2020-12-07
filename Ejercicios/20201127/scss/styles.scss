@@ -25,11 +25,11 @@
 
 
 //function for underline/strike initial effect
-@mixin text-initial-effect($bottom) {
+@mixin text-initial-effect($bottom, $color) {
     content: "";
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
+    background-color: $color;
 
     display: flex;
     position: absolute;
@@ -74,6 +74,10 @@ body {
     z-index: 1;
     background-color: transparent;
     @include flexible(row, nowrap, space-between, center);
+
+    @media screen and (max-width:960px) {
+        display: none;
+    }
 }
 
 .header__title {
@@ -95,7 +99,7 @@ body {
     position: relative;
 
     &::after {
-        @include text-initial-effect(0px);
+        @include text-initial-effect(0px,  #ffffff);
     }
 
     &:hover::after {    
@@ -120,7 +124,7 @@ body {
     &--underline {
 
         &::after {
-            @include text-initial-effect(0px);
+            @include text-initial-effect(0px,  #ffffff);
         }
 
         &:hover::after {    
@@ -132,13 +136,43 @@ body {
     &--strike {
 
         &::after {
-            @include text-initial-effect(10px);
+            @include text-initial-effect(10px,  #ffffff);
         }
 
         &:hover::after {    
             @include text-ending-effect();
         }
     }
+}
+
+.header__div-icon {
+    display: none;
+
+    @media screen and (max-width:960px) {
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        z-index: 1;
+        background-color: transparent;
+        @include flexible(row, nowrap, flex-start, center);
+    }
+}
+
+.header__icon {
+    width: 20%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header__icon-title {
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
 }
 
 
@@ -148,39 +182,55 @@ body {
   }
   
 .main__video {
+    width: 100%;
+    min-height: 60rem;
     position: relative;
+    overflow: hidden;
+}
+
+.main__movie {
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
 }
 
 .main__text {
     width: 90%;
-    position: absolute;
-    top: 20%;
-    left: 10%;
-}
+    position: relative;
+    padding: 10rem;
 
-.main__button {
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 20px;
-    display: inline-flex;
-    cursor: pointer;
-    @include text-style(1rem, 700, initial, 0, 1rem, left, #000000);
-}
-
-.main__title {
-    margin: 1rem 0;
-    @include text-style(6.5rem, 700, initial, .2rem, 7.5rem, left, #ffffff);
-}
-
-.main__subtitle {
-    margin: 1rem 0;
-    @include text-style(1.1rem, 700, initial, .1rem, 1.5rem, left, #ffffff);
+    & .main__button {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 20px;
+        display: inline-flex;
+        cursor: pointer;
+        @include text-style(1rem, 700, initial, 0, 1rem, left, #000000);
+    }
+    
+    & .main__title {
+        margin: 1rem 0;
+        @include text-style(6.5rem, 700, initial, .2rem, 7.5rem, left, #ffffff);
+    }
+    
+    & .main__subtitle {
+        margin: 1rem 0;
+        @include text-style(1.1rem, 700, initial, .1rem, 1.5rem, left, #ffffff);
+    }
 }
 
 .main__top1 {
     width: 80%;
     margin: auto;
-    padding: 3rem 0;
+    padding-left: 10rem;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    cursor: pointer;
+    background-color: #ffffff;
+
     @include flexible(row, nowrap, space-between, center);
 
     & .top1__text1 {
@@ -191,12 +241,31 @@ body {
     & .top1__text2 {
         padding: 1rem 0;
         @include text-style(1.8rem, 700, initial, 0, 1.5rem, left, #000000);
+        position: relative;
+
+        &::after {
+            @include text-initial-effect(0px, #000000);
+        }
+
+        &:hover::after {    
+            @include text-ending-effect();
+        }
     }
     
     & .top1__text3 {
         padding: 1rem 0;
         @include text-style(1.2rem, 700, initial, 0, 1.5rem, left, #a7a7a7);
     }
+
+    & .top1__text3--black {
+        padding: 1rem 0;
+        @include text-style(1.2rem, 700, initial, 0, 1.5rem, left, #000000);
+    }
+
+    .opacity-effect {
+        opacity: .5;
+    }
+    
 }
 
 .main__top2 {
