@@ -25,8 +25,26 @@
         </div>
     </header>
     <main class="main">
-        <div class="main__form">
-
+        <div class="main__form-container">
+            <form class="main__form" action="#" method="post" enctype="multipart/form-data">
+                <div class="form__container form__file form__separator">
+                    <label for="userFile">Añade tus archivos</label>
+                    <input type="file" name="user_file" id="userFile">
+                </div>
+                <div class="form__container form__input form__separator">
+                    <label for="emailTo">Enviar email a</label>
+                    <input type="text" name="email_to" id="emailTo" value="" pattern="[A-Za-z0-9]+" required>
+                </div>
+                <div class="form__container form__input form__separator">
+                    <label for="emailFrom">Tu email</label>
+                    <input type="text" name="email_from" id="emailFrom" value="" pattern="[A-Za-z0-9]+" required>
+                </div>
+                <div class="form__container form__textarea form__separator">
+                    <label for="areaComments">Mensaje</label>
+                    <textarea name="area_comments" id="areaComments" cols="30" rows="4" autofocus></textarea>
+                </div>
+                <div class="form__container form__submit"><input type="submit" value="Enviar"></div>
+            </form>
         </div>
     </main>
 </body>
