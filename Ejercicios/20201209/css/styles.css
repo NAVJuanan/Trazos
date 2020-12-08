@@ -160,8 +160,10 @@ body {
 .main .main__form .form__input .label--focus {
   font-size: 0.7rem;
 }
-.main .main__form .form__input [type=input] {
+.main .main__form .form__input [type=text] {
+  width: 100%;
   padding-top: 1rem;
+  padding-bottom: 0.1rem;
 }
 .main .main__form .form__textarea label {
   margin-left: 1rem;
@@ -173,6 +175,7 @@ body {
   font-size: 0.7rem;
 }
 .main .main__form .form__textarea textarea {
+  width: 100%;
   padding: 0 1rem;
 }
 .main .main__form .form__submit {
@@ -180,15 +183,21 @@ body {
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   align-content: initial;
 }
 .main .main__form .form__submit [type=submit] {
-  width: 40%;
+  width: 50%;
   padding: 1rem 3rem;
+  margin-left: 2rem;
+  border-radius: 10px;
   color: #ffffff;
   font-weight: 700;
-  border-radius: 10px;
   background-color: lightgray;
+  cursor: pointer;
+}
+.main .main__form .form__submit .fa-pause-circle {
+  font-size: 2rem;
+  cursor: pointer;
 }
