@@ -116,8 +116,12 @@ body {
 
             & label {
                 color: #6a6d70;
-                font-size: .875rem;
+                font-size: .9rem;
                 padding: .8rem 0;
+            }
+
+            & .label--focus {
+                font-size: .7rem;
             }
 
             & [type=input] {
@@ -130,10 +134,14 @@ body {
             & label {
                 margin-left: 1rem;
                 color: #6a6d70;
-                font-size: .875rem;
+                font-size: .9rem;
                 padding: .8rem 0;
             }
 
+            & .label--focus {
+                font-size: .7rem;
+            }
+            
             & textarea {
                 padding: 0 1rem;
             }

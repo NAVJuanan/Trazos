@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="js/app.js"></script>
     <title>WeTransfer 09.12.2020</title>
     <!-- https://wetransfer.com/ -->
 </head>
@@ -32,19 +34,19 @@
                     <input type="file" name="user_file" id="userFile">
                 </div>
                 <div class="form__container form__input form__separator">
-                    <label for="emailTo">Enviar email a</label>
+                    <label for="emailTo" id="emailToLabel">Enviar email a</label>
                     <input type="text" name="email_to" id="emailTo" value="" pattern="[A-Za-z0-9]+" required>
                 </div>
                 <div class="form__container form__input form__separator">
-                    <label for="emailFrom">Tu email</label>
+                    <label for="emailFrom" id="emailFromLabel">Tu email</label>
                     <input type="text" name="email_from" id="emailFrom" value="" pattern="[A-Za-z0-9]+" required>
                 </div>
                 <div class="form__container form__textarea form__separator">
-                    <label for="areaComments">Mensaje</label>
+                    <label for="areaComments" id="areaCommentsLabel">Mensaje</label>
                     <textarea name="area_comments" id="areaComments" cols="30" rows="4" autofocus></textarea>
                 </div>
                 <div class="form__container form__submit">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value="">
                     <input type="submit" value="Enviar">
                 </div>
             </form>

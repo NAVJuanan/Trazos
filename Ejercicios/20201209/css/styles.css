@@ -154,8 +154,11 @@ body {
 }
 .main .main__form .form__input label {
   color: #6a6d70;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   padding: 0.8rem 0;
+}
+.main .main__form .form__input .label--focus {
+  font-size: 0.7rem;
 }
 .main .main__form .form__input [type=input] {
   padding-top: 1rem;
@@ -163,8 +166,11 @@ body {
 .main .main__form .form__textarea label {
   margin-left: 1rem;
   color: #6a6d70;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   padding: 0.8rem 0;
+}
+.main .main__form .form__textarea .label--focus {
+  font-size: 0.7rem;
 }
 .main .main__form .form__textarea textarea {
   padding: 0 1rem;
