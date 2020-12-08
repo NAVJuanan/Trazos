@@ -90,7 +90,7 @@ body {
 
         & .form__container {
             width: 100%;
-            padding: 1rem 0;
+            padding: .2rem 0;
             @include flexible(column, nowrap, center, flex-start);
         }
 
@@ -113,25 +113,44 @@ body {
         & .form__input {
             width: 90%;
             margin: auto;
+
+            & label {
+                color: #6a6d70;
+                font-size: .875rem;
+                padding: .8rem 0;
+            }
+
+            & [type=input] {
+                padding-top: 1rem;
+            }
         }
 
         & .form__textarea {
+
             & label {
                 margin-left: 1rem;
+                color: #6a6d70;
+                font-size: .875rem;
+                padding: .8rem 0;
+            }
+
+            & textarea {
+                padding: 0 1rem;
             }
         }
 
         & .form__submit {
-            width: 40%;
-            padding: 1rem 3rem;
-            border-radius: 20px;
-            text-align: center;
-            margin: 1rem auto;        
-            background-color: lightgray;
+            width: 90%;     
+            margin: auto;
+            @include flexible(row, nowrap, space-between, center);
 
             & [type=submit] {
+                width: 40%;
+                padding: 1rem 3rem;
                 color: #ffffff;
                 font-weight: 700;
+                border-radius: 10px;
+                background-color: lightgray;
             }
         }
     }

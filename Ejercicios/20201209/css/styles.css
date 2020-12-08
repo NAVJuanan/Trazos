@@ -128,7 +128,7 @@ body {
 }
 .main .main__form .form__container {
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.2rem 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -152,18 +152,37 @@ body {
   width: 90%;
   margin: auto;
 }
+.main .main__form .form__input label {
+  color: #6a6d70;
+  font-size: 0.875rem;
+  padding: 0.8rem 0;
+}
+.main .main__form .form__input [type=input] {
+  padding-top: 1rem;
+}
 .main .main__form .form__textarea label {
   margin-left: 1rem;
+  color: #6a6d70;
+  font-size: 0.875rem;
+  padding: 0.8rem 0;
+}
+.main .main__form .form__textarea textarea {
+  padding: 0 1rem;
 }
 .main .main__form .form__submit {
-  width: 40%;
-  padding: 1rem 3rem;
-  border-radius: 20px;
-  text-align: center;
-  margin: 1rem auto;
-  background-color: lightgray;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: initial;
 }
 .main .main__form .form__submit [type=submit] {
+  width: 40%;
+  padding: 1rem 3rem;
   color: #ffffff;
   font-weight: 700;
+  border-radius: 10px;
+  background-color: lightgray;
 }
