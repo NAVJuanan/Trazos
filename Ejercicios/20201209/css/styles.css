@@ -148,6 +148,37 @@ body {
   bottom: 0;
   left: 0;
 }
+.main .main__form .form__file {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: initial;
+}
+.main .main__form .form__file .form__file--button {
+  margin-left: 1rem;
+}
+.main .main__form .form__file .form__file--button #userFileLabel {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.main .main__form .form__file .form__file--button #userFile {
+  cursor: pointer;
+}
+.main .main__form .form__file .form__file--button #userFile:hover {
+  color: blue;
+}
+.main .main__form .form__file .fa-plus-circle {
+  font-size: 2rem;
+  color: blue;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.main .main__form .form__file .fa-plus-circle:hover {
+  opacity: 1;
+}
 .main .main__form .form__input {
   width: 90%;
   margin: auto;
@@ -199,5 +230,10 @@ body {
 }
 .main .main__form .form__submit .fa-pause-circle {
   font-size: 2rem;
+  color: blue;
+  opacity: 0.5;
   cursor: pointer;
+}
+.main .main__form .form__submit .fa-pause-circle:hover {
+  opacity: 1;
 }

@@ -110,6 +110,39 @@ body {
             }
         }
 
+        & .form__file {
+            width: 100%;
+            padding: 2rem 1rem;
+            @include flexible(row, nowrap, space-between, center);
+
+            & .form__file--button {
+                margin-left: 1rem;
+                                        
+                & #userFileLabel {
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+    
+                & #userFile {
+                    cursor: pointer;
+                    &:hover {
+                        color: blue;
+                    }
+                }
+            }
+
+            & .fa-plus-circle {
+                font-size: 2rem;
+                color: blue;
+                opacity: .5;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
         & .form__input {
             width: 90%;
             margin: auto;
@@ -168,7 +201,13 @@ body {
 
             & .fa-pause-circle {
                 font-size: 2rem;
+                color: blue;
+                opacity: .5;
                 cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }

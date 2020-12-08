@@ -31,8 +31,11 @@
         <div class="main__form-container">
             <form class="main__form" action="#" method="post" enctype="multipart/form-data">
                 <div class="form__container form__file form__separator">
-                    <label for="userFile">Añade tus archivos</label>
-                    <input type="file" name="user_file" id="userFile">
+                    <div class="fas fa-plus-circle"></div>
+                    <div class="form__file--button">
+                        <label for="userFile" id="userFileLabel">Añade tus archivos</label>
+                        <input type="file" name="user_file" id="userFile">
+                    </div>
                 </div>
                 <div class="form__container form__input form__separator">
                     <label for="emailTo" id="emailToLabel">Enviar email a</label>
