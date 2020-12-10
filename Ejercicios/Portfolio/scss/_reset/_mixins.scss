@@ -1,0 +1,9 @@
+/*** css mixins ***/
+
+@mixin flexible($flex-direction, $flex-wrap, $justify-content, $align-item, $align-content) {
+    align-content: $align-content;
+    align-items: $align-item;
+    display: flex;
+    flex-flow: $flex-direction $flex-wrap;
+	justify-content: $justify-content;
+}
