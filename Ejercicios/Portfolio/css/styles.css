@@ -1,0 +1,104 @@
+/*** css import ***/
+/*** css vars import ***/
+/*** css vars ***/
+/*** css reset ***/
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+a {
+  color: inherit;
+  display: flex;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+audio {
+  display: flex;
+}
+
+body {
+  font: normal normal normal 100%/140% "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+  font-smooth: always;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+form input, form textarea, form select, form option {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  display: block;
+  font: normal normal normal 100%/140% "Helvetica", Arial, sans-serif;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+iframe {
+  width: 100%;
+  display: block;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+video {
+  display: flex;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: auto;
+}
+
+/*** css vars ***/
+/*** css mixins ***/
+/*** css keyframes ***/
+/*** css body ***/
+body {
+  background-color: khaki;
+}
+
+/*** css header ***/
