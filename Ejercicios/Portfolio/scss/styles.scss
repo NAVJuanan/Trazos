@@ -2,10 +2,57 @@
 @import "_reset/reset", "_reset/vars", "_reset/mixins", "_reset/keyframes";
 
 
+/*** fonts import ***/
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(../assets/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-ExtraBold";
+    src: url(../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+
 /*** css body ***/
 body {
-    background-color: khaki;
+    background-color: #ffffff;
+    font-family: "Montserrat-Regular", sans-serif;
 }
 
 
 /*** css header ***/
+.header {
+    width: 100%;
+    background-color: yellow;
+
+    & .header__container {
+        margin: auto;
+        max-width: 1200px;
+        width: 80%;
+        background-color: aquamarine;
+
+        & .header__nav {
+            width: 100%;
+            background-color: azure;
+
+            & .header__list {
+                line-height: 2rem;
+                width: 100%;
+                background-color: burlywood;
+
+                @include flexible(row, nowrap, space-around, center, initial);
+            
+                & .header__item {
+                    width: 100%;
+                    background-color: cadetblue;
+                }
+            }
+        }
+    }
+}

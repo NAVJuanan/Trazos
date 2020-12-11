@@ -96,9 +96,51 @@ video {
 /*** css vars ***/
 /*** css mixins ***/
 /*** css keyframes ***/
+/*** fonts import ***/
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(../assets/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url(../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
 /*** css body ***/
 body {
-  background-color: khaki;
+  background-color: #ffffff;
+  font-family: "Montserrat-Regular", sans-serif;
 }
 
 /*** css header ***/
+.header {
+  width: 100%;
+  background-color: yellow;
+}
+.header .header__container {
+  margin: auto;
+  max-width: 1200px;
+  width: 80%;
+  background-color: aquamarine;
+}
+.header .header__container .header__nav {
+  width: 100%;
+  background-color: azure;
+}
+.header .header__container .header__nav .header__list {
+  line-height: 2rem;
+  width: 100%;
+  background-color: burlywood;
+  align-content: initial;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.header .header__container .header__nav .header__list .header__item {
+  width: 100%;
+  background-color: cadetblue;
+}
