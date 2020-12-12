@@ -118,31 +118,27 @@ body {
 /*** css header ***/
 .header {
   width: 100%;
-  background-color: yellow;
 }
 .header .header__container {
   line-height: 2rem;
   margin: auto;
   max-width: 1200px;
+  min-height: 10vh;
   width: 80%;
-  background-color: aquamarine;
   align-content: initial;
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
 .header .header__container .header__title {
   width: 20%;
-  background-color: bisque;
 }
 .header .header__container .header__nav {
   width: 80%;
-  background-color: azure;
 }
 .header .header__container .header__nav .header__list {
   width: 100%;
-  background-color: burlywood;
   align-content: initial;
   align-items: center;
   display: flex;
@@ -150,13 +146,20 @@ body {
   justify-content: space-around;
 }
 .header .header__container .header__nav .header__list .header__item {
-  padding: 0 0.5rem;
+  color: #3c9da7;
+  font-family: "Montserrat-Bold", sans-serif;
+  letter-spacing: 0.1rem;
+  padding: 0 0.2rem;
   position: relative;
-  background-color: cadetblue;
+  text-transform: lowercase;
+  transition: all 0.4s ease;
+}
+.header .header__container .header__nav .header__list .header__item:hover {
+  transform: scale(1.1);
 }
 .header .header__container .header__nav .header__list .header__item::after {
   content: "";
-  background-color: #ffffff;
+  background-color: #3c9da7;
   bottom: 0;
   display: flex;
   height: 2px;
@@ -170,4 +173,20 @@ body {
 .header .header__container .header__nav .header__list .header__item:hover::after {
   transform: scaleX(1);
   transform-origin: right;
+}
+
+/*** css main ***/
+.main {
+  width: 100%;
+}
+.main .main__who {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 10vh;
+  width: 80%;
+  align-content: initial;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
 }

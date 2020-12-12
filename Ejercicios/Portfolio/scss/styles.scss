@@ -12,39 +12,43 @@ body {
 /*** css header ***/
 .header {
     width: 100%;
-    background-color: yellow;
 
     & .header__container {
         line-height: 2rem;
         margin: auto;
         max-width: 1200px;
+        min-height: 10vh;
         width: 80%;
-        background-color: aquamarine;
 
-        @include flexible(row, nowrap, space-between, center, initial);
+        @include flexible(row, nowrap, space-between, flex-end, initial);
 
         & .header__title {
             width: 20%;
-            background-color: bisque;
         }
 
         & .header__nav {
             width: 80%;
-            background-color: azure;
 
             & .header__list {
                 width: 100%;
-                background-color: burlywood;
 
                 @include flexible(row, nowrap, space-around, center, initial);
             
                 & .header__item {
-                    padding: 0 .5rem;
+                    color: $main-color;
+                    font-family: "Montserrat-Bold", sans-serif;
+                    letter-spacing: .1rem;
+                    padding: 0 .2rem;
                     position: relative;
-                    background-color: cadetblue;
+                    text-transform: lowercase;
+                    transition: all .4s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
 
                     &::after {
-                        @include text-initial-effect(#ffffff);
+                        @include text-initial-effect($main-color);
                     }
                 
                     &:hover::after {    
@@ -53,5 +57,20 @@ body {
                 }
             }
         }
+    }
+}
+
+
+/*** css main ***/
+.main {
+    width: 100%;
+
+    & .main__who {
+        margin: auto;
+        max-width: 1200px;
+        min-height: 10vh;
+        width: 80%;
+
+        @include flexible(column, nowrap, space-around, center, initial);
     }
 }
