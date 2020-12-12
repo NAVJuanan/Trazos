@@ -1,9 +1,32 @@
 /*** css mixins ***/
 
+// function to display flex
 @mixin flexible($flex-direction, $flex-wrap, $justify-content, $align-item, $align-content) {
     align-content: $align-content;
     align-items: $align-item;
     display: flex;
     flex-flow: $flex-direction $flex-wrap;
 	justify-content: $justify-content;
+}
+
+// function for underline initial effect
+@mixin text-initial-effect($color) {
+    content: "";
+    background-color: $color;
+    bottom: 0;
+    display: flex;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all .4s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+}
+
+
+// function for underline ending effect
+@mixin  text-ending-effect {
+    transform: scaleX(1);
+    transform-origin: right;
 }
