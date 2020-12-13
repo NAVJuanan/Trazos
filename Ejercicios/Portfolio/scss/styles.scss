@@ -65,12 +65,44 @@ body {
 .main {
     width: 100%;
 
-    & .main__who {
+    & .main__bio {
         margin: auto;
         max-width: 1200px;
         min-height: 10vh;
         width: 80%;
 
-        @include flexible(column, nowrap, space-around, center, initial);
+        @include flexible(column, nowrap, space-around, flex-start, initial);
+    
+        & .bio__title, .bio__subtitle {
+            color: $secondary-color;
+            font-family: "Montserrat-ExtraBold", sans-serif;
+            font-size: 3rem;
+            line-height: 5rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        & .bio-rrss {
+            padding: 2.5rem 0;
+            width: 100%;
+            
+            & .bio-rrss__list {
+                width: 20%;
+
+                @include flexible(row, nowrap, space-between, flex-end, initial);
+
+                & .bio-rrss__item {
+                    color: $main-color;
+                    font-family: "Montserrat-Bold", sans-serif;
+                    font-size: 2rem;
+                    text-align: left;
+                    transition: all .4s ease;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+            }
+        }
     }
 }
