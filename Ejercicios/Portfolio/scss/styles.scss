@@ -33,7 +33,7 @@ body {
             & .header__list {
                 width: 100%;
 
-                @include flexible(row, nowrap, space-around, center, initial);
+                @include flexible(row, nowrap, space-evenly, center, initial);
             
                 & .header__item {
                     color: $main-color;
@@ -83,6 +83,14 @@ body {
             line-height: 5rem;
             text-align: left;
             width: 100%;
+
+            @media screen and (max-width:900px) {
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width:610px) {
+                font-size: 1.5rem;
+            }
         }
 
         /*** rrss ***/
@@ -94,6 +102,14 @@ body {
                 width: 20%;
 
                 @include flexible(row, nowrap, space-between, flex-end, initial);
+                
+                @media screen and (max-width:900px) {
+                    width: 30%;
+                }
+    
+                @media screen and (max-width:610px) {
+                    width: 40%;
+                }
 
                 & .bio-rrss__item {
                     color: $main-color;
@@ -121,6 +137,11 @@ body {
         min-height: 25vh;
         width: 80%;
 
+        @media screen and (max-width:900px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
         & .travel-section__item {
             position: relative;
 
@@ -131,10 +152,10 @@ body {
                     opacity: .2;
                 }
 
-                // subimos opacidad al texto para verlo
+                // subimos opacidad al texto para verlo y lo movemos
                 .travel-section__text {
                     opacity: .9;
-                    transform: translateX(25%);
+                    transform: translateX(30%);
                 }
 
                 // diferente movimiento en imágenes pequeñas
@@ -153,21 +174,41 @@ body {
         & .travel-section__item--venecia {
             grid-column: 3 / 4;
             grid-row: 1 / 2;
+
+            @media screen and (max-width:900px) {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
         }
 
         & .travel-section__item--paris {
             grid-column: 4 / 5;
             grid-row: 1 / 2;
+
+            @media screen and (max-width:900px) {
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+            }
         }
 
         & .travel-section__item--atenas {
             grid-column: 3 / 4;
             grid-row: 2 / 3;
+
+            @media screen and (max-width:900px) {
+                grid-column: 1 / 2;
+                grid-row: 4 / 5;
+            }
         }
 
         & .travel-section__item--londres {
             grid-column: 4 / 5;
             grid-row: 2 / 3;
+
+            @media screen and (max-width:900px) {
+                grid-column: 2 / 3;
+                grid-row: 4 / 5;
+            }
         }
 
         & .travel-section__img {

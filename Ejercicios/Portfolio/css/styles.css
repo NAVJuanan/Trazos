@@ -145,7 +145,7 @@ body {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .header .header__container .header__nav .header__list .header__item {
   color: #3c9da7;
@@ -204,6 +204,16 @@ body {
   text-align: left;
   width: 100%;
 }
+@media screen and (max-width: 900px) {
+  .main .main__bio .bio__title, .main .main__bio .bio__subtitle {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 610px) {
+  .main .main__bio .bio__title, .main .main__bio .bio__subtitle {
+    font-size: 1.5rem;
+  }
+}
 .main .main__bio .bio-rrss {
   padding: 2.5rem 0;
   width: 100%;
@@ -215,6 +225,16 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .main .main__bio .bio-rrss .bio-rrss__list {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 610px) {
+  .main .main__bio .bio-rrss .bio-rrss__list {
+    width: 40%;
+  }
 }
 .main .main__bio .bio-rrss .bio-rrss__list .bio-rrss__item {
   color: #3c9da7;
@@ -236,6 +256,12 @@ body {
   min-height: 25vh;
   width: 80%;
 }
+@media screen and (max-width: 900px) {
+  .main .main__travel {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 .main .main__travel .travel-section__item {
   position: relative;
 }
@@ -244,7 +270,7 @@ body {
 }
 .main .main__travel .travel-section__item:hover .travel-section__text {
   opacity: 0.9;
-  transform: translateX(25%);
+  transform: translateX(30%);
 }
 .main .main__travel .travel-section__item:hover .travel-section__text--small {
   transform: translateX(20%);
@@ -257,17 +283,41 @@ body {
   grid-column: 3/4;
   grid-row: 1/2;
 }
+@media screen and (max-width: 900px) {
+  .main .main__travel .travel-section__item--venecia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
 .main .main__travel .travel-section__item--paris {
   grid-column: 4/5;
   grid-row: 1/2;
+}
+@media screen and (max-width: 900px) {
+  .main .main__travel .travel-section__item--paris {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
 }
 .main .main__travel .travel-section__item--atenas {
   grid-column: 3/4;
   grid-row: 2/3;
 }
+@media screen and (max-width: 900px) {
+  .main .main__travel .travel-section__item--atenas {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
 .main .main__travel .travel-section__item--londres {
   grid-column: 4/5;
   grid-row: 2/3;
+}
+@media screen and (max-width: 900px) {
+  .main .main__travel .travel-section__item--londres {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
 }
 .main .main__travel .travel-section__img {
   transform: scale(1) rotate(0deg) translateY(0%);
