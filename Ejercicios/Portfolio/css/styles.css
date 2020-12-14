@@ -181,7 +181,8 @@ body {
 .main {
   width: 100%;
   /*** Bio ***/
-  /*** Viajes ***/
+  /*** Trabajo ***/
+  /*** Viaje ***/
 }
 .main .main__bio {
   margin: auto;
@@ -246,84 +247,311 @@ body {
 .main .main__bio .bio-rrss .bio-rrss__list .bio-rrss__item:hover {
   opacity: 0.7;
 }
-.main .main__travel {
+.main .main__career {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 10vh;
+  padding: 10rem 0;
+  width: 80%;
+  align-content: initial;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  /*** título ***/
+  /*** empresas ***/
+}
+.main .main__career .career__title {
+  color: #272636;
+  font-family: "Montserrat-ExtraBold", sans-serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  text-align: left;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 610px) {
+  .main .main__career .career__title {
+    font-size: 1.5rem;
+  }
+}
+.main .main__career .career__container {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 0.4fr);
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+.main .main__career .career__container .career-section__image {
+  padding: 1rem 2rem;
+  transition: all 0.4s ease;
+}
+.main .main__career .career__container .career-section__image:hover {
+  transform: scale(0.9);
+}
+.main .main__career .career__container .career-section__date {
+  color: #464647;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  padding-top: 1.3rem;
+  text-align: right;
+}
+.main .main__career .career__container .career-section__text {
+  padding-right: 2.5rem;
+  text-align: left;
+}
+.main .main__career .career__container .career-section__text .career-section__text--title {
+  color: #272636;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 1.2rem;
+}
+.main .main__career .career__container .career-section__text .career-section__text--subtitle {
+  color: #464647;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+.main .main__career .career__container .career-section__text .career-section__text--description {
+  color: #464647;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 0.9rem;
+}
+.main .main__career .career__container .career-section__item--prodware {
+  grid-column: 3/5;
+  grid-row: 1/2;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__item--prodware {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
+.main .main__career .career__container .career-section__date--prodware {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__date--prodware {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+.main .main__career .career__container .career-section__text--prodware {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__text--prodware {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+.main .main__career .career__container .career-section__item--attest {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__item--attest {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+.main .main__career .career__container .career-section__date--attest {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__date--attest {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
+.main .main__career .career__container .career-section__text--attest {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__text--attest {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+}
+.main .main__career .career__container .career-section__item--tecnocom {
+  grid-column: 3/5;
+  grid-row: 3/4;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__item--tecnocom {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+}
+.main .main__career .career__container .career-section__date--tecnocom {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__date--tecnocom {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+}
+.main .main__career .career__container .career-section__text--tecnocom {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__text--tecnocom {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+}
+.main .main__career .career__container .career-section__item--ibdos {
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__item--ibdos {
+    grid-column: 1/3;
+    grid-row: 7/8;
+  }
+}
+.main .main__career .career__container .career-section__date--ibdos {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__date--ibdos {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+}
+.main .main__career .career__container .career-section__text--ibdos {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+@media screen and (max-width: 900px) {
+  .main .main__career .career__container .career-section__text--ibdos {
+    grid-column: 2/3;
+    grid-row: 8/9;
+  }
+}
+.main .main__travel {
   margin: auto;
   max-width: 1200px;
   min-height: 25vh;
   width: 80%;
+  align-content: initial;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  /*** título ***/
+  /*** lugares ***/
+}
+.main .main__travel .travel__title {
+  color: #272636;
+  font-family: "Montserrat-ExtraBold", sans-serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  text-align: left;
+  width: 100%;
 }
 @media screen and (max-width: 900px) {
-  .main .main__travel {
+  .main .main__travel .travel__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 610px) {
+  .main .main__travel .travel__title {
+    font-size: 1.5rem;
+  }
+}
+.main .main__travel .travel__container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (max-width: 900px) {
+  .main .main__travel .travel__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
 }
-.main .main__travel .travel-section__item {
+.main .main__travel .travel__container .travel-section__item {
   position: relative;
 }
-.main .main__travel .travel-section__item:hover .travel-section__img {
+.main .main__travel .travel__container .travel-section__item:hover .travel-section__img {
   opacity: 0.2;
 }
-.main .main__travel .travel-section__item:hover .travel-section__text {
+.main .main__travel .travel__container .travel-section__item:hover .travel-section__text {
   opacity: 0.9;
   transform: translateX(30%);
 }
-.main .main__travel .travel-section__item:hover .travel-section__text--small {
+.main .main__travel .travel__container .travel-section__item:hover .travel-section__text--small {
   transform: translateX(20%);
 }
-.main .main__travel .travel-section__item--florencia {
+.main .main__travel .travel__container .travel-section__item--florencia {
   grid-column: 1/3;
   grid-row: 1/3;
 }
-.main .main__travel .travel-section__item--venecia {
+.main .main__travel .travel__container .travel-section__item--venecia {
   grid-column: 3/4;
   grid-row: 1/2;
 }
 @media screen and (max-width: 900px) {
-  .main .main__travel .travel-section__item--venecia {
+  .main .main__travel .travel__container .travel-section__item--venecia {
     grid-column: 1/2;
     grid-row: 3/4;
   }
 }
-.main .main__travel .travel-section__item--paris {
+.main .main__travel .travel__container .travel-section__item--paris {
   grid-column: 4/5;
   grid-row: 1/2;
 }
 @media screen and (max-width: 900px) {
-  .main .main__travel .travel-section__item--paris {
+  .main .main__travel .travel__container .travel-section__item--paris {
     grid-column: 2/3;
     grid-row: 3/4;
   }
 }
-.main .main__travel .travel-section__item--atenas {
+.main .main__travel .travel__container .travel-section__item--atenas {
   grid-column: 3/4;
   grid-row: 2/3;
 }
 @media screen and (max-width: 900px) {
-  .main .main__travel .travel-section__item--atenas {
+  .main .main__travel .travel__container .travel-section__item--atenas {
     grid-column: 1/2;
     grid-row: 4/5;
   }
 }
-.main .main__travel .travel-section__item--londres {
+.main .main__travel .travel__container .travel-section__item--londres {
   grid-column: 4/5;
   grid-row: 2/3;
 }
 @media screen and (max-width: 900px) {
-  .main .main__travel .travel-section__item--londres {
+  .main .main__travel .travel__container .travel-section__item--londres {
     grid-column: 2/3;
     grid-row: 4/5;
   }
 }
-.main .main__travel .travel-section__img {
+.main .main__travel .travel__container .travel-section__img {
   transform: scale(1) rotate(0deg) translateY(0%);
   transition: all 0.4s ease;
 }
-.main .main__travel .travel-section__text {
+.main .main__travel .travel__container .travel-section__text {
   color: #3c9da7;
   font-size: 2rem;
   height: 100%;
@@ -336,6 +564,6 @@ body {
   transition: transform 1.5s ease;
   width: 100%;
 }
-.main .main__travel .travel-section__text--small {
+.main .main__travel .travel__container .travel-section__text--small {
   font-size: 1.2rem;
 }
