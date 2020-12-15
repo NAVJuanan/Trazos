@@ -634,6 +634,7 @@ body {
   font-size: 1.2rem;
 }
 .main .main__contact {
+  border-bottom: 1px solid #3c9da7;
   margin: auto;
   max-width: 1200px;
   min-height: 25vh;
@@ -681,6 +682,9 @@ body {
   padding: 0 0 1rem 1rem;
   width: 80%;
 }
+.main .main__contact .contact__form .contact-form__input > label {
+  transition: all 0.4s ease;
+}
 .main .main__contact .contact__form .contact-form__input .label--focus {
   font-size: 0.8rem;
 }
@@ -695,6 +699,9 @@ body {
 .main .main__contact .contact__form .contact-form__textarea {
   padding: 0 0 1rem 1rem;
   width: 80%;
+}
+.main .main__contact .contact__form .contact-form__textarea > label {
+  transition: all 0.4s ease;
 }
 .main .main__contact .contact__form .contact-form__textarea .label--focus {
   font-size: 0.8rem;
@@ -734,6 +741,7 @@ body {
   margin: auto;
   max-width: 1200px;
   min-height: 8vh;
+  padding: 2.55rem 0;
   width: 80%;
   align-content: initial;
   align-items: center;

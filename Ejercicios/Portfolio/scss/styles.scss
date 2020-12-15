@@ -508,6 +508,7 @@ body {
 
     /*** Contacto ***/
     & .main__contact {
+        border-bottom: 1px solid $main-color;
         margin: auto;
         max-width: 1200px;
         min-height: 25vh;
@@ -548,6 +549,10 @@ body {
                 padding: 0 0 1rem 1rem;
                 width: 80%;
     
+                & > label {
+                    transition: all .4s ease;
+                }
+                
                 // efecto al hacer foco
                 & .label--focus {
                     font-size: .8rem;
@@ -566,6 +571,10 @@ body {
             & .contact-form__textarea {
                 padding: 0 0 1rem 1rem;
                 width: 80%;
+    
+                & > label {
+                    transition: all .4s ease;
+                }
 
                 // efecto al hacer foco
                 & .label--focus {
@@ -615,8 +624,9 @@ body {
         margin: auto;
         max-width: 1200px;
         min-height: 8vh;
+        padding: 2.55rem 0;
         width: 80%;
-
+        
         @include flexible(row, nowrap, space-between, center, initial);
 
         & .footer__title {
