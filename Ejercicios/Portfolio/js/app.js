@@ -11,4 +11,40 @@ $(document).ready(function () {
         closeEffect: 'fade',
         buttons: ["close"]
     });
+
+    // foco en el formulario
+    $("#firstName").focus(function () {
+        $("#firstNameLabel").addClass("label--focus");
+    });
+
+    $("#firstName").focusout(function () {
+        $("#firstNameLabel").removeClass("label--focus");
+    });
+
+
+    $("#lastName").focus(function () {
+        $("#lastNameLabel").addClass("label--focus");
+    });
+
+    $("#lastName").focusout(function () {
+        $("#lastNameLabel").removeClass("label--focus");
+    });
+
+
+    $("#email").focus(function () {
+        $("#emailLabel").addClass("label--focus");
+    });
+
+    $("#email").focusout(function () {
+        $("#emailLabel").removeClass("label--focus");
+    });
+
+
+    $("#areaComments").focus(function () {
+        $("#areaCommentsLabel").addClass("label--focus");
+    });
+
+    $("#areaComments").focusout(function () {
+        $("#areaCommentsLabel").removeClass("label--focus");
+    });
 });

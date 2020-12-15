@@ -135,7 +135,7 @@ body {
   line-height: 2rem;
   margin: auto;
   max-width: 1200px;
-  min-height: 10vh;
+  min-height: 8vh;
   width: 80%;
   align-content: initial;
   align-items: flex-end;
@@ -194,11 +194,13 @@ body {
   /*** Bio ***/
   /*** Trabajo ***/
   /*** Viaje ***/
+  /*** Contacto ***/
 }
 .main .main__bio {
   margin: auto;
   max-width: 1200px;
   min-height: 10vh;
+  padding-top: 10rem;
   width: 80%;
   align-content: initial;
   align-items: flex-start;
@@ -262,7 +264,7 @@ body {
   margin: auto;
   max-width: 1200px;
   min-height: 10vh;
-  padding: 10rem 0;
+  padding: 5rem 0;
   width: 80%;
   align-content: initial;
   align-items: flex-start;
@@ -277,7 +279,7 @@ body {
   font-family: "Montserrat-ExtraBold", sans-serif;
   font-size: 3rem;
   line-height: 5rem;
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   text-align: left;
   width: 100%;
 }
@@ -528,7 +530,7 @@ body {
   font-family: "Montserrat-ExtraBold", sans-serif;
   font-size: 3rem;
   line-height: 5rem;
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   text-align: left;
   width: 100%;
 }
@@ -630,4 +632,148 @@ body {
 }
 .main .main__travel .travel__container .travel-section__text--small {
   font-size: 1.2rem;
+}
+.main .main__contact {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 25vh;
+  padding: 5rem 0;
+  width: 80%;
+  align-content: initial;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  /*** título ***/
+  /*** formulario ***/
+}
+.main .main__contact .contact__title {
+  color: #272636;
+  font-family: "Montserrat-ExtraBold", sans-serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  padding: 2.5rem 0;
+  text-align: left;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .main .main__contact .contact__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 610px) {
+  .main .main__contact .contact__title {
+    font-size: 1.5rem;
+  }
+}
+.main .main__contact .contact__form {
+  color: #3c9da7;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  align-content: initial;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.main .main__contact .contact__form .contact-form__input {
+  padding: 0 0 1rem 1rem;
+  width: 80%;
+}
+.main .main__contact .contact__form .contact-form__input .label--focus {
+  font-size: 0.8rem;
+}
+.main .main__contact .contact__form .contact-form__input [type=text] {
+  background-color: #e6ecec;
+  border-bottom: 1px solid #3c9da7;
+  color: #3c9da7;
+  font-family: "Montserrat-Regular", sans-serif;
+  padding: 1rem 0.5rem 0.1rem;
+  width: 50%;
+}
+.main .main__contact .contact__form .contact-form__textarea {
+  padding: 0 0 1rem 1rem;
+  width: 80%;
+}
+.main .main__contact .contact__form .contact-form__textarea .label--focus {
+  font-size: 0.8rem;
+}
+.main .main__contact .contact__form .contact-form__textarea textarea {
+  background-color: #e6ecec;
+  border-bottom: 1px solid #3c9da7;
+  color: #3c9da7;
+  font-family: "Montserrat-Regular", sans-serif;
+  padding: 1rem 0.5rem 0.1rem;
+  width: 50%;
+}
+.main .main__contact .contact__form .contact-form__submit {
+  width: 40%;
+}
+.main .main__contact .contact__form .contact-form__submit [type=submit] {
+  background-color: #e6ecec;
+  border: 1px solid #3c9da7;
+  border-radius: 10px;
+  color: #3c9da7;
+  cursor: pointer;
+  font-family: "Montserrat-Bold", sans-serif;
+  margin-left: 1rem;
+  padding: 1rem 3rem;
+  transition: all 0.4s ease;
+}
+.main .main__contact .contact__form .contact-form__submit [type=submit]:hover {
+  transform: scale(1.1);
+}
+
+/*** css footer ***/
+.footer {
+  width: 100%;
+}
+.footer .footer__container {
+  line-height: 2rem;
+  margin: auto;
+  max-width: 1200px;
+  min-height: 8vh;
+  width: 80%;
+  align-content: initial;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /*** rrss ***/
+}
+.footer .footer__container .footer__title {
+  width: 20%;
+}
+.footer .footer__container .footer-rrss {
+  padding: 2.5rem 0;
+  width: 100%;
+}
+.footer .footer__container .footer-rrss .footer-rrss__list {
+  width: 20%;
+  align-content: initial;
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .footer .footer__container .footer-rrss .footer-rrss__list {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 610px) {
+  .footer .footer__container .footer-rrss .footer-rrss__list {
+    width: 40%;
+  }
+}
+.footer .footer__container .footer-rrss .footer-rrss__list .footer-rrss__item {
+  color: #3c9da7;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+.footer .footer__container .footer-rrss .footer-rrss__list .footer-rrss__item:hover {
+  opacity: 0.7;
 }
