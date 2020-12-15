@@ -218,12 +218,12 @@ body {
   text-align: left;
   width: 100%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__bio .bio__title, .main .main__bio .bio__subtitle {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 620px) {
   .main .main__bio .bio__title, .main .main__bio .bio__subtitle {
     font-size: 1.5rem;
   }
@@ -240,12 +240,12 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__bio .bio-rrss .bio-rrss__list {
     width: 30%;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 620px) {
   .main .main__bio .bio-rrss .bio-rrss__list {
     width: 40%;
   }
@@ -283,12 +283,12 @@ body {
   text-align: left;
   width: 100%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__title {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 620px) {
   .main .main__career .career__title {
     font-size: 1.5rem;
   }
@@ -301,7 +301,7 @@ body {
   position: relative;
   width: 100%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -337,7 +337,7 @@ body {
   position: absolute;
   width: 5px;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career__line {
     display: none;
   }
@@ -362,7 +362,7 @@ body {
   padding: 1.3rem 1rem 0;
   text-align: right;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__date {
     border-bottom: 1px solid #464647;
   }
@@ -371,7 +371,7 @@ body {
   padding-right: 2.5rem;
   text-align: left;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__text {
     border-bottom: 1px solid #464647;
   }
@@ -396,7 +396,7 @@ body {
   grid-column: 3/5;
   grid-row: 1/2;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__item--prodware {
     grid-column: 1/3;
     grid-row: 1/2;
@@ -406,7 +406,7 @@ body {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__date--prodware {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -416,7 +416,7 @@ body {
   grid-column: 4/5;
   grid-row: 2/3;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__text--prodware {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -426,7 +426,7 @@ body {
   grid-column: 1/3;
   grid-row: 2/3;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__item--attest {
     grid-column: 1/3;
     grid-row: 3/4;
@@ -436,7 +436,7 @@ body {
   grid-column: 1/2;
   grid-row: 3/4;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__date--attest {
     grid-column: 1/2;
     grid-row: 4/5;
@@ -446,7 +446,7 @@ body {
   grid-column: 2/3;
   grid-row: 3/4;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__text--attest {
     grid-column: 2/3;
     grid-row: 4/5;
@@ -456,7 +456,7 @@ body {
   grid-column: 3/5;
   grid-row: 3/4;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__item--tecnocom {
     grid-column: 1/3;
     grid-row: 5/6;
@@ -466,7 +466,7 @@ body {
   grid-column: 3/4;
   grid-row: 4/5;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__date--tecnocom {
     grid-column: 1/2;
     grid-row: 6/7;
@@ -476,7 +476,7 @@ body {
   grid-column: 4/5;
   grid-row: 4/5;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__text--tecnocom {
     grid-column: 2/3;
     grid-row: 6/7;
@@ -486,7 +486,7 @@ body {
   grid-column: 1/3;
   grid-row: 4/5;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__item--ibdos {
     grid-column: 1/3;
     grid-row: 7/8;
@@ -496,7 +496,7 @@ body {
   grid-column: 1/2;
   grid-row: 5/6;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__date--ibdos {
     grid-column: 1/2;
     grid-row: 8/9;
@@ -506,7 +506,7 @@ body {
   grid-column: 2/3;
   grid-row: 5/6;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__career .career__container .career-section__text--ibdos {
     grid-column: 2/3;
     grid-row: 8/9;
@@ -534,12 +534,12 @@ body {
   text-align: left;
   width: 100%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__travel .travel__title {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 620px) {
   .main .main__travel .travel__title {
     font-size: 1.5rem;
   }
@@ -550,7 +550,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__travel .travel__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -577,7 +577,7 @@ body {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__travel .travel__container .travel-section__item--venecia {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -587,7 +587,7 @@ body {
   grid-column: 4/5;
   grid-row: 1/2;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__travel .travel__container .travel-section__item--paris {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -597,7 +597,7 @@ body {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__travel .travel__container .travel-section__item--atenas {
     grid-column: 1/2;
     grid-row: 4/5;
@@ -607,7 +607,7 @@ body {
   grid-column: 4/5;
   grid-row: 2/3;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__travel .travel__container .travel-section__item--londres {
     grid-column: 2/3;
     grid-row: 4/5;
@@ -657,12 +657,12 @@ body {
   text-align: left;
   width: 100%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .main .main__contact .contact__title {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 620px) {
   .main .main__contact .contact__title {
     font-size: 1.5rem;
   }
@@ -696,6 +696,11 @@ body {
   padding: 1rem 0.5rem 0.1rem;
   width: 50%;
 }
+@media screen and (max-width: 930px) {
+  .main .main__contact .contact__form .contact-form__input [type=text] {
+    width: 100%;
+  }
+}
 .main .main__contact .contact__form .contact-form__textarea {
   padding: 0 0 1rem 1rem;
   width: 80%;
@@ -713,6 +718,11 @@ body {
   font-family: "Montserrat-Regular", sans-serif;
   padding: 1rem 0.5rem 0.1rem;
   width: 50%;
+}
+@media screen and (max-width: 930px) {
+  .main .main__contact .contact__form .contact-form__textarea textarea {
+    width: 100%;
+  }
 }
 .main .main__contact .contact__form .contact-form__submit {
   width: 40%;
@@ -765,12 +775,12 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .footer .footer__container .footer-rrss .footer-rrss__list {
     width: 30%;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 620px) {
   .footer .footer__container .footer-rrss .footer-rrss__list {
     width: 40%;
   }
