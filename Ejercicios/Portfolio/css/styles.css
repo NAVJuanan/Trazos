@@ -228,11 +228,11 @@ body {
     font-size: 1.5rem;
   }
 }
-.main .main__bio .bio-rrss {
+.main .main__bio .bio__rrss {
   padding: 2.5rem 0;
   width: 100%;
 }
-.main .main__bio .bio-rrss .bio-rrss__list {
+.main .main__bio .bio__rrss .bio-rrss__list {
   width: 20%;
   align-content: initial;
   align-items: flex-end;
@@ -241,23 +241,23 @@ body {
   justify-content: space-between;
 }
 @media screen and (max-width: 930px) {
-  .main .main__bio .bio-rrss .bio-rrss__list {
+  .main .main__bio .bio__rrss .bio-rrss__list {
     width: 30%;
   }
 }
 @media screen and (max-width: 620px) {
-  .main .main__bio .bio-rrss .bio-rrss__list {
+  .main .main__bio .bio__rrss .bio-rrss__list {
     width: 40%;
   }
 }
-.main .main__bio .bio-rrss .bio-rrss__list .bio-rrss__item {
+.main .main__bio .bio__rrss .bio-rrss__list .bio-rrss__item {
   color: #3c9da7;
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 2rem;
   text-align: left;
   transition: all 0.4s ease;
 }
-.main .main__bio .bio-rrss .bio-rrss__list .bio-rrss__item:hover {
+.main .main__bio .bio__rrss .bio-rrss__list .bio-rrss__item:hover {
   opacity: 0.7;
 }
 .main .main__career {
@@ -758,40 +758,79 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  /*** e-mail ***/
+  /*** github ***/
   /*** rrss ***/
 }
-.footer .footer__container .footer__title {
-  width: 20%;
+@media screen and (max-width: 930px) {
+  .footer .footer__container {
+    align-content: initial;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 }
-.footer .footer__container .footer-rrss {
+.footer .footer__container .footer__email {
+  padding-right: 2.5rem;
+  text-align: left;
+}
+.footer .footer__container .footer__email .footer-email__text--title {
+  color: #464647;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+.footer .footer__container .footer__email .footer-email__text--subtitle {
+  color: #272636;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 1rem;
+}
+.footer .footer__container .footer__email .footer-email__text--subtitle:hover {
+  color: #3c9da7;
+}
+.footer .footer__container .footer__github {
+  padding-right: 2.5rem;
+  text-align: left;
+}
+.footer .footer__container .footer__github .footer-github__text--title {
+  color: #464647;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+.footer .footer__container .footer__github .footer-github__text--subtitle {
+  color: #272636;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 1rem;
+}
+.footer .footer__container .footer__github .footer-github__text--subtitle:hover {
+  color: #3c9da7;
+}
+.footer .footer__container .footer__rrss {
   padding: 2.5rem 0;
   width: 100%;
 }
-.footer .footer__container .footer-rrss .footer-rrss__list {
-  width: 20%;
-  align-content: initial;
-  align-items: flex-end;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+.footer .footer__container .footer__rrss .footer-rrss__list {
+  width: 50%;
 }
 @media screen and (max-width: 930px) {
-  .footer .footer__container .footer-rrss .footer-rrss__list {
-    width: 30%;
-  }
-}
-@media screen and (max-width: 620px) {
-  .footer .footer__container .footer-rrss .footer-rrss__list {
+  .footer .footer__container .footer__rrss .footer-rrss__list {
     width: 40%;
+    align-content: initial;
+    align-items: flex-end;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
 }
-.footer .footer__container .footer-rrss .footer-rrss__list .footer-rrss__item {
+.footer .footer__container .footer__rrss .footer-rrss__list .footer-rrss__item {
   color: #3c9da7;
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 2rem;
   text-align: left;
   transition: all 0.4s ease;
 }
-.footer .footer__container .footer-rrss .footer-rrss__list .footer-rrss__item:hover {
+.footer .footer__container .footer__rrss .footer-rrss__list .footer-rrss__item:hover {
   opacity: 0.7;
 }

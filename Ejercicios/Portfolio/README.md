@@ -55,3 +55,6 @@ Tenemos un formulario de contacto para enviar consultas a la dirección de e-mai
 
 ### Pie de página
 Volvemos a mostrar el listado de redes sociales y además la dirección de e-mail y de GitHub.
+
+## Agradecimientos 🎁
+A l@s 'crucks' de mis compis de curso y al profe [Edu](https://eduardofierro.pro/).

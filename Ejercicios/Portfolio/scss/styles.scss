@@ -95,7 +95,7 @@ body {
         }
 
         /*** rrss ***/
-        & .bio-rrss {
+        & .bio__rrss {
             padding: 2.5rem 0;
             width: 100%;
             
@@ -637,26 +637,68 @@ body {
         
         @include flexible(row, nowrap, space-between, center, initial);
 
-        & .footer__title {
-            width: 20%;
+        @media screen and (max-width:930px) {
+            @include flexible(column, nowrap, center, flex-start, initial);
+        }
+
+        /*** e-mail ***/
+        & .footer__email {
+            padding-right: 2.5rem;
+            text-align: left;
+
+            & .footer-email__text--title {
+                color: $auxiliary-color;
+                font-family: "Montserrat-Regular", sans-serif;
+                font-size: .8rem;
+                opacity: .6;
+            }
+
+            & .footer-email__text--subtitle {
+                color: $secondary-color;
+                font-family: "Montserrat-Bold", sans-serif;
+                font-size: 1rem;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+
+        /*** github ***/
+        & .footer__github {
+            padding-right: 2.5rem;
+            text-align: left;
+
+            & .footer-github__text--title {
+                color: $auxiliary-color;
+                font-family: "Montserrat-Regular", sans-serif;
+                font-size: .8rem;
+                opacity: .6;
+            }
+
+            & .footer-github__text--subtitle {
+                color: $secondary-color;
+                font-family: "Montserrat-Bold", sans-serif;
+                font-size: 1rem;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
         }
 
         /*** rrss ***/
-        & .footer-rrss {
+        & .footer__rrss {
             padding: 2.5rem 0;
             width: 100%;
             
             & .footer-rrss__list {
-                width: 20%;
+                width: 50%;
 
-                @include flexible(row, nowrap, space-between, flex-end, initial);
-                
                 @media screen and (max-width:930px) {
-                    width: 30%;
-                }
-    
-                @media screen and (max-width:620px) {
                     width: 40%;
+
+                    @include flexible(row, nowrap, space-between, flex-end, initial);
                 }
 
                 & .footer-rrss__item {
