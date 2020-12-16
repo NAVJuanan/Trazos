@@ -24,11 +24,19 @@ body {
 
         & .header__title {
             width: 20%;
+
+            @media screen and (max-width:620px) {
+                display: none;
+            }
         }
 
         /*** Navegación ***/
         & .header__nav {
             width: 80%;
+
+            @media screen and (max-width:620px) {
+                display: none;
+            }
 
             & .header__list {
                 width: 100%;
@@ -55,6 +63,57 @@ body {
                     &:hover::after {    
                         @include text-ending-effect();
                     }
+                }
+            }
+        }
+
+        /*** Menú móvil ***/
+        & .header__icon {
+            color: $main-color;
+            display: none;
+            width: 100%;
+
+            @include flexible(row, nowrap, flex-start, center, initial);
+
+            @media screen and (max-width:620px) {
+                display: flex;
+            }
+
+            & .header-icon__bars {
+                cursor: pointer;
+                position: relative;
+                width: 40%;
+            }
+
+            & .header-icon__title {
+                width: 60%;
+            }
+
+            & .header-icon__nav {
+                display: none;
+            }
+
+            & .header-icon__nav--show {
+                display: flex;
+            }
+
+            & .header-icon__list {
+                left: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 40px;
+                width: 100%;
+                background-color: aqua;
+
+                @include flexible(column, nowrap, space-between, flex-start, initial);
+            
+                & .header-icon__item {
+                    color: $main-color;
+                    font-family: "Montserrat-Bold", sans-serif;
+                    letter-spacing: .1rem;
+                    padding: .2rem 0;
+                    position: relative;
+                    text-transform: lowercase;
                 }
             }
         }
@@ -695,10 +754,10 @@ body {
             & .footer-rrss__list {
                 width: 50%;
 
+                @include flexible(row, nowrap, space-between, flex-end, initial);
+
                 @media screen and (max-width:930px) {
                     width: 40%;
-
-                    @include flexible(row, nowrap, space-between, flex-end, initial);
                 }
 
                 & .footer-rrss__item {

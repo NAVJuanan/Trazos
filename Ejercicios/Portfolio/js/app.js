@@ -12,6 +12,13 @@ $(document).ready(function () {
         buttons: ["close"]
     });
 
+
+    // menú móvil
+    $(".header-icon__bars").click(function () {
+        $(".header-icon__nav").toggleClass("header-icon__nav--show")
+    });
+
+
     // foco en el formulario
     $("#firstName").focus(function () {
         $("#firstNameLabel").addClass("label--focus");
