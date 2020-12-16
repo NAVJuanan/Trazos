@@ -130,6 +130,7 @@ body {
 /*** css header ***/
 .header {
   width: 100%;
+  /*** Menú móvil ***/
 }
 .header .header__container {
   line-height: 2rem;
@@ -143,7 +144,6 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   /*** Navegación ***/
-  /*** Menú móvil ***/
 }
 .header .header__container .header__title {
   width: 20%;
@@ -198,36 +198,39 @@ body {
   transform: scaleX(1);
   transform-origin: right;
 }
-.header .header__container .header__icon {
+.header .header__icon {
   color: #3c9da7;
   display: none;
-  width: 100%;
-  align-content: initial;
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+  line-height: 2rem;
+  margin: auto;
+  max-width: 1200px;
+  min-height: 8vh;
+  width: 80%;
 }
 @media screen and (max-width: 620px) {
-  .header .header__container .header__icon {
+  .header .header__icon {
+    align-content: initial;
+    align-items: center;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
   }
 }
-.header .header__container .header__icon .header-icon__bars {
+.header .header__icon .header-icon__bars {
   cursor: pointer;
   position: relative;
   width: 40%;
 }
-.header .header__container .header__icon .header-icon__title {
+.header .header__icon .header-icon__title {
   width: 60%;
 }
-.header .header__container .header__icon .header-icon__nav {
+.header .header__icon .header-icon__nav {
   display: none;
 }
-.header .header__container .header__icon .header-icon__nav--show {
+.header .header__icon .header-icon__nav--show {
   display: flex;
 }
-.header .header__container .header__icon .header-icon__list {
+.header .header__icon .header-icon__list {
   left: 0;
   overflow: hidden;
   position: absolute;
@@ -240,7 +243,7 @@ body {
   flex-flow: column nowrap;
   justify-content: space-between;
 }
-.header .header__container .header__icon .header-icon__list .header-icon__item {
+.header .header__icon .header-icon__list .header-icon__item {
   color: #3c9da7;
   font-family: "Montserrat-Bold", sans-serif;
   letter-spacing: 0.1rem;
