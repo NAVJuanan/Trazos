@@ -84,11 +84,13 @@ body {
 
         & .header-icon__bars {
             cursor: pointer;
+            font-size: 1.5rem;
             position: relative;
             width: 40%;
         }
 
         & .header-icon__title {
+            font-size: 1.5rem;
             width: 60%;
         }
 
@@ -106,7 +108,6 @@ body {
             position: absolute;
             top: 40px;
             width: 100%;
-            background-color: aqua;
 
             @include flexible(column, nowrap, space-between, flex-start, initial);
         
@@ -114,7 +115,7 @@ body {
                 color: $main-color;
                 font-family: "Montserrat-Bold", sans-serif;
                 letter-spacing: .1rem;
-                padding: .2rem 0;
+                padding: .4rem 0;
                 position: relative;
                 text-transform: lowercase;
             }
@@ -754,23 +755,29 @@ body {
             width: 100%;
             
             & .footer-rrss__list {
-                width: 50%;
+                width: 100%;
 
-                @include flexible(row, nowrap, space-between, flex-end, initial);
+                @include flexible(row, nowrap, flex-end, center, initial);
 
                 @media screen and (max-width:930px) {
-                    width: 40%;
+                    @include flexible(row, nowrap, flex-start, center, initial);
                 }
 
                 & .footer-rrss__item {
                     color: $main-color;
                     font-family: "Montserrat-Bold", sans-serif;
                     font-size: 2rem;
-                    text-align: left;
+                    padding-left: 1rem;
+                    text-align: right;
                     transition: all .4s ease;
 
                     &:hover {
                         opacity: .7;
+                    }
+
+                    @media screen and (max-width:930px) {
+                        padding-left: 0;
+                        padding-right: 1rem;
                     }
                 }
             }

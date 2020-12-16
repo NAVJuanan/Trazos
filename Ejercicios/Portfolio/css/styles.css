@@ -218,10 +218,12 @@ body {
 }
 .header .header__icon .header-icon__bars {
   cursor: pointer;
+  font-size: 1.5rem;
   position: relative;
   width: 40%;
 }
 .header .header__icon .header-icon__title {
+  font-size: 1.5rem;
   width: 60%;
 }
 .header .header__icon .header-icon__nav {
@@ -236,7 +238,6 @@ body {
   position: absolute;
   top: 40px;
   width: 100%;
-  background-color: aqua;
   align-content: initial;
   align-items: flex-start;
   display: flex;
@@ -247,7 +248,7 @@ body {
   color: #3c9da7;
   font-family: "Montserrat-Bold", sans-serif;
   letter-spacing: 0.1rem;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
   position: relative;
   text-transform: lowercase;
 }
@@ -876,25 +877,36 @@ body {
   width: 100%;
 }
 .footer .footer__container .footer__rrss .footer-rrss__list {
-  width: 50%;
+  width: 100%;
   align-content: initial;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 930px) {
   .footer .footer__container .footer__rrss .footer-rrss__list {
-    width: 40%;
+    align-content: initial;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
   }
 }
 .footer .footer__container .footer__rrss .footer-rrss__list .footer-rrss__item {
   color: #3c9da7;
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 2rem;
-  text-align: left;
+  padding-left: 1rem;
+  text-align: right;
   transition: all 0.4s ease;
 }
 .footer .footer__container .footer__rrss .footer-rrss__list .footer-rrss__item:hover {
   opacity: 0.7;
+}
+@media screen and (max-width: 930px) {
+  .footer .footer__container .footer__rrss .footer-rrss__list .footer-rrss__item {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
 }
