@@ -1,7 +1,6 @@
 /*** JQuery ***/
 
 $(document).ready(function () {
-    console.log("¡listo!");
 
     // fancyBox plugin
     $("[data-fancybox]").fancybox({

@@ -23,21 +23,18 @@ body {
 
         @include flexible(row, nowrap, space-between, flex-end, initial);
 
-        & .header__title {
-            width: 20%;
+        @media screen and (max-width:620px) {
+            display: none;
+        }
 
-            @media screen and (max-width:620px) {
-                display: none;
-            }
+        & .header__title {
+            color: $main-color;
+            width: 20%;
         }
 
         /*** Navegación ***/
         & .header__nav {
             width: 80%;
-
-            @media screen and (max-width:620px) {
-                display: none;
-            }
 
             & .header__list {
                 width: 100%;
@@ -88,12 +85,12 @@ body {
             cursor: pointer;
             font-size: 1.5rem;
             position: relative;
-            width: 40%;
+            width: 60%;
         }
 
         & .header-icon__title {
-            font-size: 1.5rem;
-            width: 60%;
+            font-size: 1.2rem;
+            width: 40%;
         }
 
         & .header-icon__nav {
@@ -175,7 +172,7 @@ body {
                 }
     
                 @media screen and (max-width:620px) {
-                    width: 40%;
+                    width: 60%;
                 }
 
                 & .bio-rrss__item {
