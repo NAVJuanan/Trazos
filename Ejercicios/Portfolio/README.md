@@ -9,7 +9,7 @@ En el proyecto aplico diferentes herramientas, efectos y estilos que se han utli
 * animaciones
 * fuentes y librerías de terceros
 * responsive
-* saas
+* sass
 * bem
 
 ## Herramientas utilizadas de terceros 🛠️
@@ -19,7 +19,7 @@ En el proyecto aplico diferentes herramientas, efectos y estilos que se han utli
 * La librería [Font-Awesome](https://fontawesome.com/) para añadir iconos de redes sociales.
 * El directorio [Google Fonts](https://fonts.google.com/) para las fuentes.
 * La herramienta [Fancybox](https://fancyapps.com/fancybox/3/) para crear el efecto de lightbox.
-* La herramienta [PrePros](https://prepros.io/) para Saas
+* La herramienta [PrePros](https://prepros.io/) para Sass
 
 ## Estructura 📋
 La web está diseñada con responsive al tamaño de 620 px y 930 px. Limito a 1.200 px el ancho total de la web.

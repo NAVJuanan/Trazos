@@ -159,6 +159,7 @@ body {
 }
 .header .header__container {
   animation: opacidad 5s linear;
+  background-color: #ffffff;
   line-height: 2rem;
   margin: auto;
   max-width: 1200px;
@@ -221,7 +222,8 @@ body {
   transform-origin: right;
 }
 .header .header__icon {
-  animation: opacidad 5s linear;
+  animation: opacidad 4s linear;
+  background-color: #ffffff;
   color: #3c9da7;
   display: none;
   line-height: 2rem;
