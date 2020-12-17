@@ -1,13 +1,13 @@
 # Proyecto Html, Css y JQuery para Trazos de Juan Antonio Muñoz Valledor
 
-La siguiente web es un portfolio personal, con datos reales y ficticio al 50%, como proyecto para el curso de *Html, Css y JQuery* de la **Escuela Trazos**.
+La siguiente web es un portfolio personal, con datos reales y ficticios al 50%, como proyecto para el curso de *Html, Css y JQuery* de la **Escuela Trazos**.
 
 En el proyecto aplico diferentes herramientas, efectos y estilos que se han utlizado a lo largo del curso como:
 * maquetación flex
 * maquetación grid
 * JQuery
 * animaciones
-* fuentes y librerías externas
+* fuentes y librerías de terceros
 * responsive
 * saas
 * bem
@@ -24,17 +24,21 @@ En el proyecto aplico diferentes herramientas, efectos y estilos que se han utli
 ## Estructura 📋
 La web está diseñada con responsive al tamaño de 620 px y 930 px. Limito a 1.200 px el ancho total de la web.
 
+Hay un efecto al refrescar la pantalla donde la bio aparece en grande y va reduciéndose hasta colocarse en su sitio. El resto de elementos va apareciendo.
 ### Navegación
 
 La cabecera está formada por una lista de navegación a las diferentes partes del portfolio.
 
 Al pasar el ratón por encima de cada elemento, aparece una línea inferior y el texto se amplía.
 
+A partir de 620 px, el menú cambia dejando paso a un menú de tipo "hamburguesa".
+
 ### Presentación
 
 Entramos ya en el cuerpo del portfolio con la presentación.
 
-Tenemos mi presentación
+Tenemos mi presentación una pequeña descripción y un listado de redes sociales.
+Esta presentación aparece cuando entramos o refrescamos la página en grande y va reduciéndose hasta colocarse en su sitio.
 
 Para el listado de redes sociales, he utilizado iconos de [Font-Awesome](https://fontawesome.com/). He añadido el efecto de bajar la opacidad al pasar el ratón por encima de cada una:
 * [GitHub](https://github.com/NAVJuanan/Trazos/tree/main/Ejercicios/Portfolio): nos lleva al repositorio del proyecto.
@@ -44,6 +48,7 @@ Para el listado de redes sociales, he utilizado iconos de [Font-Awesome](https:/
 
 ### Experiencia laboral
 
+Utilizamos un grid de 2 columnas donde muestro mi experiencia laboral y una pequeña descripción de más reciente a más antiguo. Dividimos las 2 columnas con una línea que emite latidos. En la web original los emite el punto inicial, pero me ha parecido más interesante que lo haga la barra entera para señalar al usuario que mire toda la experiencia laboral.
 
 ### Viajes
 Mostramos varias fotografías de ciudades que podemos abrir al pinchar sobre ellas a modo de lightbox mediante la herramienta [Fancybox](https://fancyapps.com/fancybox/3/).
