@@ -7,6 +7,7 @@ En el proyecto aplico diferentes herramientas, efectos y estilos que se han utli
 * maquetación grid
 * JQuery
 * animaciones
+* posicionamiento relativo, absoluto y fijo
 * fuentes y librerías de terceros
 * responsive
 * sass
@@ -25,6 +26,9 @@ En el proyecto aplico diferentes herramientas, efectos y estilos que se han utli
 La web está diseñada con responsive al tamaño de 620 px y 930 px. Limito a 1.200 px el ancho total de la web.
 
 Hay un efecto al refrescar la pantalla donde la bio aparece en grande y va reduciéndose hasta colocarse en su sitio. El resto de elementos va apareciendo.
+
+Aparece un mensaje de cookies para aceptar y ver posiciones fijas.
+
 ### Navegación
 
 La cabecera está formada por una lista de navegación a las diferentes partes del portfolio.

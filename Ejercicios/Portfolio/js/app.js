@@ -53,4 +53,10 @@ $(document).ready(function () {
     $("#areaComments").focusout(function () {
         $("#areaCommentsLabel").removeClass("label--focus");
     });
+
+
+    // añade clase para ocultar las cookies tras aceptar
+    $(".cookies__btn").click(function () {
+        $(".cookies").addClass("cookies-hide");
+    });
 });

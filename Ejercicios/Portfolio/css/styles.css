@@ -837,6 +837,31 @@ body {
   transform: scale(1.1);
 }
 
+/*** cookies ***/
+.cookies {
+  background-color: #272636;
+  color: #ffffff;
+  left: 0;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.cookies .cookies__text {
+  font-family: "Montserrat-Regular", sans-serif;
+}
+.cookies .cookies__btn {
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+}
+
+.cookies-hide {
+  display: none;
+}
+
 /*** css footer ***/
 .footer {
   width: 100%;
