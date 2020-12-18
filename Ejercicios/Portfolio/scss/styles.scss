@@ -693,17 +693,18 @@ body {
 
 /*** cookies ***/
 .cookies { 
-    background-color: $secondary-color;
+    background-color: $main-color;
     color: #ffffff;
     left: 0;
     padding: 2rem;
     position: fixed;
-    top: 0;
+    bottom: 0;
     width: 100%;
     z-index: 1;
 
     & .cookies__text {
         font-family: "Montserrat-Regular", sans-serif;
+        text-align: justify;
     }
 
     & .cookies__btn {
