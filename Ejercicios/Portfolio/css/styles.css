@@ -261,11 +261,13 @@ body {
   display: flex;
 }
 .header .header__icon .header-icon__list {
+  background-color: #ffffff;
   left: 0;
   overflow: hidden;
   position: absolute;
-  top: 40px;
+  top: 30px;
   width: 100%;
+  z-index: 1;
   align-content: initial;
   align-items: flex-start;
   display: flex;
@@ -276,7 +278,7 @@ body {
   color: #3c9da7;
   font-family: "Montserrat-Bold", sans-serif;
   letter-spacing: 0.1rem;
-  padding: 0.4rem 0;
+  padding: 0.3rem 0;
   position: relative;
   text-transform: lowercase;
 }

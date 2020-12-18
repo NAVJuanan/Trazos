@@ -107,11 +107,13 @@ body {
         }
 
         & .header-icon__list {
+            background-color: #ffffff;
             left: 0;
             overflow: hidden;
             position: absolute;
-            top: 40px;
+            top: 30px;
             width: 100%;
+            z-index: 1;
 
             @include flexible(column, nowrap, space-between, flex-start, initial);
         
@@ -119,7 +121,7 @@ body {
                 color: $main-color;
                 font-family: "Montserrat-Bold", sans-serif;
                 letter-spacing: .1rem;
-                padding: .4rem 0;
+                padding: .3rem 0;
                 position: relative;
                 text-transform: lowercase;
             }
