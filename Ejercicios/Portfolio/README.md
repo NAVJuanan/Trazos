@@ -31,7 +31,7 @@ Aparece un mensaje de cookies para aceptar y ver posiciones fijas.
 
 ### Navegación
 
-La cabecera está formada por una lista de navegación a las diferentes partes del portfolio.
+La cabecera está formada por una lista de navegación a las diferentes partes del portfolio y que al tener una posición fija, se arrastrará por toda la web.
 
 Al pasar el ratón por encima de cada elemento, aparece una línea inferior y el texto se amplía.
 
