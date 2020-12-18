@@ -639,6 +639,10 @@ body {
                     padding: 1rem .5rem .1rem;
                     width: 50%;
 
+                    &:focus {
+                        background-color: #f7ffff;
+                    }
+
                     @media screen and (max-width:930px) {
                         width: 100%;
                     }
@@ -666,6 +670,10 @@ body {
                     padding: 1rem .5rem .1rem;
                     width: 50%;
 
+                    &:focus {
+                        background-color: #f7ffff;
+                    }
+
                     @media screen and (max-width:930px) {
                         width: 100%;
                     }
@@ -687,6 +695,7 @@ body {
                     transition: all .4s ease;  
                     
                     &:hover {
+                        background-color: #f7ffff;
                         transform: scale(1.1);
                     }
                 }
