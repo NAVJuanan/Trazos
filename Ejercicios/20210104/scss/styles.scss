@@ -1,0 +1,96 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+
+h2 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#gridCenterCenterShrink {
+    height: 300px;
+    background-color: coral;
+
+    @include flexible(row, nowrap, center, center, initial);
+
+    & .cuadrado {
+        height: 100px;
+        width: 200px;
+        margin: 7px;
+        flex-shrink: 2;
+        background-color: khaki;
+
+        @include flexible(row, nowrap, center, center, initial);
+    }
+}
+
+#gridCenterCenterGrow {
+    height: 300px;
+    background-color: coral;
+
+    @include flexible(row, nowrap, center, center, initial);
+
+    & .cuadrado {
+        height: 100px;
+        width: 200px;
+        margin: 7px;
+        background-color: khaki;
+
+        @include flexible(row, nowrap, center, center, initial);
+    }
+
+    & .cambia {
+        max-width: 350px;
+        flex: auto 1 2;
+    }
+}
+
+#gridSpaceWrap {
+    height: 300px;
+    background-color: coral;
+
+    @include flexible(row, wrap, space-evenly, center, initial);
+
+    & .cuadrado {
+        height: 100px;
+        width: 200px;
+        margin: 7px;
+        background-color: khaki;
+
+        @include flexible(row, nowrap, center, center, initial);
+    }
+}
+
+#gridColumn {
+    height: 300px;
+    background-color: coral;
+
+    @include flexible(column, wrap, center, flex-start, initial);
+
+    & .cuadrado {
+        height: 50px;
+        width: 90%;
+        max-width: 800px;
+        margin: 7px;
+        background-color: khaki;
+
+        @include flexible(row, nowrap, center, center, initial);
+    }
+
+    & .par {
+        align-self: flex-end;
+    }
+}
