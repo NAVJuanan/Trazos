@@ -114,3 +114,7 @@ article {
   height: 100px;
   background-color: coral;
 }
+
+.huge-item {
+  flex-grow: 1; /* permite hacer crecer un hijo con respecto a los demás */
+}
