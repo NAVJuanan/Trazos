@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script asyn defer src="js/app.js"></script>
+    <title>Conversor moneda 11.01.2021</title>
+</head>
+
+<body>
+    <h1>Conversor de moneda</h1>
+    <div>
+        <label for="currencyAmount" id="currencyAmountLabel">Introduce €</label>
+        <input type="text" name="currency_amount" id="currencyAmount" value="">
+        <input type="submit" value="Convertir" onclick="calculateCurrency()">
+    </div>
+    <div>
+        <h2>Resultado</h2>
+        <p><span id="dollarCurrency"></span> $</p>
+        <p><span id="poundCurrency"></span> £</p>
+        <p><span id="yenCurrency"></span> ¥</p>
+    </div>
+</body>
+
+</html>
