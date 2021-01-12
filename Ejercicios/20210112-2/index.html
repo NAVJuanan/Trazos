@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script asyn defer src="js/app.js"></script>
+    <title>Precio 12.01.2021</title>
+</head>
+
+<body>
+    <h1>Calcular precio</h1>
+    <div>
+        <label for="inputPrice" id="inputPriceLabel">Introduce precio base</label>
+        <input type="text" name="input-price" id="inputPrice" value="">
+        <input type="submit" value="Calcular" onclick="calculatePrice()">
+    </div>
+    <div>
+        <h2>Resultado</h2>
+        <p>Precio base: <span id="basePrice"></span> €</p>
+        <p>Impuestos: <span id="taxPrice"></span> €</p>
+        <p>Gastos de envío: <span id="expensePrice"></span> €</p>
+        <p>Total: <span id="totalPrice"></span> €</p>
+    </div>
+</body>
+
+</html>
