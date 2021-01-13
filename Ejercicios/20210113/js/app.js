@@ -1,7 +1,7 @@
 function calcSum() {
     const startingValue = document.querySelector("#sourceNumber").valueAsNumber; // obtenemos el número inicial
     const endingValue = document.querySelector("#destinyNumber").valueAsNumber; // obtenemos el número final
-    debugger;
+
     const sumValue = sumOdd(startingValue, endingValue); // calcula suma de impares
     document.querySelector("#totalOdd").textContent = sumValue; // total
 }
@@ -15,6 +15,7 @@ function sumOdd(startValue, endValue) {
         // sumamos si es impar
         if (i % 2 !== 0) {
             oddValue += i;
+            document.querySelector("#listOdd").innerHTML += "<li>Número " + i + "</li>"; // mostramos cada número en una lista
         }
     }
 
