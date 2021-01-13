@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script asyn defer src="js/app.js"></script>
+    <title>Suma impares 13.01.2021</title>
+</head>
+
+<body>
+    <h1>Suma impares</h1>
+    <div>
+        <label for="sourceNumber" id="sourceNumberLabel">Introduce el número inicial</label>
+        <input type="number" name="source-number" id="sourceNumber" value="">
+        <label for="destinyNumber" id="destinyNumberLabel">Introduce el número final</label>
+        <input type="number" name="destiny-number" id="destinyNumber" value="">
+        <input type="submit" value="Calcular" onclick="calcSum()">
+    </div>
+    <div>
+        <h2>Resultado</h2>
+        <p>La suma total de los impares es: <span id="totalOdd"></span></p>
+    </div>
+</body>
+
+</html>
