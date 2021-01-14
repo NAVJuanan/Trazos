@@ -28,8 +28,7 @@ h1 {
 
     & .table-multiply {
         width: 400px;
-        margin: 7px;
-        flex-shrink: 2;
+        margin: 1rem;
         background-color: khaki;
 
         @include flexible(column, nowrap, center, center, initial);

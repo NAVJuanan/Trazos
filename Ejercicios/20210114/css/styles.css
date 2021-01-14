@@ -75,8 +75,7 @@ h1 {
 }
 .table-container .table-multiply {
   width: 400px;
-  margin: 7px;
-  flex-shrink: 2;
+  margin: 1rem;
   background-color: khaki;
   display: flex;
   flex-flow: column nowrap;
