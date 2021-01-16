@@ -1,0 +1,41 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+
+h1 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table-container {
+    background-color: coral;
+
+    @include flexible(row, wrap, center, flex-start, initial);
+
+    & .table-month {
+        width: 400px;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: khaki;
+
+        & th {
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+}
