@@ -13,7 +13,6 @@
 
 
 // css body
-
 h1 {
     padding: 1rem 0;
     font-size: 2rem;
@@ -21,21 +20,37 @@ h1 {
     text-align: center;
 }
 
-.table-container {
+.calendar__container {
     background-color: coral;
 
-    @include flexible(row, wrap, center, flex-start, initial);
+    @include flexible(row, wrap, center, baseline, initial);
 
-    & .table-month {
-        width: 400px;
+    & .month__container {
         margin: 1rem;
-        padding: 1rem;
+        border: 1px solid black;
         background-color: khaki;
 
-        & th {
-            padding: 1rem 0;
+        & .month__title {
+            padding: .5rem 0;
             font-size: 1.5rem;
             font-weight: bold;
+            text-align: center;
+        }
+
+        & .month__table {
+            padding: .5rem;
+
+            & thead th {
+                padding: 1rem 0;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            & tbody td {
+                padding: .5rem;
+                text-align: center;
+                border: 1px solid black;
+            }
         }
     }
 }

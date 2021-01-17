@@ -1,6 +1,6 @@
-let nodeTable = document.querySelector(".table-container"); // obtenemos el contenedor
+const daysOfWeek = ["L", "M", "X", "J", "V", "S", "D"]; // constante para el array semanal
+let nodeTable = document.querySelector(".calendar__container"); // obtenemos el contenedor
 let nodeHtml = ""; // variable para rellenar el html
-const daysOfWeek = ["L", "M", "X", "J", "V", "S", "D"]; // array semanal
 let week = 1; // inicializamos el día de la semana
 
 // bucle para recorrer los meses
@@ -9,21 +9,33 @@ for (let i = 1; i <= 12; i++) {
     let nameOfMonth = nameMonth(i); // obtenemos el nombre del mes
 
     // imprimimos el mes
-    nodeHtml += "<table class='table-month'><tr><th colspan='7'>" + nameOfMonth + "</th></tr>";
+    nodeHtml += "<div class='month__container'><h2 class='month__title'>" + nameOfMonth + "</h2><table class='month__table'>";
 
     // imprimimos los días de la semana
-    nodeHtml += "<tr>";
+    nodeHtml += "<thead><tr>";
     for (let j = 0; j < daysOfWeek.length; j++) {
-        nodeHtml += "<td>" + daysOfWeek[j] + "</td>";
+        nodeHtml += "<th>" + daysOfWeek[j] + "</th>";
     }
-    nodeHtml += "</tr>";
+    nodeHtml += "</tr></thead>";
 
     // bucle para recorrer los días del mes
+    nodeHtml += "<tbody><tr>"
     for (let j = 1; j <= daysOfMonth; j++) {
-        nodeHtml += "<tr><td>" + j + "</td></tr>";
+
+        if (week === 1) {
+            nodeHtml += "<tr>";
+        }
+
+        nodeHtml += "<td>" + j + "</td>";
+        week++;
+
+        if (week > daysOfWeek.length) {
+            nodeHtml += "</tr>"
+            week = 1;
+        }
     }
 
-    nodeHtml += "</table>";
+    nodeHtml += "</tr></tbody></table></div>"; // cierre de etiquetas
 }
 
 nodeTable.innerHTML += nodeHtml; // devolvemos el resultado al contenedor html

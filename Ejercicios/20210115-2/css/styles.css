@@ -65,22 +65,35 @@ h1 {
   text-align: center;
 }
 
-.table-container {
+.calendar__container {
   background-color: coral;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: baseline;
   align-content: initial;
 }
-.table-container .table-month {
-  width: 400px;
+.calendar__container .month__container {
   margin: 1rem;
-  padding: 1rem;
+  border: 1px solid black;
   background-color: khaki;
 }
-.table-container .table-month th {
-  padding: 1rem 0;
+.calendar__container .month__container .month__title {
+  padding: 0.5rem 0;
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
+}
+.calendar__container .month__container .month__table {
+  padding: 0.5rem;
+}
+.calendar__container .month__container .month__table thead th {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.calendar__container .month__container .month__table tbody td {
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid black;
 }
