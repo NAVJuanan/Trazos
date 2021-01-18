@@ -1,4 +1,4 @@
-const PI = 3.14; // valor constante de Pi
+const pi = Math.PI // valor constante de Pi
 
 // función para gestionar los cálculos y escribir los resultados
 function calculateCircle() {
@@ -20,10 +20,10 @@ function calculateCircleDiameter(value) {
 
 // función para calcular el perímetro
 function calculateCirclePerimeter(value) {
-    return 2 * PI * value;
+    return 2 * pi * value;
 }
 
 // función para calcular el área
 function calculateCircleArea(value) {
-    return 2 * PI * value * value;
+    return 2 * pi * value * value;
 }
