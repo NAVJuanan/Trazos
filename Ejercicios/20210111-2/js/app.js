@@ -25,5 +25,5 @@ function calculateCirclePerimeter(value) {
 
 // función para calcular el área
 function calculateCircleArea(value) {
-    return 2 * pi * value * value;
+    return pi * (value ** 2);
 }
