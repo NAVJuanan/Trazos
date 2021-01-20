@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img, video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  display: block;
+}
+
+form, input, textarea, select, option {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body {
+  background-color: darkcyan;
+  position: relative;
+}
+
+.modal-window {
+  background-color: beige;
+  left: 20%;
+  max-width: 15rem;
+  opacity: 1;
+  padding: 2.5rem;
+  position: absolute;
+  top: 5rem;
+}
+.modal-window .modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.modal-window .modal-text {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+.modal-window #modal-button {
+  background-color: lightblue;
+  border: 1px solid black;
+  bottom: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  left: 35%;
+  padding: 0.5rem;
+  position: absolute;
+}
+.modal-window #modal-close {
+  background-color: lightblue;
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal-window--show {
+  display: block;
+}
+
+.modal-window--hide {
+  display: none;
+}
+
+#modal-open {
+  background-color: lightblue;
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.modal-open--show {
+  opacity: 1;
+}
+
+.modal-open--hide {
+  opacity: 0.2;
+}
