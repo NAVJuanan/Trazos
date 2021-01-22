@@ -1,79 +1,118 @@
+// alumnos
 alumnoUno = {
     firstName: "Javier",
     lastName: "Pérez Sánchez",
-    birthDate: new Date("01/21/2000"),
+    birthDate: new Date(2000, 01, 21),
     grade: 8.5,
-    calcAge: function () {
+    age: function () {
         const todayDate = new Date();
-        let age = todayDate.getFullYear() - this.birthDate.getFullYear();
+        let currentAge = todayDate.getFullYear() - this.birthDate.getFullYear();
 
         // restamos 1 día porque o hay un bug o las horas cuentan para contemplar el mismo día
         if ((todayDate.getMonth() < this.birthDate.getMonth()) || ((todayDate.getMonth() === this.birthDate.getMonth()) && (todayDate.getDay() < (this.birthDate.getDay() - 1)))) {
-            age--;
+            currentAge--;
         }
-        console.log(age);
+
+        return currentAge;
     }
 }
 
 alumnoDos = {
     firstName: "María",
     lastName: "Rodríguez Peña",
-    birthDate: new Date("10/21/2000"),
+    birthDate: new Date(2000, 10, 21),
     grade: 9.1,
-    calcAge: function () {
+    age: function () {
         const todayDate = new Date();
-        let age = todayDate.getFullYear() - this.birthDate.getFullYear();
+        let currentAge = todayDate.getFullYear() - this.birthDate.getFullYear();
 
         // restamos 1 día porque o hay un bug o las horas cuentan para contemplar el mismo día
         if ((todayDate.getMonth() < this.birthDate.getMonth()) || ((todayDate.getMonth() === this.birthDate.getMonth()) && (todayDate.getDay() < (this.birthDate.getDay() - 1)))) {
-            age--;
+            currentAge--;
         }
-        console.log(age);
+
+        return currentAge;
     }
 }
 
 alumnoTres = {
     firstName: "Pedro",
     lastName: "Martín Fernández",
-    birthDate: new Date("03/12/2001"),
+    birthDate: new Date(2000, 03, 12),
     grade: 7.3,
-    calcAge: function () {
+    age: function () {
         const todayDate = new Date();
-        let age = todayDate.getFullYear() - this.birthDate.getFullYear();
+        let currentAge = todayDate.getFullYear() - this.birthDate.getFullYear();
 
         // restamos 1 día porque o hay un bug o las horas cuentan para contemplar el mismo día
         if ((todayDate.getMonth() < this.birthDate.getMonth()) || ((todayDate.getMonth() === this.birthDate.getMonth()) && (todayDate.getDay() < (this.birthDate.getDay() - 1)))) {
-            age--;
+            currentAge--;
         }
-        console.log(age);
+
+        return currentAge;
     }
 }
 
 alumnoCuatro = {
     firstName: "Laura",
     lastName: "Sánchez Pérez",
-    birthDate: new Date("09/15/1999"),
+    birthDate: new Date(1999, 09, 15),
     grade: 7.9,
-    calcAge: function () {
+    age: function () {
         const todayDate = new Date();
-        let age = todayDate.getFullYear() - this.birthDate.getFullYear();
+        let currentAge = todayDate.getFullYear() - this.birthDate.getFullYear();
 
         // restamos 1 día porque o hay un bug o las horas cuentan para contemplar el mismo día
         if ((todayDate.getMonth() < this.birthDate.getMonth()) || ((todayDate.getMonth() === this.birthDate.getMonth()) && (todayDate.getDay() < (this.birthDate.getDay() - 1)))) {
-            age--;
+            currentAge--;
         }
-        console.log(age);
+
+        return currentAge;
     }
 }
 
 console.log(alumnoUno);
-alumnoUno.calcAge();
+console.log(alumnoUno.age());
 
 console.log(alumnoDos);
-alumnoDos.calcAge();
+console.log(alumnoDos.age());
 
 console.log(alumnoTres);
-alumnoTres.calcAge();
+console.log(alumnoTres.age());
 
 console.log(alumnoCuatro);
-alumnoCuatro.calcAge();
+console.log(alumnoCuatro.age());
+
+// asignaturas
+asignaturaUno = {
+    name: "Matemáticas",
+    startingDate: new Date(2021, 01, 22),
+    teacher: {
+        firstName: "Julia",
+        lastName: "Machín Hernández",
+        birthDate: new Date(1986, 07, 11),
+        dni: "50123456F",
+        age: function () {
+            const todayDate = new Date();
+            let currentAge = todayDate.getFullYear() - this.birthDate.getFullYear();
+
+            // restamos 1 día porque o hay un bug o las horas cuentan para contemplar el mismo día
+            if ((todayDate.getMonth() < this.birthDate.getMonth()) || ((todayDate.getMonth() === this.birthDate.getMonth()) && (todayDate.getDay() < (this.birthDate.getDay() - 1)))) {
+                currentAge--;
+            }
+
+            return currentAge;
+        }
+    },
+    studentNumber: function () {
+        return this.studentList.length;
+    },
+    studentList: [
+        alumnoUno,
+        alumnoDos,
+        alumnoTres
+    ],
+}
+
+console.log(asignaturaUno);
+console.log(asignaturaUno.studentNumber());
