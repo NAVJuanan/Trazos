@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img, video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  display: block;
+}
+
+form, input, textarea, select, option {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.course {
+  background-color: darkgray;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+.course .course-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.course .course-teacher {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.course .course-students {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+}

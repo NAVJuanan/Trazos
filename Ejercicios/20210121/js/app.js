@@ -71,17 +71,6 @@ alumnoCuatro = {
     }
 }
 
-console.log(alumnoUno);
-console.log(alumnoUno.age());
-
-console.log(alumnoDos);
-console.log(alumnoDos.age());
-
-console.log(alumnoTres);
-console.log(alumnoTres.age());
-
-console.log(alumnoCuatro);
-console.log(alumnoCuatro.age());
 
 // asignaturas
 asignaturaUno = {
@@ -110,9 +99,39 @@ asignaturaUno = {
     studentList: [
         alumnoUno,
         alumnoDos,
-        alumnoTres
+        alumnoCuatro
     ],
 }
 
+
+// mostrar en consola
 console.log(asignaturaUno);
 console.log(asignaturaUno.studentNumber());
+
+console.log(alumnoUno);
+console.log(alumnoUno.age());
+
+console.log(alumnoDos);
+console.log(alumnoDos.age());
+
+console.log(alumnoTres);
+console.log(alumnoTres.age());
+
+console.log(alumnoCuatro);
+console.log(alumnoCuatro.age());
+
+
+// enviar datos a html
+nodeCourseTitle = document.querySelector("#courseTitle")
+nodeCourseTeacher = document.querySelector("#courseTeacher");
+nodeCourseStudents = document.querySelector("#courseStudents");
+
+nodeCourseTitle.textContent = `Curso de ${asignaturaUno.name}`;
+nodeCourseTeacher.textContent = `Profesor: ${asignaturaUno.teacher.firstName} ${asignaturaUno.teacher.lastName}`;
+
+let studentsList = "";
+for (let i = 0; i < asignaturaUno.studentNumber(); i++) {
+    studentsList += `<li>${asignaturaUno.studentList[i].firstName} ${asignaturaUno.studentList[i].lastName}, ${asignaturaUno.studentList[i].age()} años: ${asignaturaUno.studentList[i].grade}</li>`;
+}
+
+nodeCourseStudents.innerHTML = studentsList;
