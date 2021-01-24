@@ -58,12 +58,27 @@ body {
   display: block;
 }
 
-body {
-  background-color: darkcyan;
-  position: relative;
+@keyframes ventana-modal {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-.modal-window {
+.body-container {
+  background-color: gray;
+  position: relative;
+  min-height: 100vh;
+}
+.body-container .modal-window {
+  animation: ventana-modal 1s linear;
   background-color: beige;
   left: 20%;
   max-width: 15rem;
@@ -72,17 +87,17 @@ body {
   position: absolute;
   top: 5rem;
 }
-.modal-window .modal-title {
+.body-container .modal-window .modal-title {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
 }
-.modal-window .modal-text {
+.body-container .modal-window .modal-text {
   font-size: 1rem;
   font-weight: 500;
   text-align: left;
 }
-.modal-window #modal-button {
+.body-container .modal-window #modal-button {
   background-color: lightblue;
   border: 1px solid black;
   bottom: 0;
@@ -92,7 +107,7 @@ body {
   padding: 0.5rem;
   position: absolute;
 }
-.modal-window #modal-close {
+.body-container .modal-window #modal-close {
   background-color: lightblue;
   border: 1px solid black;
   font-size: 1rem;
@@ -101,6 +116,10 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.body-container--light {
+  background-color: lightgrey;
 }
 
 .modal-window--show {

@@ -8,6 +8,10 @@ function showModal() {
     let nodeWindow = document.querySelector("#modal-open");
     nodeWindow.classList.add("modal-open--hide");
     nodeWindow.classList.remove("modal-open--show");
+
+    // suavizamos el color del fondo
+    let nodeContainer = document.querySelector(".body-container");
+    nodeContainer.classList.add("body-container--light");
 }
 
 // ocultamos la ventana
@@ -20,4 +24,8 @@ function closeModal() {
     let nodeWindow = document.querySelector("#modal-open");
     nodeWindow.classList.add("modal-open--show");
     nodeWindow.classList.remove("modal-open--hide");
+
+    // oscurecemos el color del fondo
+    let nodeContainer = document.querySelector(".body-container");
+    nodeContainer.classList.remove("body-container--light");
 }
