@@ -1,0 +1,47 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+.main-container {
+
+    & .filter-container {
+        background-color: beige;
+        margin: auto;
+        padding: 1rem 0;
+        width: 50%;
+
+        @include flexible(column, nowrap, center, center, initial);
+
+        & .filter-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        & .filter-list {
+            padding: 1rem;
+            width: 100%;
+
+            @include flexible(row, nowrap, space-around, center, initial);
+            
+            & input {
+                background-color: lightgrey;
+                padding: .5rem;
+            }
+        }
+
+        & .filter-items {
+            @include flexible(row, nowrap, space-around, center, initial);
+        }
+    }
+}
