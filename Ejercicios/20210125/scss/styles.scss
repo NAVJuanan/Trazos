@@ -41,7 +41,15 @@
         }
 
         & .filter-items {
-            @include flexible(row, nowrap, space-around, center, initial);
+            @include flexible(row, wrap, flex-start, center, initial);
+        
+            & .filter-image {
+                width: 30%;
+            }
+
+            & .filter-image--hidden {
+                display: none;
+            }
         }
     }
 }
