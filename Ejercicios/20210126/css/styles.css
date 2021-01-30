@@ -58,8 +58,28 @@ body {
   display: block;
 }
 
-.student-form {
+.student__title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.student-list {
+  background-color: whitesmoke;
+  border: 1px solid gray;
   margin: auto;
+  padding: 1rem 0;
+  width: 40%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: initial;
+}
+.student-form {
+  border: 1px solid gray;
+  margin: 2rem auto;
   width: 40%;
   display: flex;
   flex-flow: column nowrap;
