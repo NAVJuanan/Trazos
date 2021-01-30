@@ -20,6 +20,7 @@
     text-align: center;
 }
 
+// student list container
 .student-list {
     background-color: whitesmoke;
     border: 1px solid gray;
@@ -27,13 +28,32 @@
     padding: 1rem 0;
     width: 40%;
    
-    @include flexible(row, nowrap, flex-start, center, initial);
+    @include flexible(row, wrap, flex-start, center, initial);
 
+    // each student of the list
     & .student-register {
-        
+
+        padding: 1rem;
+
+        & .student-register__title {
+            font-size: 1.5rem;
+            padding: .5rem 0;
+        }
+
+        & .student-register__age {
+            color: gray;
+            font-size: 1rem;
+            padding: .5rem 0;
+        }
+
+        & .student-register__birth {
+            font-size: 1.2rem;
+            padding: .5rem 0;
+        }
     }
 }
 
+// form to populate a new studen
 .student-form {
     border: 1px solid gray;
     margin: 2rem auto;
@@ -64,6 +84,7 @@
         }
     }
 
+    // button to enter a new student
     & .student-form__submit {
 
         & [type=submit] {

@@ -72,11 +72,28 @@ body {
   padding: 1rem 0;
   width: 40%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: initial;
 }
+.student-list .student-register {
+  padding: 1rem;
+}
+.student-list .student-register .student-register__title {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.student-list .student-register .student-register__age {
+  color: gray;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+.student-list .student-register .student-register__birth {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
 .student-form {
   border: 1px solid gray;
   margin: 2rem auto;
