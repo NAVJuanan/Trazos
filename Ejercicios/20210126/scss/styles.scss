@@ -1,0 +1,57 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+.student-form {
+    margin: auto;
+    width: 40%;
+   
+    @include flexible(column, nowrap, center, center, initial);
+
+    & .student-form__title {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    & .student-form__input {
+        background-color: whitesmoke;
+        padding: 1rem 0;
+        width: 80%;
+
+        @include flexible(column, nowrap, center, center, initial);
+
+        & > input {
+            transition: all .1s ease;
+            width: 50%;
+
+            &:focus {
+                background-color: lightgrey;
+                border: 1px solid black;
+            }
+        }
+    }
+
+    & .student-form__submit {
+
+        & [type=submit] {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            color: green;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+    }
+}
