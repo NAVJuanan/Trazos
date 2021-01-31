@@ -86,9 +86,8 @@ class Asignatura {
         this.name = name;
         this.startingDate = startingDate;
         this.teacher = teacher;
+        this.studentList = [];
     }
-
-    studentList = [];
 
     studentNumber() {
         return this.studentList.length;
