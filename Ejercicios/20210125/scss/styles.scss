@@ -19,9 +19,9 @@
         background-color: beige;
         margin: auto;
         padding: 1rem 0;
-        width: 50%;
+        width: 70%;
 
-        @include flexible(column, nowrap, center, center, initial);
+        @include flexible(column, nowrap, flex-start, center, initial);
 
         & .filter-title {
             font-size: 1.5rem;
@@ -44,7 +44,8 @@
             @include flexible(row, wrap, flex-start, center, initial);
         
             & .filter-image {
-                width: 30%;
+                margin: 1rem;
+                max-width: 200px;
             }
 
             & .filter-image--hidden {
@@ -52,4 +53,9 @@
             }
         }
     }
+}
+
+.lightbox {
+    width: 100%;
+    background-color: aquamarine;
 }

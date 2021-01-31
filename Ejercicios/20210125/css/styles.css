@@ -62,10 +62,10 @@ body {
   background-color: beige;
   margin: auto;
   padding: 1rem 0;
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   align-content: initial;
 }
@@ -94,8 +94,14 @@ body {
   align-content: initial;
 }
 .main-container .filter-container .filter-items .filter-image {
-  width: 30%;
+  margin: 1rem;
+  max-width: 200px;
 }
 .main-container .filter-container .filter-items .filter-image--hidden {
   display: none;
+}
+
+.lightbox {
+  width: 100%;
+  background-color: aquamarine;
 }

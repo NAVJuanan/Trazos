@@ -4,6 +4,7 @@ let nodeAllCards = document.querySelector("#allCards");
 let nodeAllForests = document.querySelector("#allForests");
 let nodeAllSwamps = document.querySelector("#allSwamps");
 let nodeAllMountains = document.querySelector("#allMountains");
+let nodeAllImages = document.querySelectorAll(".filter-image");
 
 // filtro por total
 nodeAllCards.addEventListener("click", function () {
@@ -57,3 +58,11 @@ nodeAllMountains.addEventListener("click", function () {
         }
     }
 })
+
+// evento click a cada imagen
+for (let i = 0; i < nodeAllImages.length; i++) {
+    nodeAllImages[i].addEventListener("click", function () {
+        let nodeLightbox = document.querySelector(".lightbox-image");
+        nodeLightbox.src = this.src;
+    })
+}
