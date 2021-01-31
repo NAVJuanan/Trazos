@@ -62,7 +62,25 @@ nodeAllMountains.addEventListener("click", function () {
 // evento click a cada imagen
 for (let i = 0; i < nodeAllImages.length; i++) {
     nodeAllImages[i].addEventListener("click", function () {
-        let nodeLightbox = document.querySelector(".lightbox-image");
-        nodeLightbox.src = this.src;
+
+        // abrimos el lightbox
+        let nodeLightbox = document.querySelector(".lightbox");
+        nodeLightbox.classList.toggle("lightbox--open");
+
+        // cargamos la imagen
+        let nodeImage = document.querySelector(".lightbox-image");
+        nodeImage.src = this.src;
     })
 }
+
+// evento clic en lightbox fuera de imagen
+let nodeLightbox = document.querySelector(".lightbox");
+nodeLightbox.addEventListener("click", function () {
+
+    // descargamos la imagen
+    let nodeImage = document.querySelector(".lightbox-image");
+    nodeImage.src = "";
+
+    // cerramos el lightbox
+    nodeLightbox.classList.toggle("lightbox--open");
+})

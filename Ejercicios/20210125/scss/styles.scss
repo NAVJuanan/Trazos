@@ -53,9 +53,28 @@
             }
         }
     }
+
+    & .filter-container--hidden {
+        display: none;
+    }
 }
 
 .lightbox {
-    width: 100%;
-    background-color: aquamarine;
+    background-color: rgba( 0,0,0,0.6 );
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+
+    & .lightbox-image {
+        width: 30%;
+        margin: auto;
+        position: relative;
+    }
+}
+
+.lightbox--open {
+    @include flexible(row, nowrap, center, center, initial);
 }
