@@ -97,6 +97,16 @@ class Asignatura {
     addStudent(student) {
         this.studentList.push(student);
     }
+
+    getStudents() {
+        let studentsList = "";
+
+        for (let i = 0; i < asignaturaDos.studentNumber(); i++) {
+            studentsList += `<li>${asignaturaDos.studentList[i].firstName} ${asignaturaDos.studentList[i].lastName}, ${asignaturaDos.studentList[i].age()} años: ${asignaturaDos.studentList[i].grade}</li>`;
+        }
+
+        return studentsList;
+    }
 }
 
 // creamos instancias de asignaturas
@@ -122,10 +132,4 @@ let nodeCourseTeacher = document.querySelector("#courseTeacher");
 nodeCourseTeacher.innerHTML = `Profesor: ${asignaturaDos.teacher.firstName} ${asignaturaDos.teacher.lastName}`;
 
 let nodeCourseStudents = document.querySelector("#courseStudents");
-
-let studentsList = "";
-for (let i = 0; i < asignaturaDos.studentNumber(); i++) {
-    studentsList += `<li>${asignaturaDos.studentList[i].firstName} ${asignaturaDos.studentList[i].lastName}, ${asignaturaDos.studentList[i].age()} años: ${asignaturaDos.studentList[i].grade}</li>`;
-}
-
-nodeCourseStudents.innerHTML = studentsList;
+nodeCourseStudents.innerHTML = asignaturaDos.getStudents();
