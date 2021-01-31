@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img, video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  display: block;
+}
+
+form, input, textarea, select, option {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.student__title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.student-list {
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  margin: auto;
+  padding: 1rem 0;
+  width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: initial;
+}
+.student-list .student-register {
+  padding: 1rem;
+}
+.student-list .student-register .student-register__title {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.student-list .student-register .student-register__age {
+  color: gray;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+.student-list .student-register .student-register__birth {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.student-form {
+  border: 1px solid gray;
+  margin: 2rem auto;
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+.student-form .student-form__title {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.student-form .student-form__input {
+  background-color: whitesmoke;
+  padding: 1rem 0;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+.student-form .student-form__input > input {
+  transition: all 0.1s ease;
+  width: 50%;
+}
+.student-form .student-form__input > input:focus {
+  background-color: lightgrey;
+  border: 1px solid black;
+}
+.student-form .student-form__submit [type=submit] {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  color: green;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}

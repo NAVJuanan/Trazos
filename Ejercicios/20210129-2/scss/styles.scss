@@ -1,0 +1,100 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+.student__title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+// student list container
+.student-list {
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    margin: auto;
+    padding: 1rem 0;
+    width: 40%;
+   
+    @include flexible(row, wrap, flex-start, center, initial);
+
+    // each student of the list
+    & .student-register {
+
+        padding: 1rem;
+
+        & .student-register__title {
+            font-size: 1.5rem;
+            padding: .5rem 0;
+        }
+
+        & .student-register__age {
+            color: gray;
+            font-size: 1rem;
+            padding: .5rem 0;
+        }
+
+        & .student-register__birth {
+            font-size: 1.2rem;
+            padding: .5rem 0;
+        }
+    }
+}
+
+// form to populate a new studen
+.student-form {
+    border: 1px solid gray;
+    margin: 2rem auto;
+    width: 40%;
+   
+    @include flexible(column, nowrap, center, center, initial);
+
+    & .student-form__title {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    & .student-form__input {
+        background-color: whitesmoke;
+        padding: 1rem 0;
+        width: 80%;
+
+        @include flexible(column, nowrap, center, center, initial);
+
+        & > input {
+            transition: all .1s ease;
+            width: 50%;
+
+            &:focus {
+                background-color: lightgrey;
+                border: 1px solid black;
+            }
+        }
+    }
+
+    // button to enter a new student
+    & .student-form__submit {
+
+        & [type=submit] {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            color: green;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+    }
+}
