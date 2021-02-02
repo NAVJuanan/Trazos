@@ -5,7 +5,7 @@ const limit = {
     hour: 23,
     minute: 59,
     second: 59,
-    milisecond: 999
+    tenth: 9
 };
 
 // definición de actual
@@ -13,7 +13,7 @@ let current = {
     hour: 0,
     minute: 0,
     second: 0,
-    milisecond: 0
+    tenth: 0
 };
 
 // obtenemos nodos con cronómetro e inicializamos
@@ -32,6 +32,7 @@ for (let i = 0; i < nodeButtons.length; i++) {
 }
 
 // definimos el temporizador
+const intervalTime = 100;
 let temporizador = null;
 let isStarted = false;
 
@@ -46,7 +47,7 @@ nodeStart.addEventListener("click", function () {
             isStarted = true;
             updateTimer();
             updateHTML();
-        }, 1);
+        }, intervalTime);
 
         for (let i = 0; i < nodeButtons.length; i++) {
 
@@ -86,7 +87,7 @@ nodeReset.addEventListener("click", function () {
         current.hour = 0;
         current.minute = 0;
         current.second = 0;
-        current.milisecond = 0;
+        current.tenth = 0;
 
         updateHTML();
     }
@@ -105,12 +106,12 @@ nodeSave.addEventListener("click", function () {
 // sumamos 1ms
 function updateTimer() {
 
-    // ms
-    if (current.milisecond >= limit.milisecond) {
-        current.milisecond = 0;
+    // dm
+    if (current.tenth >= limit.tenth) {
+        current.tenth = 0;
         current.second++;
     } else {
-        current.milisecond++;
+        current.tenth++;
     }
 
     // sg
@@ -136,14 +137,14 @@ function updateHTML() {
     nodeItems[0].innerHTML = `${current.hour}`;
     nodeItems[1].innerHTML = `${current.minute}`;
     nodeItems[2].innerHTML = `${current.second}`;
-    nodeItems[3].innerHTML = `${current.milisecond}`;
+    nodeItems[3].innerHTML = `${current.tenth}`;
 }
 
 // añadimos un registro
 function addRegister() {
     let nodeRegister = document.createElement("p");
     nodeRegister.classList.add("load-data__item");
-    nodeRegister.innerHTML = `${current.hour}:${current.minute}:${current.second}:${current.milisecond}`;
+    nodeRegister.innerHTML = `${current.hour}:${current.minute}:${current.second}:${current.tenth}`;
 
     let nodeData = document.querySelector(".load__data");
     nodeData.appendChild(nodeRegister);
