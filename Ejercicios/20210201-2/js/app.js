@@ -33,6 +33,7 @@ for (let i = 0; i < nodeButtons.length; i++) {
 
 // definimos el temporizador
 let temporizador = null;
+let isStarted = false;
 
 
 // al hacer click en Iniciar se inicia el temporizador
@@ -42,6 +43,7 @@ nodeStart.addEventListener("click", function () {
     if (temporizador === null) {
 
         temporizador = setInterval(() => {
+            isStarted = true;
             updateTimer();
             updateHTML();
         }, 1);
@@ -61,15 +63,17 @@ nodeStart.addEventListener("click", function () {
 let nodeStop = document.querySelector("#stopId");
 nodeStop.addEventListener("click", function () {
 
-    clearInterval(temporizador);
-    temporizador = null;
+    if (temporizador !== null) {
+        clearInterval(temporizador);
+        temporizador = null;
 
-    for (let i = 0; i < nodeButtons.length; i++) {
+        for (let i = 0; i < nodeButtons.length; i++) {
 
-        if (nodeButtons[i].id === "stopId") {
-            nodeButtons[i].classList.add("load__button--disabled");
-        } else {
-            nodeButtons[i].classList.remove("load__button--disabled");
+            if (nodeButtons[i].id === "stopId") {
+                nodeButtons[i].classList.add("load__button--disabled");
+            } else {
+                nodeButtons[i].classList.remove("load__button--disabled");
+            }
         }
     }
 });
@@ -92,7 +96,7 @@ nodeReset.addEventListener("click", function () {
 let nodeSave = document.querySelector("#saveId");
 nodeSave.addEventListener("click", function () {
 
-    if (temporizador === null) {
+    if (temporizador === null && isStarted) {
         addRegister();
     }
 });
