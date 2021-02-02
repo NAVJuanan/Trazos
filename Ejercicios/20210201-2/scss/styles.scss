@@ -1,0 +1,63 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+.load__title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.load__list {
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    margin: auto;
+    padding: 1rem 0;
+    width: 50%;
+   
+    @include flexible(row, nowrap, space-around, center, initial);
+
+    & .load__item {
+        padding: 1rem;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+
+.load__buttons {
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    margin: auto;
+    padding: 1rem 0;
+    width: 50%;
+   
+    @include flexible(row, nowrap, space-around, center, initial);
+
+    & .load__button {
+        background-color: lightgray;
+        border: 1px solid gray;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+.load__data {
+    margin: auto;
+    padding: 4rem 0;
+    width: 50%;
+
+    @include flexible(column, nowrap, flex-start, center, initial);
+}
