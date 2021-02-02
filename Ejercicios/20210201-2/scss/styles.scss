@@ -33,6 +33,7 @@
         padding: 1rem;
         font-size: 3rem;
         font-weight: 700;
+        width: 10%;
     }
 }
 
@@ -53,6 +54,11 @@
         font-size: 1rem;
         font-weight: 700;
     }
+
+    & .load__button--disabled {
+        background-color: lightcoral;
+        color: bisque;
+    }
 }
 
 .load__data {
@@ -61,4 +67,8 @@
     width: 50%;
 
     @include flexible(column, nowrap, flex-start, center, initial);
+
+    & .load-data__item {
+        font-size: 2rem;
+    }
 }

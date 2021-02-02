@@ -81,6 +81,7 @@ body {
   padding: 1rem;
   font-size: 3rem;
   font-weight: 700;
+  width: 10%;
 }
 
 .load__buttons {
@@ -103,6 +104,10 @@ body {
   font-size: 1rem;
   font-weight: 700;
 }
+.load__buttons .load__button--disabled {
+  background-color: lightcoral;
+  color: bisque;
+}
 
 .load__data {
   margin: auto;
@@ -113,4 +118,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   align-content: initial;
+}
+.load__data .load-data__item {
+  font-size: 2rem;
 }
