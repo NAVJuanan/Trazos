@@ -1,4 +1,4 @@
-// definición de límites y actual
+// definición de límites
 const limit = {
     hour: 23,
     minute: 59,
@@ -6,6 +6,7 @@ const limit = {
     milisecond: 999
 };
 
+// definición de actual
 let current = {
     hour: 0,
     minute: 0,
@@ -13,52 +14,43 @@ let current = {
     milisecond: 0
 };
 
-
-nodeItems = document.querySelectorAll(".load-item__time");
+// obtenemos nodos con cronómetro e inicializamos
+let nodeItems = document.querySelectorAll(".load-item__time");
 for (let i = 0; i < nodeItems.length; i++) {
     nodeItems[i].innerHTML = "00";
 }
 
-// // límite 1
-// const temporizador1 = setInterval(() => {
+// en cada ms se suma 1ms y actualizamos el resto de datos
+const temporizador = setInterval(() => {
 
-//     if (statsItem1 > limit.stats1) {
-//         clearInterval(temporizador1);
-//     } else {
-//         nodeItems[0].innerHTML = `${statsItem1} %`;
-//         statsItem1++;
-//     }
-// }, 200);
+    // ms
+    if (current.milisecond >= limit.milisecond) {
+        current.milisecond = 0;
+        current.second++;
+    } else {
+        current.milisecond++;
+    }
 
-// // límite 2
-// const temporizador2 = setInterval(() => {
+    // sg
+    if (current.second > limit.second) {
+        current.second = 0;
+        current.minute++;
+    }
 
-//     if (statsItem2 > limit.stats2) {
-//         clearInterval(temporizador2);
-//     } else {
-//         nodeItems[1].innerHTML = `${statsItem2} %`;
-//         statsItem2++;
-//     }
-// }, 150);
+    //mn
+    if (current.minute > limit.minute) {
+        current.minute = 0;
+        current.hour++;
+    }
 
-// // límite 3
-// const temporizador3 = setInterval(() => {
+    //hr
+    if (current.hour > limit.hour) {
+        current.hour = 0;
+    }
 
-//     if (statsItem3 > limit.stats3) {
-//         clearInterval(temporizador3);
-//     } else {
-//         nodeItems[2].innerHTML = `${statsItem3} %`;
-//         statsItem3++;
-//     }
-// }, 300);
-
-// // límite 4
-// const temporizador4 = setInterval(() => {
-
-//     if (statsItem4 > limit.stats4) {
-//         clearInterval(temporizador4);
-//     } else {
-//         nodeItems[3].innerHTML = `${statsItem4} %`;
-//         statsItem4++;
-//     }
-// }, 400);
+    // actualizamos html
+    nodeItems[0].innerHTML = `${current.hour}`;
+    nodeItems[1].innerHTML = `${current.minute}`;
+    nodeItems[2].innerHTML = `${current.second}`;
+    nodeItems[3].innerHTML = `${current.milisecond}`;
+}, 1);
