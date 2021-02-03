@@ -12,7 +12,7 @@ let statsItem3 = 0;
 let statsItem4 = 0;
 
 
-nodeItems = document.querySelectorAll(".load__item");
+let nodeItems = document.querySelectorAll(".load__item");
 
 // límite 1
 const temporizador1 = setInterval(() => {
