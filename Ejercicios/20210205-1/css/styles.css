@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img, video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  display: block;
+}
+
+form, input, textarea, select, option {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.draw__title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.draw-form {
+  border: 1px solid gray;
+  margin: 2rem auto;
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+.draw-form .draw-form__input {
+  padding: 1rem 0;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+.draw-form .draw-form__input > input {
+  background-color: lightgrey;
+  transition: all 0.1s ease;
+  width: 50%;
+}
+.draw-form .draw-form__input > input:focus {
+  border: 1px solid black;
+}
+.draw-form .draw-form__button [type=submit] {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  color: green;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.draw-data {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+.draw-data .draw-data__name {
+  border: 1px solid green;
+  border-radius: 10px;
+  color: green;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+.draw-data .selected {
+  background-color: green;
+  color: whitesmoke;
+}
+.draw-data .transition {
+  background-color: lightgreen;
+  color: gray;
+}

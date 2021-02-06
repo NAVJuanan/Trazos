@@ -1,0 +1,86 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+.draw__title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+// form to add a new name
+.draw-form {
+    border: 1px solid gray;
+    margin: 2rem auto;
+    width: 40%;
+   
+    @include flexible(column, nowrap, center, center, initial);
+
+    & .draw-form__input {
+        padding: 1rem 0;
+        width: 80%;
+
+        @include flexible(column, nowrap, center, center, initial);
+
+        & > input {
+            background-color: lightgrey;
+            transition: all .1s ease;
+            width: 50%;
+
+            &:focus {
+                border: 1px solid black;
+            }
+        }
+    }
+
+    // button to add a new name
+    & .draw-form__button {
+
+        & [type=submit] {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            color: green;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+    }
+}
+
+.draw-data {
+    @include flexible(column, nowrap, center, center, initial);
+
+    & .draw-data__name {
+        border: 1px solid green;
+        border-radius: 10px;
+        color: green;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 0.2rem;
+        padding: .5rem;
+        text-align: center;
+    }
+
+    & .selected {
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    & .transition {
+        background-color: lightgreen;
+        color: gray;
+    }
+}
