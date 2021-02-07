@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script asyn defer src="js/app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contador palabras 05.02.2021</title>
+</head>
+
+<body>
+    <div class="text-form">
+        <div class="text-form__input">
+            <label for="textInput" id="textInputLabel">Texto</label>
+            <input type="text" name="text-input" id="textInput" value="" pattern="[A-Za-z]+">
+        </div>
+        <div class="text-form__read">
+            <label for="textRead" id="textReadLabel">Slug</label>
+            <input type="text" name="text-read" id="textRead" value="" readonly>
+        </div>
+        <div class="text-form__result">
+            <p id="inputChars">ddd</p>
+            <p id="inputWords">333</p>
+        </div>
+        <div class="text-form__area">
+            <label for="textLong" id="textLongLabel">Publicación</label>
+            <textarea name="text-long" id="textLong" cols="30" rows="4"></textarea>
+        </div>
+        <div class="text-form__button">
+            <input type="button" value="ABCD" id="btnUpper">
+            <input type="button" value="abcd" id="btnLower">
+        </div>
+        <div class="text-form__result">
+            <p id="areaChars">ddd</p>
+            <p id="areaWords">333</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img, video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  display: block;
+}
+
+form, input, textarea, select, option {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.text-form {
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  margin: 2rem auto;
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: initial;
+}
+.text-form .text-form__input {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: initial;
+}
+.text-form .text-form__input > label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.text-form .text-form__input > input {
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  transition: all 0.1s ease;
+  width: 100%;
+}
+.text-form .text-form__input > input:focus {
+  background-color: lightgrey;
+  border: 1px solid black;
+}
+.text-form .text-form__read {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: initial;
+}
+.text-form .text-form__read > label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.text-form .text-form__read > input {
+  border: 1px solid lightgrey;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+.text-form .text-form__result {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: initial;
+}
+.text-form .text-form__button [type=submit] {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  color: green;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
