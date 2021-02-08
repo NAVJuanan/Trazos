@@ -38,7 +38,7 @@
             border: 1px solid lightgrey;
             cursor: pointer;
             margin: .5rem 0;
-            padding: .5rem 0;
+            padding: .5rem;
             transition: all .1s ease;
             width: 100%;
 
@@ -63,15 +63,42 @@
         & > input {
             border: 1px solid lightgrey;
             margin: .5rem 0;
-            padding: .5rem 0;
+            padding: .5rem;
             width: 100%;
+        }
+    }
+
+    & .text-form__area {
+        padding: 1rem;
+        width: 100%;
+
+        @include flexible(column, nowrap, center, flex-start, initial);
+
+        & > label {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        & > textarea {
+            border: 1px solid lightgrey;
+            cursor: pointer;
+            margin: .5rem 0;
+            padding: .5rem;
+            transition: all .1s ease;
+            width: 100%;
+
+            &:focus {
+                background-color: lightgrey;
+                border: 1px solid black;
+            }
         }
     }
 
     // results
     & .text-form__result {
         font-size: 1.2rem;
-        font-weight: bold;
+        font-style: italic;
+        font-weight: 400;
         padding: 1rem;
         width: 100%;
 
@@ -81,14 +108,16 @@
     // buttons to upper/lower case text
     & .text-form__button {
 
-        & [type=submit] {
-            background-color: whitesmoke;
+        @include flexible(row, nowrap, flex-start, center, initial);
+
+        & [type=button] {
+            background-color: lightgray;
             border-radius: 10px;
             color: green;
             cursor: pointer;
             font-size: 1.2rem;
-            margin-top: 1rem;
-            padding: 1rem;
+            margin: .5rem 1rem;
+            padding: .5rem;
         }
     }
 }

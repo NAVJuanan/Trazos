@@ -86,7 +86,7 @@ body {
   border: 1px solid lightgrey;
   cursor: pointer;
   margin: 0.5rem 0;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   transition: all 0.1s ease;
   width: 100%;
 }
@@ -110,12 +110,10 @@ body {
 .text-form .text-form__read > input {
   border: 1px solid lightgrey;
   margin: 0.5rem 0;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   width: 100%;
 }
-.text-form .text-form__result {
-  font-size: 1.2rem;
-  font-weight: bold;
+.text-form .text-form__area {
   padding: 1rem;
   width: 100%;
   display: flex;
@@ -124,12 +122,47 @@ body {
   align-items: flex-start;
   align-content: initial;
 }
-.text-form .text-form__button [type=submit] {
-  background-color: whitesmoke;
+.text-form .text-form__area > label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.text-form .text-form__area > textarea {
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  transition: all 0.1s ease;
+  width: 100%;
+}
+.text-form .text-form__area > textarea:focus {
+  background-color: lightgrey;
+  border: 1px solid black;
+}
+.text-form .text-form__result {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: initial;
+}
+.text-form .text-form__button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: initial;
+}
+.text-form .text-form__button [type=button] {
+  background-color: lightgray;
   border-radius: 10px;
   color: green;
   cursor: pointer;
   font-size: 1.2rem;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
 }
