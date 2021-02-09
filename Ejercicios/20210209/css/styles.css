@@ -84,6 +84,7 @@ body {
 }
 .main-container .filter-container .filter-list input {
   background-color: lightgrey;
+  cursor: pointer;
   padding: 0.5rem;
 }
 .main-container .filter-container .filter-items {

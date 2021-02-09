@@ -3,84 +3,65 @@
 /*** JQuery ***/
 $(document).ready(function () {
 
-    let nodeAllCards = $("#allCards");
-    let nodeAllForests = $("#allForests");
-    let nodeAllSwamps = $("#allSwamps");
-    let nodeAllMountains = $("#allMountains");
-    let nodeAllImages = $(".filter-image");
+    // retiramos filtros
+    $("#allCards").on({
+        click: function () {
+            $(".filter-image").removeClass("filter-image--hidden");
+        },
 
-    // filtro por total
-    nodeAllCards.addEventListener("click", function () {
-        nodeAllImages.classList.remove("filter-image--hidden");
-    })
-
-    // filtro por cada categoría
-
-    nodeAllForests.addEventListener("click", function () {
-        let nodeForest = document.querySelectorAll(".filter-image");
-
-        for (let i = 0; i < nodeForest.length; i++) {
-            let nodeClassList = nodeForest[i].className;
-
-            if (!nodeClassList.includes("forest")) {
-                nodeForest[i].classList.add("filter-image--hidden");
-            } else {
-                nodeForest[i].classList.remove("filter-image--hidden");
-            }
+        // testeo 2 eventos y muestro this y $(this)
+        dblclick: function () {
+            $(".filter-image").addClass("filter-image--hidden");
+            console.log(this);
+            console.log($(this));
         }
-    })
+    });
 
-    nodeAllSwamps.addEventListener("click", function () {
-        let nodeSwamp = document.querySelectorAll(".filter-image");
-
-        for (let i = 0; i < nodeSwamp.length; i++) {
-            let nodeClassList = nodeSwamp[i].className;
-
-            if (!nodeClassList.includes("swamp")) {
-                nodeSwamp[i].classList.add("filter-image--hidden");
-            } else {
-                nodeSwamp[i].classList.remove("filter-image--hidden");
-            }
+    // filtro por bosques
+    $("#allForests").on({
+        click: function () {
+            $(".filter-image").addClass("filter-image--hidden");
+            $(".forest").removeClass("filter-image--hidden");
         }
-    })
+    });
 
-    nodeAllMountains.addEventListener("click", function () {
-        let nodeMountain = document.querySelectorAll(".filter-image");
-
-        for (let i = 0; i < nodeMountain.length; i++) {
-            let nodeClassList = nodeMountain[i].className;
-
-            if (!nodeClassList.includes("mountain")) {
-                nodeMountain[i].classList.add("filter-image--hidden");
-            } else {
-                nodeMountain[i].classList.remove("filter-image--hidden");
-            }
+    // filtro por pantanos
+    $("#allSwamps").on({
+        click: function () {
+            $(".filter-image").addClass("filter-image--hidden");
+            $(".swamp").removeClass("filter-image--hidden");
         }
-    })
+    });
+
+    // filtro por montañas
+    $("#allMountains").on({
+        click: function () {
+            $(".filter-image").addClass("filter-image--hidden");
+            $(".mountain").removeClass("filter-image--hidden");
+        }
+    });
 
     // evento click a cada imagen
-    for (let i = 0; i < nodeAllImages.length; i++) {
-        nodeAllImages[i].addEventListener("click", function () {
+    $(".filter-image").on({
+        click: function () {
 
             // abrimos el lightbox
-            let nodeLightbox = document.querySelector(".lightbox");
-            nodeLightbox.classList.toggle("lightbox--open");
+            $(".lightbox").addClass("lightbox--open");
 
-            // cargamos la imagen
-            let nodeImage = document.querySelector(".lightbox-image");
-            nodeImage.src = this.src;
-        })
-    }
+            // cargamos la imagen del elemento que hace 'click'
+            $(".lightbox-image").attr("src", $(this).attr("src"));
+        }
+    });
 
-    // evento clic en lightbox fuera de imagen
-    let nodeLightbox = document.querySelector(".lightbox");
-    nodeLightbox.addEventListener("click", function () {
+    // evento click en lightbox fuera de imagen
+    $(".lightbox").on({
+        click: function () {
 
-        // descargamos la imagen
-        let nodeImage = document.querySelector(".lightbox-image");
-        nodeImage.src = "";
+            // descargamos la imagen
+            $(".lightbox-image").attr("src", "#");
 
-        // cerramos el lightbox
-        nodeLightbox.classList.toggle("lightbox--open");
-    })
+            // cerramos el lightbox
+            $(this).removeClass("lightbox--open");
+        }
+    });
 });
