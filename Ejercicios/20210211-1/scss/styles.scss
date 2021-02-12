@@ -1,0 +1,36 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+.main-container {
+
+    background-color: white;
+    width: 100%;
+
+    & .main-button {
+        background-color: white;
+        border: 2px solid black;
+        color: black;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;
+    }
+
+    & .main-button--hover {
+        background-color: black;
+        border: 2px solid white;
+        color: white;
+    }
+}
