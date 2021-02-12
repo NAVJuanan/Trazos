@@ -3,17 +3,34 @@
 /*** JQuery ***/
 $(document).ready(function () {
 
-    // acciones sobre el botón
+    // oculto al iniciar
+    $(".menu-container").hide();
+
+    // acciones sobre el botón de abrir
     $("#btnOpen").on({
         mouseenter: function () {
-            $(this).addClass("main-button--hover");
+            $(this).addClass("open-button--hover");
         },
         mouseleave: function () {
-            $(this).removeClass("main-button--hover");
+            $(this).removeClass("open-button--hover");
         },
         click: function () {
-            alert("Hola")
+            $(this).hide();
+            $(".menu-container").slideDown();
         }
     });
 
+    // acciones sobre el botón de cerrar
+    $("#btnClose").on({
+        mouseenter: function () {
+            $(this).addClass("close-button--hover");
+        },
+        mouseleave: function () {
+            $(this).removeClass("close-button--hover");
+        },
+        click: function () {
+            $(".menu-container").hide();
+            $("#btnOpen").show();
+        }
+    });
 });

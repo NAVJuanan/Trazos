@@ -60,9 +60,11 @@ body {
 
 .main-container {
   background-color: white;
+  height: 100vh;
+  position: relative;
   width: 100%;
 }
-.main-container .main-button {
+.main-container .open-button {
   background-color: white;
   border: 2px solid black;
   color: black;
@@ -70,9 +72,50 @@ body {
   font-size: 2rem;
   font-weight: bold;
   padding: 1rem;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
 }
-.main-container .main-button--hover {
+.main-container .open-button--hover {
   background-color: black;
   border: 2px solid white;
   color: white;
+}
+.main-container .menu-container {
+  background-color: black;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.main-container .close-button {
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
+.main-container .close-button--hover {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+.main-container .menu-list {
+  padding-top: 15rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+}
+.main-container .menu-item {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
 }

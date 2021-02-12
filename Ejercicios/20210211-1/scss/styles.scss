@@ -13,12 +13,16 @@
 
 
 // css body
-.main-container {
 
+// contenedor principal
+.main-container {
     background-color: white;
+    height: 100vh;
+    position: relative;
     width: 100%;
 
-    & .main-button {
+    // botón de apertura
+    & .open-button {
         background-color: white;
         border: 2px solid black;
         color: black;
@@ -26,11 +30,60 @@
         font-size: 2rem;
         font-weight: bold;
         padding: 1rem;
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
     }
 
-    & .main-button--hover {
+    // botón de apertura al pasar el ratón
+    & .open-button--hover {
         background-color: black;
         border: 2px solid white;
         color: white;
+    }
+    
+    // contenedor del menú
+    & .menu-container {
+        background-color: black;
+        height: 100vh;
+        position: relative;
+        width: 100%;
+    }
+
+    // botón de cierre
+    & .close-button {
+        background-color: black;
+        border: 2px solid white;
+        color: white;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+    }
+
+    // botón de cierre al pasar el ratón
+    & .close-button--hover {
+        background-color: white;
+        border: 2px solid black;
+        color: black;
+    }
+
+    // lista de elementos
+    & .menu-list {
+        padding-top: 15rem;
+        width: 100%;
+
+        @include flexible(column, nowrap, center, center, initial);
+    }
+
+    // elemento del menú
+    & .menu-item {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;
     }
 }
