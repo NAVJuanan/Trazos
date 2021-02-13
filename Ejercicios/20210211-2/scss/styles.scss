@@ -13,20 +13,20 @@
 
 
 // css body
+body {
+    background-color: lightgray;
+    width: 100%;
+}
 
 // slider
 .main__slider {
-    background-color: lightgray;
+    background-color: black;
     border-radius: 20px;
-    margin: 1rem auto;
+    margin: 2.5rem auto;
     min-height: 50vh;
     overflow: hidden;
     position: relative;
     width: 80%;
-}
-
-.slider__img--hide {
-    display: none;
 }
 
 .arrow {
