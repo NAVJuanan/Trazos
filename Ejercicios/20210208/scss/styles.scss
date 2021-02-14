@@ -1,0 +1,51 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+
+// form to write text
+.text-form {
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    margin: 2rem auto;
+    width: 20%;
+   
+    @include flexible(column, nowrap, center, flex-start, initial);
+
+    & .text-form__input {
+        padding: 1rem;
+        width: 100%;
+
+        @include flexible(column, nowrap, center, flex-start, initial);
+
+        & > label {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        & > input {
+            border: 1px solid lightgrey;
+            cursor: pointer;
+            margin: .5rem 0;
+            padding: .5rem;
+            transition: all .1s ease;
+            width: 100%;
+
+            &:focus {
+                background-color: lightgrey;
+                border: 1px solid black;
+            }
+        }
+    }
+}
