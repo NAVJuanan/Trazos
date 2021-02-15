@@ -1,0 +1,40 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+body {
+    background-color: lightgray;
+    width: 100%;
+}
+
+.image__container {
+    background-color: yellowgreen;
+    border-radius: 20px;
+    margin: 2.5rem auto;
+    min-height: 70vh;
+    overflow: hidden;
+    position: relative;
+    width: 75%;
+}
+
+.image__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.2) translateX(0);
+
+    &:hover {
+        transform: scale(1.2) translateX(100px);
+    }
+}
