@@ -64,21 +64,10 @@ body {
 }
 
 .image__container {
-  background-color: yellowgreen;
+  background-image: url("../assets/img/thumb-1920-1047038.jpg");
+  background-repeat: no-repeat;
   border-radius: 20px;
-  margin: 2.5rem auto;
-  min-height: 70vh;
-  overflow: hidden;
-  position: relative;
+  margin: 2rem auto;
+  min-height: 90vh;
   width: 75%;
-}
-
-.image__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scale(1.2) translateX(0);
-}
-.image__item:hover {
-  transform: scale(1.2) translateX(100px);
 }
