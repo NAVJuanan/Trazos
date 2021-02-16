@@ -26,5 +26,16 @@ body {
     border-radius: 20px;
     margin: 2rem auto;
     min-height: 90vh;
+    position: relative;
     width: 75%;
+
+    & .image__title {
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+
+        position: absolute;
+        top: calc(20%);
+        left: calc(35%);
+    }
 }
