@@ -1,22 +1,15 @@
 // evento para obtener el valor del 'input' tras cada cambio
 document.querySelector("#textInput").addEventListener("input", function () {
 
-    const spaceChar = " ";
-    const hyphenChar = "-";
-    const emptyChar = "";
+    const inputValue = this.value;
 
-    // patrón para excluir letras que no vayan de la 'a' a la 'z' y espacio
-    const regexPattern = /[^a-z ]/g;
+    // patrón para incluir 8 dígitos iniciales, un guión opcional y una letra mayúscula obligatoria
+    const regexPattern = /^\d{9}-{0,1}[a-zA-Z]/g;
 
-    // recogemos y transformamos texto a minúsculas
-    const inputValue = this.value.toLowerCase();
-
-    // aplicamos el patrón y sustituimos por una cadena vacía
-    const regexValue = inputValue.replace(regexPattern, emptyChar);
-
-    // creamos array por cada palabra separando por espacios
-    const inputArray = regexValue.split(spaceChar);
-
-    // filtramos array para descartar cadenas vacías
-    const filteredArray = inputArray.filter(value => value !== emptyChar);
+    // comprobamos si el dni introducido cumple el patrón
+    if (regexPattern.test(inputValue)) {
+        document.querySelector("#inputResult").innerHTML = "Es correcto";
+    } else {
+        document.querySelector("#inputResult").innerHTML = "Es incorrecto";
+    }
 })
