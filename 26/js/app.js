@@ -39,7 +39,7 @@ $(document).ready(() => {
             },
             error: function (error) {
                 console.log("error al obtener datos");
-                console.log(error);
+                console.error(error);
             }
         })
     }
@@ -65,7 +65,10 @@ $(document).ready(() => {
                 //const jsonFormat = JSON.stringify(httpResponse);
             }
         }
-
+        httpRequest.onerror = function (error) {
+            console.log("error al obtener datos");
+            console.error(error);
+        }
         httpRequest.send();
     }
 
