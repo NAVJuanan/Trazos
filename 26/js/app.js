@@ -1,11 +1,10 @@
 "use strict";
 
-let urlCurrent = "https://swapi.dev/api/people";
-let urlNext = null;
-let urlBack = null;
-
 /*** JQuery ***/
 $(document).ready(() => {
+    let urlCurrent = "https://swapi.dev/api/people";
+    let urlNext = null;
+    let urlBack = null;
 
     requestData(urlCurrent);
 
@@ -32,6 +31,7 @@ $(document).ready(() => {
                 urlBack = data.previous;
 
                 drawPeople(data);
+                checkButtons();
             },
             error: function (error) {
                 console.log("error al obtener datos");
@@ -50,6 +50,20 @@ $(document).ready(() => {
                 .html(datos.results[i].name);
 
             $("#gridPeople").append(nodePeople);
+        }
+    }
+
+    function checkButtons() {
+        if (urlBack) {
+            $("#btnBack").prop("disabled", false);
+        } else {
+            $("#btnBack").prop("disabled", true);
+        }
+
+        if (urlNext) {
+            $("#btnNext").prop("disabled", false);
+        } else {
+            $("#btnNext").prop("disabled", true);
         }
     }
 })
