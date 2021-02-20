@@ -6,21 +6,25 @@ $(document).ready(() => {
     let urlNext = null;
     let urlBack = null;
 
-    requestData(urlCurrent);
+    //requestDataJS(urlCurrent);
+    requestDataJQuery(urlCurrent);
 
     $("#btnNext").on({
         click: function () {
-            requestData(urlNext);
+            //requestDataJS(urlNext);
+            requestDataJQuery(urlNext);
         }
     })
 
     $("#btnBack").on({
         click: function () {
-            requestData(urlBack);
+            //requestDataJS(urlBack);
+            requestDataJQuery(urlBack);
         }
     })
 
-    function requestData(url) {
+    // request JQuery
+    function requestDataJQuery(url) {
         urlCurrent = url;
 
         $.ajax({
@@ -40,6 +44,31 @@ $(document).ready(() => {
         })
     }
 
+    // request JavaScript
+    function requestDataJS(url) {
+        urlCurrent = url;
+
+        const httpRequest = new XMLHttpRequest();
+        httpRequest.open("GET", urlCurrent, true);
+        httpRequest.onreadystatechange = function (event) {
+            if (this.readyState == 4 && this.status == 200) {
+                // convierte un Json a objeto
+                const httpResponse = JSON.parse(this.responseText);
+
+                urlNext = httpResponse.next;
+                urlBack = httpResponse.previous;
+
+                drawPeople(httpResponse);
+                checkButtons();
+
+                // convierte un objeto a Json
+                //const jsonFormat = JSON.stringify(httpResponse);
+            }
+        }
+
+        httpRequest.send();
+    }
+
     function drawPeople(datos) {
         $("#numberPeople").html(datos.count);
         $("#gridPeople").empty();
@@ -47,7 +76,12 @@ $(document).ready(() => {
         for (let i = 0; i < datos.results.length; i++) {
             const nodePeople = $("<div></div>")
                 .addClass("people")
-                .html(datos.results[i].name);
+                .html(datos.results[i].name)
+                .on({
+                    click: function () {
+                        console.log(this);
+                    }
+                })
 
             $("#gridPeople").append(nodePeople);
         }
