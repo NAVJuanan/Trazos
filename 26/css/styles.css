@@ -81,5 +81,12 @@ p {
 .people {
   background-color: lightcyan;
   border: 1px solid black;
+  min-width: 20%;
+  padding: 1rem;
+}
+
+.buttons {
+  border: 1px solid gray;
+  cursor: pointer;
   padding: 1rem;
 }

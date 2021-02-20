@@ -1,36 +1,55 @@
 "use strict";
 
+let urlCurrent = "https://swapi.dev/api/people";
+let urlNext = null;
+let urlBack = null;
+
 /*** JQuery ***/
 $(document).ready(() => {
 
-    const urlData = $.ajax({
-        method: "GET",
-        url: "https://swapi.dev/api/people",
-        success: function (data) {
-            console.log("datos obtenidos correctamente");
-            console.log(data);
+    requestData(urlCurrent);
 
-            drawPeople(data);
-        },
-        error: function (error) {
-            console.log("error al obtener datos");
-            console.log(error);
+    $("#btnNext").on({
+        click: function () {
+            requestData(urlNext);
         }
     })
 
-    console.log(urlData);
-})
+    $("#btnBack").on({
+        click: function () {
+            requestData(urlBack);
+        }
+    })
 
-function drawPeople(datos) {
-    $("#numberPeople").html(datos.count);
+    function requestData(url) {
+        urlCurrent = url;
 
-    for (let i = 0; i < datos.results.length; i++) {
-        console.log(datos.results[i].name);
+        $.ajax({
+            method: "GET",
+            url: urlCurrent,
+            success: function (data) {
+                urlNext = data.next;
+                urlBack = data.previous;
 
-        const nodePeople = $("<div></div>")
-            .addClass("people")
-            .html(datos.results[i].name);
-
-        $("#gridPeople").append(nodePeople);
+                drawPeople(data);
+            },
+            error: function (error) {
+                console.log("error al obtener datos");
+                console.log(error);
+            }
+        })
     }
-}
+
+    function drawPeople(datos) {
+        $("#numberPeople").html(datos.count);
+        $("#gridPeople").empty();
+
+        for (let i = 0; i < datos.results.length; i++) {
+            const nodePeople = $("<div></div>")
+                .addClass("people")
+                .html(datos.results[i].name);
+
+            $("#gridPeople").append(nodePeople);
+        }
+    }
+})
