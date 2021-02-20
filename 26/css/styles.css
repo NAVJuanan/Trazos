@@ -85,9 +85,15 @@ p {
   min-width: 20%;
   padding: 1rem;
 }
+.people:hover {
+  background-color: lightblue;
+}
 
 .buttons {
   border: 1px solid gray;
   cursor: pointer;
   padding: 1rem;
+}
+.buttons:hover {
+  background-color: #a7a5a5;
 }

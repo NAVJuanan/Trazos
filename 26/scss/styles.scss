@@ -35,10 +35,18 @@ p {
     cursor: pointer;
     min-width: 20%;
     padding: 1rem;
+
+    &:hover{
+        background-color: lightblue;
+    }
 }
 
 .buttons {
     border: 1px solid gray;
     cursor: pointer;
     padding: 1rem;
+
+    &:hover{
+        background-color: rgb(167, 165, 165);
+    }
 }

@@ -72,19 +72,31 @@ $(document).ready(() => {
         httpRequest.send();
     }
 
+    function requestPersonJS(url) {
+        $.ajax({
+            method: "GET",
+            url: url,
+            success: function (data) {
+                console.log("dato de persona");
+                console.log(data);
+            },
+            error: function (error) {
+                console.log("error al obtener persona");
+                console.error(error);
+            }
+        })
+    }
+
     function drawPeople(datos) {
         $("#numberPeople").html(datos.count);
         $("#gridPeople").empty();
 
-        for (let i = 0; i < datos.results.length; i++) {
-            const nodePeople = $("<div></div>")
-                .addClass("people")
-                .html(datos.results[i].name)
-                .on({
-                    click: function () {
-                        console.log(this);
-                    }
-                })
+        for (let dato of datos.results) {
+            const nodePeople =
+                $("<div></div>")
+                    .addClass("people")
+                    .html(dato.name)
+                    .on({ click: () => requestPersonJS(dato.url) })
 
             $("#gridPeople").append(nodePeople);
         }
