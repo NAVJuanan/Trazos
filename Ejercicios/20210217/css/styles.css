@@ -58,9 +58,19 @@ body {
   display: block;
 }
 
-.main__slider {
-  background-color: black;
+.slider__container {
+  overflow: hidden;
   width: 100%;
+}
+
+.slider__main {
+  position: relative;
+  width: 400%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
 }
 
 .slider__images {

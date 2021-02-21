@@ -13,14 +13,21 @@
 
 
 // slider
-.main__slider {
-    background-color: black;
+.slider__container {
+    overflow: hidden;
     width: 100%;
+}
+
+.slider__main {
+    position: relative;
+    width: 400%;
+
+    @include flexible(row, nowrap, center, center, initial);
 }
 
 .slider__images {
     width: 100%;
-
+    
     @include flexible(row, nowrap, flex-start, center, initial);
 }
 

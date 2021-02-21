@@ -9,13 +9,19 @@ $(document).ready(() => {
     $(".slider__img").on({
         click: function () {
             const transitionTime = 500;
+            const percentage = 100;
             const selectedImage = parseInt($(this).attr("data-img"));
 
             if (!delayImage) {
                 delayImage = setInterval(function () {
                     if (selectedImage > currentImage) {
-                        $(".slider__big-img").attr("src", $(".slider__img").eq(currentImage).attr("src"));
+                        // transicionamos las imágenes hasta llegar al objetivo
+                        $(".slider__main").animate({ right: `${currentImage * percentage}%` }, transitionTime, "swing");
                         currentImage++;
+                    } else if (selectedImage < currentImage) {
+                        currentImage--;
+                        // transicionamos las imágenes hasta llegar al objetivo
+                        $(".slider__main").animate({ right: `${(currentImage - 1) * percentage}%` }, transitionTime, "swing");
                     } else {
                         clearInterval(delayImage);
                         delayImage = undefined;
