@@ -12,21 +12,17 @@ $(document).ready(() => {
             const percentage = 100;
             const selectedImage = parseInt($(this).attr("data-img"));
 
-            if (!delayImage) {
-                delayImage = setInterval(function () {
-                    if (selectedImage > currentImage) {
-                        // transicionamos las imágenes hasta llegar al objetivo
-                        $(".slider__main").animate({ right: `${currentImage * percentage}%` }, transitionTime, "swing");
-                        currentImage++;
-                    } else if (selectedImage < currentImage) {
-                        currentImage--;
-                        // transicionamos las imágenes hasta llegar al objetivo
-                        $(".slider__main").animate({ right: `${(currentImage - 1) * percentage}%` }, transitionTime, "swing");
-                    } else {
-                        clearInterval(delayImage);
-                        delayImage = undefined;
-                    }
-                }, transitionTime)
+            while (selectedImage !== currentImage) {
+
+                if (selectedImage > currentImage) {
+                    // transicionamos las imágenes hasta llegar al objetivo
+                    $(".slider__main").animate({ right: `${currentImage * percentage}%` }, transitionTime, "swing");
+                    currentImage++;
+                } else if (selectedImage < currentImage) {
+                    currentImage--;
+                    // transicionamos las imágenes hasta llegar al objetivo
+                    $(".slider__main").animate({ right: `${(currentImage - 1) * percentage}%` }, transitionTime, "swing");
+                }
             }
         }
     })
