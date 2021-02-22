@@ -1,0 +1,32 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+body {
+    background-color: lightcyan;
+}
+
+.buttons {
+    border: 1px solid gray;
+    cursor: pointer;
+    padding: 1rem;
+
+    &:hover{
+        background-color: rgb(167, 165, 165);
+    }
+}
+
+#pickText {
+    background-color: lightcyan;
+}
