@@ -3,9 +3,12 @@
 /*** JQuery ***/
 $(document).ready(() => {
 
-    const listTextColor = [];
+    let listTextColor = [];
 
     // Local Storage: guarda y recupera datos bajo una clave
+    if (JSON.parse(localStorage.getItem("listTextColor"))) {
+        listTextColor = JSON.parse(localStorage.getItem("listTextColor"));
+    }
     $("body").css("background-color", localStorage.getItem("favoriteColor"));
 
     $("#btnChange").on({
