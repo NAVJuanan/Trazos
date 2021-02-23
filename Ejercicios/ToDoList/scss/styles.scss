@@ -13,4 +13,41 @@
 
 body {
     background-color: lightcyan;
+    width: 100%;
+}
+
+.main__container {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 2rem 0;
+    width: 30%;
+
+    @include flexible(column, nowrap, flex-start, flex-start, initial);
+
+    & .task__text{
+        width: 100%;
+        @include flexible(row, nowrap, flex-start, center, initial);
+
+        & [type=text] {
+            background-color: #98ccf7;
+            color: white;
+            padding: 1rem;
+
+            &:focus {
+                background-color: #7ab7e9;
+            }
+        }
+
+        & [type=button] {
+            background-color: white;
+            color: #7ab7e9;
+            cursor: pointer;
+            padding: 1rem;
+
+            &:hover {
+                background-color: #7ab7e9;
+                color: white;
+            }
+        }
+    }
 }

@@ -60,4 +60,43 @@ body {
 
 body {
   background-color: lightcyan;
+  width: 100%;
+}
+
+.main__container {
+  background-color: whitesmoke;
+  margin: auto;
+  padding: 2rem 0;
+  width: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: initial;
+}
+.main__container .task__text {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: initial;
+}
+.main__container .task__text [type=text] {
+  background-color: #98ccf7;
+  color: white;
+  padding: 1rem;
+}
+.main__container .task__text [type=text]:focus {
+  background-color: #7ab7e9;
+}
+.main__container .task__text [type=button] {
+  background-color: white;
+  color: #7ab7e9;
+  cursor: pointer;
+  padding: 1rem;
+}
+.main__container .task__text [type=button]:hover {
+  background-color: #7ab7e9;
+  color: white;
 }
