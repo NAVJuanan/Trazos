@@ -1,0 +1,16 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+body {
+    background-color: lightcyan;
+}
