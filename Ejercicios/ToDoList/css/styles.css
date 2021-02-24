@@ -143,20 +143,20 @@ body {
   width: 80%;
 }
 
-.task-done__task-remove {
+.task-todo__task-remove, .task-done__task-remove {
   cursor: pointer;
   font-size: 1.5rem;
   padding: 0 1rem;
 }
-.task-done__task-remove:hover {
+.task-todo__task-remove:hover, .task-done__task-remove:hover {
   color: red;
 }
 
-.task-done__task-add {
+.task-todo__task-add, .task-done__task-add {
   cursor: pointer;
   font-size: 1.5rem;
   padding: 0 1rem;
 }
-.task-done__task-add:hover {
+.task-todo__task-add:hover, .task-done__task-add:hover {
   color: greenyellow;
 }
