@@ -58,20 +58,20 @@ $(document).ready(() => {
         const nodeTaskToDo =
             $("<div></div>")
                 .attr("id", taskId)
-                .addClass("task-todo__task");
+                .addClass("task__div");
 
         const nodeSpanTask =
             $("<span></span>")
-                .addClass("task-todo__task-text")
+                .addClass("task__text")
                 .html(taskName);
 
         const nodeSpanRemove =
             $("<button>")
-                .addClass("removeTask task-todo__task-remove far fa-trash-alt");
+                .addClass("task__remove far fa-trash-alt");
 
         const nodeSpanAdd =
             $("<button>")
-                .addClass("nextTask task-todo__task-add far fa-check-circle");
+                .addClass("task__next task-todo__task-add far fa-check-circle");
 
         nodeTaskToDo
             .append(nodeSpanTask)
@@ -81,29 +81,28 @@ $(document).ready(() => {
         $(".task__todo").append(nodeTaskToDo);
 
 
-        // event to move a task from the ToDo list to the Done list and draw DOM
-        $(".nextTask").on({
-            click: () => {
-                const taskName = $("#taskName").val();
+        // event to remove a task from the ToDo list and draw DOM
+        $(".task__remove").on({
+            click: function () {
+                const taskId = $(this).parent().attr("id");
+                const taskName = $(this).parent().text();
 
-                emptyTask(taskName);
+                $(`#${taskId}`).remove();
                 taskManager.removeTaskToDo(taskName);
-
-                taskManager.addTaskDone(taskName);
-                drawTaskDone(taskName);
             }
         })
 
 
-        // event to remove a task from the ToDo list and draw DOM
-        $(".removeTask").on({
-            click: function () {
-                const taskId = $(this).parent().attr("id");
-                const taskName = $(this).parent().text();
-                console.log(taskId);
-                console.log(taskName);
-                emptyTask(taskId);
+        // event to move a task from the ToDo list to the Done list and draw DOM
+        $(".task__next").on({
+            click: () => {
+                const taskName = $("#taskName").val();
+
+                $(`#${taskName}`).remove();
                 taskManager.removeTaskToDo(taskName);
+
+                taskManager.addTaskDone(taskName);
+                drawTaskDone(taskName);
             }
         })
     }
@@ -116,20 +115,20 @@ $(document).ready(() => {
         const nodeTaskDone =
             $("<div></div>")
                 .attr("id", taskId)
-                .addClass("task-done__task");
+                .addClass("task__div");
 
         const nodeSpanTask =
             $("<span></span>")
-                .addClass("task-done__task-text")
+                .addClass("task__text")
                 .html(taskName);
 
         const nodeSpanRemove =
             $("<button>")
-                .addClass("removeTask task-done__task-remove far fa-trash-alt");
+                .addClass("task__remove far fa-trash-alt");
 
         const nodeSpanAdd =
             $("<button>")
-                .addClass("backTask task-done__task-add far fa-check-circle");
+                .addClass("task__back task-done__task-add far fa-check-circle");
 
         nodeTaskDone
             .append(nodeSpanTask)
@@ -139,23 +138,29 @@ $(document).ready(() => {
         $(".task__done").append(nodeTaskDone);
 
 
+        // event to remove a task from the Done list and draw DOM
+        $(".task__remove").on({
+            click: function () {
+                const taskId = $(this).parent().attr("id");
+                const taskName = $(this).parent().text();
+
+                $(`#${taskId}`).remove();
+                taskManager.removeTaskToDo(taskName);
+            }
+        })
+
+
         // event to move a task from the Done list to the ToDo list and draw DOM
-        $(".backTask").on({
+        $(".task__back").on({
             click: () => {
                 const taskName = $("#taskName").val();
 
-                emptyTask(taskName);
+                $(`#${taskName}`).remove();
                 taskManager.removeTaskDone(taskName);
 
                 taskManager.addTaskToDo(taskName);
                 drawTaskToDo(taskName);
             }
         })
-    }
-
-
-    // function to empty from dom a ToDo Task node
-    function emptyTask(taskName) {
-        $(`#${taskName}`).remove();
     }
 })

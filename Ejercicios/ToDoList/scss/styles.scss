@@ -73,25 +73,25 @@ body {
     width: 100%;
 }
 
-.task-todo__title, .task-done__title {
+.task__title {
     font-size: 2rem;
     font-weight: bold;
     padding: 0.5rem 0;
 }
 
-.task-todo__task, .task-done__task {
+.task__div {
     border: 1px solid lightgrey;
     padding: 1rem;
 
     @include flexible(row, nowrap, flex-start, center, initial);
 }
 
-.task-todo__task-text, .task-done__task-text{
+.task__text {
     font-size: 1.5rem;
     width: 80%;
 }
 
-.task-todo__task-remove, .task-done__task-remove {
+.task__remove {
     cursor: pointer;
     font-size: 1.5rem;    
     padding: 0 1rem;
@@ -101,12 +101,23 @@ body {
     }
 }
 
-.task-todo__task-add, .task-done__task-add {
+.task__next {
     cursor: pointer;
     font-size: 1.5rem;    
     padding: 0 1rem;
 
     &:hover {
         color: greenyellow;
+    }
+}
+
+.task__back {
+    color: greenyellow;
+    cursor: pointer;
+    font-size: 1.5rem;    
+    padding: 0 1rem;
+
+    &:hover {
+        color: green;
     }
 }
