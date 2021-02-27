@@ -9,8 +9,16 @@ $(document).ready(() => {
         taskDoneList: [],
 
         // methods
-        addTaskToDo(taskName) { this.taskToDoList.push(taskName) },
-        addTaskDone(taskName) { this.taskDoneList.push(taskName) },
+        addTaskToDo(taskName) {
+            if (!this.taskToDoList.includes(taskName)) {
+                this.taskToDoList.push(taskName)
+            }
+        },
+        addTaskDone(taskName) {
+            if (!this.taskDoneList.includes(taskName)) {
+                this.taskDoneList.push(taskName)
+            }
+        },
         checkNewTask(taskName) {
             if (taskName !== "") {
                 if (!this.taskToDoList.includes(taskName) && !this.taskDoneList.includes(taskName)) {
@@ -37,6 +45,10 @@ $(document).ready(() => {
             }
         },
     }
+
+
+    // load local storage
+    getLocalStorage();
 
 
     // event to add a new ToDo Task to the list and draw DOM
@@ -83,6 +95,8 @@ $(document).ready(() => {
 
         $(".task__todo").append(nodeTaskToDo);
 
+        setLocalStorage();
+
 
         // event to remove a task from the ToDo list and draw DOM
         $(".task__remove").on({
@@ -92,6 +106,8 @@ $(document).ready(() => {
 
                 $(`#${taskId}`).remove();
                 taskManager.removeTaskToDo(taskName);
+
+                setLocalStorage();
             }
         })
 
@@ -101,11 +117,15 @@ $(document).ready(() => {
             click: function () {
                 const taskId = $(this).parent().attr("id");
                 const taskName = $(this).parent().text();
-
+                console.log(taskName, taskManager.taskToDoList.length);
+                console.log("el otro", taskManager.taskDoneList.length);
                 $(`#${taskId}`).remove();
                 taskManager.removeTaskToDo(taskName);
-
+                console.log(taskName, taskManager.taskToDoList.length);
+                console.log("el otro", taskManager.taskDoneList.length);
                 taskManager.addTaskDone(taskName);
+                console.log(taskName, taskManager.taskToDoList.length);
+                console.log("el otro", taskManager.taskDoneList.length);
                 drawTaskDone(taskName);
             }
         })
@@ -141,6 +161,8 @@ $(document).ready(() => {
 
         $(".task__done").append(nodeTaskDone);
 
+        setLocalStorage();
+
 
         // event to remove a task from the Done list and draw DOM
         $(".task__remove").on({
@@ -150,6 +172,8 @@ $(document).ready(() => {
 
                 $(`#${taskId}`).remove();
                 taskManager.removeTaskDone(taskName);
+
+                setLocalStorage();
             }
         })
 
@@ -159,13 +183,47 @@ $(document).ready(() => {
             click: function () {
                 const taskId = $(this).parent().attr("id");
                 const taskName = $(this).parent().text();
-
+                console.log(taskName, taskManager.taskDoneList.length);
+                console.log("el otro", taskManager.taskToDoList.length);
                 $(`#${taskId}`).remove();
                 taskManager.removeTaskDone(taskName);
-
+                console.log(taskName, taskManager.taskDoneList.length);
+                console.log("el otro", taskManager.taskToDoList.length);
                 taskManager.addTaskToDo(taskName);
+                console.log(taskName, taskManager.taskDoneList.length);
+                console.log("el otro", taskManager.taskToDoList.length);
                 drawTaskToDo(taskName);
             }
         })
+    }
+
+
+    // function to get local storage data, load lists & draw
+    function getLocalStorage() {
+
+        if (JSON.parse(localStorage.getItem("listTasksToDo"))) {
+            const taskNames = JSON.parse(localStorage.getItem("listTasksToDo"));
+
+            for (let taskName of taskNames) {
+                taskManager.addTaskToDo(taskName);
+                drawTaskToDo(taskName);
+            }
+        }
+
+        if (JSON.parse(localStorage.getItem("listTasksDone"))) {
+            const taskNames = JSON.parse(localStorage.getItem("listTasksDone"));
+
+            for (let taskName of taskNames) {
+                taskManager.addTaskDone(taskName);
+                drawTaskDone(taskName);
+            }
+        }
+    }
+
+
+    // function to set local storage data
+    function setLocalStorage() {
+        localStorage.setItem("listTasksToDo", JSON.stringify(taskManager.taskToDoList));
+        localStorage.setItem("listTasksDone", JSON.stringify(taskManager.taskDoneList));
     }
 })
