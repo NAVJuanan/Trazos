@@ -9,10 +9,21 @@ $(document).ready(() => {
         taskDoneList: [],
 
         // methods
-        taskToDoLength() { return this.taskToDoList.length },
-        taskDoneLength() { return this.taskDoneList.length },
         addTaskToDo(taskName) { this.taskToDoList.push(taskName) },
         addTaskDone(taskName) { this.taskDoneList.push(taskName) },
+        checkNewTask(taskName) {
+            if (taskName !== "") {
+                if (!this.taskToDoList.includes(taskName) && !this.taskDoneList.includes(taskName)) {
+                    return true;
+                } else {
+                    alert(`La tarea '${taskName}' ya existe`);
+                    return false;
+                }
+            } else {
+                alert("La tarea no es válida");
+                return false;
+            }
+        },
         removeTaskToDo(taskName) {
             const index = this.taskToDoList.indexOf(taskName);
             if (index >= 0) {
@@ -23,14 +34,6 @@ $(document).ready(() => {
             const index = this.taskDoneList.indexOf(taskName);
             if (index >= 0) {
                 this.taskDoneList.splice(index, 1);
-            }
-        },
-        checkNewTask(taskName) {
-            if (!this.taskToDoList.includes(taskName) && !this.taskDoneList.includes(taskName)) {
-                return true;
-            } else {
-                alert(`La tarea '${taskName}' ya existe`);
-                return false;
             }
         },
     }
@@ -45,7 +48,7 @@ $(document).ready(() => {
 
                 taskManager.addTaskToDo(taskName);
                 drawTaskToDo(taskName);
-                $("#taskName").val("Introducir una actividad");
+                $("#taskName").val("");
             }
         }
     })
@@ -95,10 +98,11 @@ $(document).ready(() => {
 
         // event to move a task from the ToDo list to the Done list and draw DOM
         $(".task__next").on({
-            click: () => {
-                const taskName = $("#taskName").val();
+            click: function () {
+                const taskId = $(this).parent().attr("id");
+                const taskName = $(this).parent().text();
 
-                $(`#${taskName}`).remove();
+                $(`#${taskId}`).remove();
                 taskManager.removeTaskToDo(taskName);
 
                 taskManager.addTaskDone(taskName);
@@ -145,17 +149,18 @@ $(document).ready(() => {
                 const taskName = $(this).parent().text();
 
                 $(`#${taskId}`).remove();
-                taskManager.removeTaskToDo(taskName);
+                taskManager.removeTaskDone(taskName);
             }
         })
 
 
         // event to move a task from the Done list to the ToDo list and draw DOM
         $(".task__back").on({
-            click: () => {
-                const taskName = $("#taskName").val();
+            click: function () {
+                const taskId = $(this).parent().attr("id");
+                const taskName = $(this).parent().text();
 
-                $(`#${taskName}`).remove();
+                $(`#${taskId}`).remove();
                 taskManager.removeTaskDone(taskName);
 
                 taskManager.addTaskToDo(taskName);
