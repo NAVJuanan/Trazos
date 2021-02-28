@@ -37,16 +37,17 @@ Se compone de 2 propiedades que guardan las diferentes tareas:
 Se compone de varios métodos que gestionan el comportamiento de la aplicación:
 * **addTaskToDo(tarea)**: es un método para añadir la tarea que recibe como parámetro a la lista de tareas a realizar.
 * **addTaskDone(tarea)**: es un método para añadir la tarea que recibe como parámetro a la lista de tareas realizadas.
-* **checkNewTask(tarea)**: es un método para comprobar si la nueva tarea que se añade, ya existe en alguna de las listas y devolver un error en ese caso.
+* **checkNewTask(tarea)**: es un método para comprobar si la nueva tarea que se añade no está vacía o si ya existe en alguna de las listas y devolver un error en esos casos.
 * **removeTaskToDo(tarea)**: es un método para eliminar la tarea que recibe como parámetro de la lista de tareas a realizar.
 * **removeTaskDone(tarea)**: es un método para eliminar la tarea que recibe como parámetro de la lista de tareas realizadas.
 
 Se compone de los siguientes eventos y funciones:
 * **click al añadir una tarea**: evento que recoge el valor introducido en el input, revisa si la tarea introducida cumple los requisitos para poder agregarse como nueva tarea a realizar y la agrega si es así, actualiza el dom para verla y reinicia el input para introducir una nueva tarea.
-* **drawTaskToDo(tarea)**: función que dibuja en el dom de tareas a realizar la tarea que recibe como parámetro, dándole unas clases, botones para eliminar y mover con sus correspondientes eventos y una id única basada en el nombre de la tarea sin espacios, con lo que facilitamos la gestión de cada tarea.
-* **drawTaskDone(tarea)**: función que dibuja en el dom de tareas realizadas la tarea que recibe como parámetro, dándole unas clases, botones para eliminar y mover con sus correspondientes eventos y una id única basada en el nombre de la tarea sin espacios, con lo que facilitamos la gestión de cada tarea.
+* **drawTaskToDo(tarea, actualizar)**: función que dibuja en el dom de tareas a realizar la tarea que recibe como parámetro, dándole unas clases, botones para eliminar y mover con sus correspondientes eventos y una id única basada en el nombre de la tarea sin espacios, con lo que facilitamos la gestión de cada tarea. También le pasamos un parámetro para actualizar o no el almacenamiento local.
+* **drawTaskDone(tarea, actualizar)**: función que dibuja en el dom de tareas realizadas la tarea que recibe como parámetro, dándole unas clases, botones para eliminar y mover con sus correspondientes eventos y una id única basada en el nombre de la tarea sin espacios, con lo que facilitamos la gestión de cada tarea. También le pasamos un parámetro para actualizar o no el almacenamiento local.
 * **click al eliminar una tarea**: evento añadido cuando se dibuja una tarea en el dom y que elimina la tarea del listado al que pertenezca y además actualiza la vista del dom.
 * **click al mover una tarea**: evento añadido cuando se dibuja una tarea en el dom y que mueve la tarea de la lista de tareas a relizar a la lista de tareas realizadas o viceversa y además actualiza la vista del dom.
 
-
-
+Para gestionar el almacenamiento local tenemos 2 funciones:
+* **getLocalStorage**: función llamada al inicio de la aplicación que lee el almacenamiento local y añade una a una las tareas en el listado correspondiente actualizando la visualización del dom.
+* **setLocalStorage**: función llamada tras la gestión de cada tarea para actualizar el contenido del almacenamiento local.
