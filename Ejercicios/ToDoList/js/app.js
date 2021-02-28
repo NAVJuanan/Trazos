@@ -146,7 +146,7 @@ $(document).ready(() => {
 
         const nodeSpanTask =
             $("<span></span>")
-                .addClass("task__text")
+                .addClass("task__text task__text-done")
                 .html(taskName);
 
         const nodeSpanRemove =

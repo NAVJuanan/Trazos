@@ -92,6 +92,10 @@ body {
     width: 80%;
 }
 
+.task__text-done {
+    text-decoration: line-through;
+}
+
 .task__remove {
     cursor: pointer;
     font-size: 1.5rem;    
