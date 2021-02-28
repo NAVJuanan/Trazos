@@ -67,7 +67,7 @@ $(document).ready(() => {
 
 
     // function to draw a new ToDo Task node
-    function drawTaskToDo(taskName) {
+    function drawTaskToDo(taskName, updateLocalStorage = true) {
         const taskId = taskName.replace(/\s/g, "");
 
         const nodeTaskToDo =
@@ -95,7 +95,10 @@ $(document).ready(() => {
 
         $(".task__todo").append(nodeTaskToDo);
 
-        setLocalStorage();
+
+        if (updateLocalStorage) {
+            setLocalStorage();
+        }
 
 
         // event to remove a task from the ToDo list and draw DOM
@@ -133,7 +136,7 @@ $(document).ready(() => {
 
 
     // function to draw a new Done Task node
-    function drawTaskDone(taskName) {
+    function drawTaskDone(taskName, updateLocalStorage = true) {
         const taskId = taskName.replace(/\s/g, "");
 
         const nodeTaskDone =
@@ -161,7 +164,10 @@ $(document).ready(() => {
 
         $(".task__done").append(nodeTaskDone);
 
-        setLocalStorage();
+
+        if (updateLocalStorage) {
+            setLocalStorage();
+        }
 
 
         // event to remove a task from the Done list and draw DOM
@@ -202,20 +208,20 @@ $(document).ready(() => {
     function getLocalStorage() {
 
         if (JSON.parse(localStorage.getItem("listTasksToDo"))) {
-            const taskNames = JSON.parse(localStorage.getItem("listTasksToDo"));
-
-            for (let taskName of taskNames) {
+            const taskToDoNames = JSON.parse(localStorage.getItem("listTasksToDo"));
+            console.log(taskToDoNames);
+            for (let taskName of taskToDoNames) {
                 taskManager.addTaskToDo(taskName);
-                drawTaskToDo(taskName);
+                drawTaskToDo(taskName, false);
             }
         }
 
         if (JSON.parse(localStorage.getItem("listTasksDone"))) {
-            const taskNames = JSON.parse(localStorage.getItem("listTasksDone"));
-
-            for (let taskName of taskNames) {
+            const taskDoneNames = JSON.parse(localStorage.getItem("listTasksDone"));
+            console.log(taskDoneNames);
+            for (let taskName of taskDoneNames) {
                 taskManager.addTaskDone(taskName);
-                drawTaskDone(taskName);
+                drawTaskDone(taskName, false);
             }
         }
     }
