@@ -1,0 +1,48 @@
+// import css reset
+@import "reset.scss";
+
+
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// css body
+body {
+    background-color: lightcyan;
+}
+
+#opener {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#gridCuadrado {
+    margin: 1rem;
+    @include flexible(row, nowrap, flex-start, center, initial);
+}
+
+.cuadrado {
+    height: 100px;
+    width: 100px;
+    background-color: darkkhaki;
+    border: 1px solid black;
+    margin-right: 1rem;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+#dropElement {
+    margin: 1rem;
+    height: 200px;
+    width: 200px;
+    background-color: floralwhite;
+}
