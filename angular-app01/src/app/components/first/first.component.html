@@ -3,6 +3,10 @@
 <!-- interpolación de las propiedades -->
 <p>{{title}} from {{name}} with {{counter}} works!</p>
 
+<!-- interpolación de los atributos -->
+<a href="{{web}}">{{web}}</a>
+<a [href]="web">{{web}}</a>
+
 <!-- eventos -->
 <button type="submit" (click)="sumar()">Sumar</button>
 <button type="submit" (click)="restar()">Restar</button>

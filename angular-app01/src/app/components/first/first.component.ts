@@ -10,6 +10,7 @@ export class FirstComponent implements OnInit {
   // propiedades
   public title: string = 'first';
   public name: string = "Juanan";
+  public web: string = "www.google.es";
   public counter: number = 0;
 
   // métodos
