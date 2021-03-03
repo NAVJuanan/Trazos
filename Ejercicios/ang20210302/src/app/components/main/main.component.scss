@@ -1,0 +1,55 @@
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+.main {
+    width: 100%;
+}
+
+.main__soul {
+    width: 100%;
+    padding: 20rem 0;
+
+    background-image: url("../../../assets/img/soul1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include flexible(row, nowrap, center, center, initial);
+}
+
+.main__columnas {
+    width: 85%;
+    margin: auto;
+    padding: 8rem 0;
+
+    @include flexible(row, nowrap, space-between, baseline, initial);
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        @include flexible(column, nowrap, center, center, initial);
+    }    
+}
+
+.main__columnas section {
+    width: calc(100% / 3 - 2rem);
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        width: 80%;
+    }    
+}
+
+.main__columnas h3 {
+    padding: 2rem 0;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #1d1d1d;
+}

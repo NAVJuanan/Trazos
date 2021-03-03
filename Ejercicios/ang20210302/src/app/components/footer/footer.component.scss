@@ -1,0 +1,102 @@
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+.footer {
+    width: 100%;
+    min-height: 10vh;
+}
+
+.footer__div {
+    width: 85%;
+    margin: auto;
+    padding: 3rem 0;
+
+    @include flexible(column, nowrap, space-between, center, initial);
+}
+
+.footer__rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+  
+.footer__rrss i.fab {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: all .4s ease;
+}
+
+.footer__rrss i.fa-facebook-f:hover {
+    color: blue;
+}
+  
+.footer__rrss i.fa-twitter:hover {
+    color: lightblue;
+}
+  
+.footer__rrss i.fa-instagram:hover {
+    color: coral;
+}
+  
+.footer__rrss i.fa-youtube:hover {
+    color: red;
+}
+
+.footer__policy {
+    width: 50%;
+    margin: 4rem 0 2rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        flex-flow: column nowrap;
+    }
+}
+
+.footer__policy li {
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #1d1d1d;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+
+    transition: all .4s ease;
+}
+
+.footer__policy li::after {
+    content: "|";
+    margin: 0 1rem;
+
+    /* css responsive */
+    @media screen and (max-width:960px) {
+        display: none;
+    }    
+}
+
+.footer__policy li:hover {
+    color: grey;
+}
+
+.footer__copyright {
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #1d1d1d;
+}
