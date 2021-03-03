@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  title1: string = "careers at Pixar";
+  title2: string = "Soul trailers";
+  title3: string = "inclusion and outreach";
+
   constructor() { }
 
   ngOnInit(): void {
