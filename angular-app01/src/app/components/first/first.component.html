@@ -1,7 +1,7 @@
 <br>
 
-<!-- interpolación de las propiedades -->
-<p>{{title}} from {{name}} with {{counter}} works!</p>
+<!-- interpolación de las propiedades & directiva 'ngIf' para visualización selectiva -->
+<p>{{title}} from {{name}} with {{counter}} works! <span *ngIf="(counter % 2) === 0">EVEN</span><span *ngIf="(counter % 2) !== 0">ODD</span></p>
 
 <!-- interpolación de los atributos -->
 <a href="{{web}}">{{web}}</a>
@@ -10,3 +10,6 @@
 <!-- eventos -->
 <button type="submit" (click)="sumar()">Sumar</button>
 <button type="submit" (click)="restar()">Restar</button>
+
+<!-- directiva 'ngFor' para bucles -->
+<span *ngFor="let item of listValues">{{item}}</span>

@@ -12,6 +12,7 @@ export class FirstComponent implements OnInit {
   public name: string = "Juanan";
   public web: string = "www.google.es";
   public counter: number = 0;
+  public listValues: string[] = [];
 
   // métodos
   public sumar() {
@@ -25,6 +26,10 @@ export class FirstComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.listValues.push("dando");
+    this.listValues.push("una");
+    this.listValues.push("vuelta");
+    this.listValues.push("por");
+    this.listValues.push("Angular");
   }
-
 }
