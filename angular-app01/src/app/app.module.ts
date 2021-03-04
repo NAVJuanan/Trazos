@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FirstComponent } from './components/first/first.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // font-awesome
+import { FirstComponent } from './components/first/first.component'; // new component
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { FirstComponent } from './components/first/first.component';
     FirstComponent // new component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule // font-awesome
   ],
   providers: [],
   bootstrap: [AppComponent]
