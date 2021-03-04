@@ -15,19 +15,29 @@ export class FirstComponent implements OnInit {
   public title: string = 'first';
   public name: string = "Juanan";
   public web: string = "www.google.es";
+  public inputValue: string = "";
   public counter: number = 0;
   public listValues: string[] = [];
 
+  constructor() { }
+
   // métodos
-  public sumar() {
+  public sumar(): void {
     this.counter++;
   }
 
-  public restar() {
+  public restar(): void {
     this.counter--;
   }
 
-  constructor() { }
+  public printItem(item: string): string {
+    return item.toUpperCase();
+  }
+
+  public addWord(): void {
+    this.listValues.push(this.inputValue);
+    this.inputValue = "";
+  }
 
   ngOnInit(): void {
     this.listValues.push("dando");

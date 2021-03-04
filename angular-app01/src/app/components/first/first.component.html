@@ -21,10 +21,14 @@
 <br>
 
 <!-- directiva 'ngFor' para bucles -->
-<span *ngFor="let item of listValues">{{item}}
+<span *ngFor="let item of listValues">{{printItem(item)}}
     <fa-icon [icon]="faCoffee"></fa-icon>
     <br>
 </span>
+
+<!-- directiva 'ngModel' para lectura/escritura -->
+<input type="text" name="" id="" [(ngModel)]="inputValue">
+<button type="submit" (click)="addWord()">Añadir</button>
 
 <!-- instalación FontAwesome -->
 <!-- 

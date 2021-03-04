@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // ngModel
 
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // font-awesome
@@ -12,6 +13,7 @@ import { FirstComponent } from './components/first/first.component'; // new comp
   ],
   imports: [
     BrowserModule,
+    FormsModule, // ngModel
     FontAwesomeModule // font-awesome
   ],
   providers: [],
