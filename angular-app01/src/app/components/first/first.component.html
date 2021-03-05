@@ -21,7 +21,7 @@
 <br>
 
 <!-- directiva 'ngFor' para bucles -->
-<span *ngFor="let item of listValues">{{printItem(item)}}
+<span *ngFor="let item of listValues; let i = index">{{printItem(item)}} índice = {{i}}
     <fa-icon [icon]="faCoffee"></fa-icon>
     <br>
 </span>
