@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // Bootstrap
+
 import { AppComponent } from './app.component';
 import { NavigatorComponent } from './components/navigator/navigator.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -20,7 +21,8 @@ import { Page3Component } from './components/page3/page3.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule // Bootstrap
   ],
   providers: [],
   bootstrap: [AppComponent]
