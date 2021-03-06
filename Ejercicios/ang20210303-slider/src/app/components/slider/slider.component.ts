@@ -13,10 +13,11 @@ export class SliderComponent implements OnInit {
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
 
-  // list of images
-  private imageList: string[] = [];
+  private imageList: string[] = []; // list of images
   public currentImage: string = "";
   private currentIndex: number = 0;
+  private intervalTime: number = 6000;
+  private setRightClick: any;
 
   constructor() { }
 
@@ -45,6 +46,16 @@ export class SliderComponent implements OnInit {
   // show image
   private loadImage(): void {
     this.currentImage = this.imageList[this.currentIndex];
+    this.manageInterval();
+  }
+
+  // manage interval
+  private manageInterval(): void {
+    if (this.setRightClick) {
+      clearInterval(this.setRightClick);
+    }
+
+    this.setRightClick = setInterval(() => this.moveRight(), this.intervalTime);
   }
 
   // load initial images
@@ -56,5 +67,6 @@ export class SliderComponent implements OnInit {
 
     this.currentIndex = 0;
     this.loadImage();
+    this.manageInterval();
   }
 }
