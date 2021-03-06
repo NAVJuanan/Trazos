@@ -1,0 +1,107 @@
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+
+// animación para el efecto de aparecer la ventana modal
+@keyframes ventana-modal {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: .1;
+    }
+    40% {
+      opacity: .2;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
+// css body
+.body-container {
+    background-color: gray;
+    position: relative;  
+    min-height: 100vh;
+
+    & .modal-window {
+        animation: ventana-modal 1s linear;
+        background-color: beige;
+        left: 20%;
+        max-width: 15rem;
+        opacity: 1;
+        padding: 2.5rem;  
+        position: absolute;
+        top: 5rem;
+
+        & .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        & .modal-text {
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        & #modal-button {
+            background-color: lightblue;
+            border: 1px solid black;
+            bottom: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            left: 35%;
+            padding: .5rem;
+            position: absolute;  
+        }
+
+        & #modal-close {       
+            background-color: lightblue;
+            border: 1px solid black;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: .5rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.body-container--light {
+    background-color: lightgrey;
+}
+
+.modal-window--show {
+    display: block;
+}
+
+.modal-window--hide {
+    display: none;
+}
+
+#modal-open {
+    background-color: lightblue;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem;
+}
+
+.modal-open--show {
+    opacity: 1;
+}
+
+.modal-open--hide {
+    opacity: .2;
+}
