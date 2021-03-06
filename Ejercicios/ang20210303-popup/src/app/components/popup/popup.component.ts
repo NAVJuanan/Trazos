@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopupComponent implements OnInit {
 
+  modalOpen: boolean = false;
+
   constructor() { }
+
+  showModal(): void {
+    this.modalOpen = true;
+  }
+
+  closeModal(): void {
+    this.modalOpen = false;
+  }
+
 
   ngOnInit(): void {
   }

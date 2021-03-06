@@ -1,9 +1,10 @@
 <div class="body-container">
-    <button id="modal-open" class="modal-open--show" onclick="showModal()">Abrir modal</button>
-    <div class="modal-window modal-window--hide">
+    <button id="modal-open" class="modal-open--show" *ngIf="!(modalOpen)" (click)="showModal()">Abrir modal</button>
+    <button id="modal-open" class="modal-open--hide" *ngIf="modalOpen" (click)="showModal()">Abrir modal</button>
+    <div *ngIf="modalOpen" class="modal-window">
         <h2 class="modal-title">Ventana</h2>
-        <button id="modal-close" onclick="closeModal()">X</button>
+        <button id="modal-close" (click)="closeModal()">X</button>
         <p class="modal-text">Esta es una ventana para el ejercicio del día 21.01.2021 del curso JavaScript y Angular</p>
-        <button id="modal-button" onclick="closeModal()">Cerrar</button>
+        <button id="modal-button" (click)="closeModal()">Cerrar</button>
     </div>
 </div>
