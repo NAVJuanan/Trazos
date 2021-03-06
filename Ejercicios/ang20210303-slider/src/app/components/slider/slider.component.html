@@ -1,6 +1,6 @@
 <div class="main__slider">
     <div class="slider__image">
-        <img class="slider__img" src="../../../assets/img/thumb-1920-1047038.jpg" alt="imagen 1 de slider">
+        <img class="slider__img" [src]="currentImage" alt="imagen de slider">
     </div>
     <fa-icon [icon]="faArrowLeft" class="arrow arrow__left" (click)="moveLeft()"></fa-icon>
     <fa-icon [icon]=" faArrowRight" class="arrow arrow__right" (click)="moveRight()"></fa-icon>

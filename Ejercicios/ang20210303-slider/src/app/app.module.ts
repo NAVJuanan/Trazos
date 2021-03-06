@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // font-awesome
-
 import { AppRoutingModule } from './app-routing.module';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // font-awesome
 import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
 
@@ -13,8 +13,8 @@ import { SliderComponent } from './components/slider/slider.component';
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule, // font-awesome
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule // font-awesome
   ],
   providers: [],
   bootstrap: [AppComponent]

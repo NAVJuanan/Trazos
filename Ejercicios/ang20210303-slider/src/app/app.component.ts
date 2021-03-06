@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ang20210303-slider';
+  title = 'Angular 03.03.2021 - Slider';
 }

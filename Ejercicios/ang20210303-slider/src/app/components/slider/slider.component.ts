@@ -14,16 +14,37 @@ export class SliderComponent implements OnInit {
   faArrowRight = faArrowRight;
 
   // list of images
-  imageList: string[] = [];
+  private imageList: string[] = [];
+  public currentImage: string = "";
+  private currentIndex: number = 0;
 
   constructor() { }
 
-  moveLeft(): void {
-
+  public moveLeft(): void {
+    this.currentIndex--;
+    this.checkIndex();
+    this.loadImage();
   }
 
-  moveRight(): void {
+  public moveRight(): void {
+    this.currentIndex++;
+    this.checkIndex();
+    this.loadImage();
+  }
 
+  private checkIndex(): void {
+    if (this.currentIndex >= this.imageList.length) {
+      this.currentIndex = 0;
+    }
+
+    if (this.currentIndex < 0) {
+      this.currentIndex = this.imageList.length - 1;
+    }
+  }
+
+  // show image
+  private loadImage(): void {
+    this.currentImage = this.imageList[this.currentIndex];
   }
 
   // load initial images
@@ -32,6 +53,8 @@ export class SliderComponent implements OnInit {
     this.imageList.push("../../../assets/img/thumb-1920-1074249.jpg");
     this.imageList.push("../../../assets/img/thumb-1920-1077528.jpg");
     this.imageList.push("../../../assets/img/thumb-1920-1077740.jpg");
-  }
 
+    this.currentIndex = 0;
+    this.loadImage();
+  }
 }
