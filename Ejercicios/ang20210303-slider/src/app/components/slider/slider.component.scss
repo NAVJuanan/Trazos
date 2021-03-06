@@ -1,0 +1,51 @@
+// function for flex position
+@mixin flexible($direction, $wrap, $justify-content, $align-item, $align-content) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+.main__slider {
+    background-color: black;
+    border-radius: 20px;
+    margin: 2.5rem auto;
+    min-height: 50vh;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.arrow {
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+    height: 40px;
+    opacity: .5;
+    padding: 2rem;
+    position: absolute;
+    top: calc(50% - 20px);
+    transition: all .4s ease;
+    width: 40px;
+    
+    @include flexible(row, nowrap, center, center, initial);
+
+    &:hover {
+        transform: scale(.9);
+    }
+    
+    &:active {
+        transform: scale(1.1);
+    }
+}
+
+.arrow__left {
+    left: 5%;
+}
+
+.arrow__right {
+    right: 5%;
+}
