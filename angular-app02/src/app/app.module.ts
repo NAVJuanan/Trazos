@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module'; // Routing
+import { HttpClientModule } from '@angular/common/http'; // HttpClientModule
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // Bootstrap
 
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { CharacterComponent } from './components/character/character.component';
   imports: [
     BrowserModule,
     AppRoutingModule, // Routing
+    HttpClientModule, // HttpClientModule
     NgbModule // Bootstrap
   ],
   providers: [],
