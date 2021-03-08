@@ -1,1 +1,4 @@
-<p>character works!</p>
+<h2>Personajes de Rick y Morty</h2>
+<div id="gridCharacters">
+    <div *ngFor="let character of characterList" class="character">{{character.name}} ({{character.species}})</div>
+</div>

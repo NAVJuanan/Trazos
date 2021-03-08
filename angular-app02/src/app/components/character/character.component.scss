@@ -1,0 +1,10 @@
+#gridCharacters {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.character {
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: .5rem;
+}
