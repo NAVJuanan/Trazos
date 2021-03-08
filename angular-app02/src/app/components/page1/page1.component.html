@@ -1,1 +1,6 @@
-<h1>Página 1</h1>
+<!-- directiva 'ngStyle' para css -->
+<h1 [ngStyle]="{color: myColor}">Página 1</h1>
+
+<!-- directiva 'ngClass' para activar/desactivar clases -->
+<h2 [ngClass]="{h2__style : true}">Cambiando estilos y clases</h2>
+<h2 [ngClass]="{h2__style : false}">Manteniendo estilos y clases</h2>
