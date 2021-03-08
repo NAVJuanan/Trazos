@@ -7,4 +7,9 @@
     background-color: lightblue;
     border: 1px solid black;
     padding: .5rem;
+
+    & div {
+        font-weight: bold;
+        text-align: center;
+    }
 }
