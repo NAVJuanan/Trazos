@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'; // Routing
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // Bootstrap
 
 import { AppComponent } from './app.component';
@@ -21,7 +21,7 @@ import { Page3Component } from './components/page3/page3.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, // Routing
     NgbModule // Bootstrap
   ],
   providers: [],
