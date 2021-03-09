@@ -14,9 +14,13 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   // un Observable es un objeto o colección de elementos asíncronos
-  public getCharacters(): Observable<any> {
+  public getInitialCharacters(): Observable<any> {
     const urlApi: string = this.urlBase + this.urlCharacter;
 
+    return this.http.get(urlApi);
+  }
+
+  public getCharacters(urlApi: string): Observable<any> {
     return this.http.get(urlApi);
   }
 }

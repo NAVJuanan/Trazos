@@ -10,6 +10,8 @@ import { IPerson } from 'src/app/models/person.model'; // interface
 export class CharacterComponent implements OnInit {
 
   public characterList: any[] = [];
+  private urlNext: string = "";
+  private urlPrevious: string = "";
 
   // interface developed
   public person: IPerson = {
@@ -30,8 +32,12 @@ export class CharacterComponent implements OnInit {
   ngOnInit(): void {
 
     // load list with response
-    this.api.getCharacters().subscribe(
-      data => this.characterList = data.results,
+    this.api.getInitialCharacters().subscribe(
+      data => {
+        this.characterList = data.results;
+        this.urlPrevious = data.info.prev;
+        this.urlNext = data.info.next;
+      },
       error => alert(error)
     );
 
@@ -55,5 +61,27 @@ export class CharacterComponent implements OnInit {
     }
 
     console.log(this.person);
+  }
+
+  public previousList(): void {
+    this.api.getCharacters(this.urlPrevious).subscribe(
+      data => {
+        this.characterList = data.results;
+        this.urlPrevious = data.info.prev;
+        this.urlNext = data.info.next;
+      },
+      error => alert(error)
+    );
+  }
+
+  public nextList(): void {
+    this.api.getCharacters(this.urlNext).subscribe(
+      data => {
+        this.characterList = data.results;
+        this.urlPrevious = data.info.prev;
+        this.urlNext = data.info.next;
+      },
+      error => alert(error)
+    );
   }
 }
