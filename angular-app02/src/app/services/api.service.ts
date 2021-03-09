@@ -13,6 +13,7 @@ export class ApiService {
   // HttpClient
   constructor(private http: HttpClient) { }
 
+  // un Observable es un objeto o colección de elementos asíncronos
   public getCharacters(): Observable<any> {
     const urlApi: string = this.urlBase + this.urlCharacter;
 

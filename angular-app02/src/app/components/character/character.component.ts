@@ -13,6 +13,10 @@ export class CharacterComponent implements OnInit {
   // call to service
   constructor(private api: ApiService) { }
 
+  public showCharacter(characterName: string): void {
+    alert(characterName);
+  }
+
   ngOnInit(): void {
 
     // load list with response

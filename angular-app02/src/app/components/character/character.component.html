@@ -1,6 +1,6 @@
 <h2>Personajes de Rick y Morty</h2>
 <div id="gridCharacters">
-    <div *ngFor="let character of characterList" class="character">
+    <div *ngFor="let character of characterList" (click)="showCharacter(character.name)" class="character">
         <img [src]="character.image" alt="">
         <div>{{character.name}} ({{character.species}})</div>
-</div>
+    </div>
