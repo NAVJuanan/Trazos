@@ -10,8 +10,8 @@ import { IPerson } from 'src/app/models/person.model'; // interface
 export class CharacterComponent implements OnInit {
 
   public characterList: any[] = [];
-  private urlNext: string = "";
-  private urlPrevious: string = "";
+  public urlNext: string = "";
+  public urlPrevious: string = "";
 
   // interface developed
   public person: IPerson = {

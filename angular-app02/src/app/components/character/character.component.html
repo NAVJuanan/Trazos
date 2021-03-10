@@ -5,5 +5,5 @@
         <div>{{character.name}} ({{character.species}})</div>
     </div>
 </div>
-<button type="submit" (click)="previousList()">Anterior</button>
-<button type="submit" (click)="nextList()">Siguiente</button>
+<button type="submit" [disabled]="!urlPrevious" (click)="previousList()">Anterior</button>
+<button type="submit" [disabled]="!urlNext" (click)="nextList()">Siguiente</button>
