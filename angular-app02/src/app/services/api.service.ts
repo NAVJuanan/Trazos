@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http' // HttpClient
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs'; // Observable
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,12 @@ export class ApiService {
   }
 
   public getCharacters(urlApi: string): Observable<any> {
+    return this.http.get(urlApi);
+  }
+
+  public getCharacterDetail(urlDetail: string): Observable<any> {
+    const urlApi: string = this.urlBase + this.urlCharacter + urlDetail;
+
     return this.http.get(urlApi);
   }
 }

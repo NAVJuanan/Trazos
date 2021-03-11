@@ -11,6 +11,7 @@ import { Page1Component } from './components/page1/page1.component';
 import { Page2Component } from './components/page2/page2.component';
 import { Page3Component } from './components/page3/page3.component';
 import { CharacterComponent } from './components/character/character.component';
+import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CharacterComponent } from './components/character/character.component';
     Page1Component,
     Page2Component,
     Page3Component,
-    CharacterComponent
+    CharacterComponent,
+    CharacterDetailComponent
   ],
   imports: [
     BrowserModule,
