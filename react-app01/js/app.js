@@ -1,6 +1,6 @@
 "use strict";
 
-const e = React.createElement;
+const nodeLike = React.createElement;
 
 class LikeButton extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class LikeButton extends React.Component {
             return 'You liked this.';
         }
 
-        return e(
+        return nodeLike(
             'button',
             { onClick: () => this.setState({ liked: true }) },
             'Like'
@@ -21,5 +21,26 @@ class LikeButton extends React.Component {
     }
 }
 
-const domContainer = document.querySelector('#hiReact');
-ReactDOM.render(e(LikeButton), domContainer);
+const domContainer = document.querySelector('#likeReact');
+ReactDOM.render(nodeLike(LikeButton), domContainer);
+
+
+// new React component
+const nodeHi = React.createElement;
+
+class HolaMundo extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return nodeHi(
+            'h2',
+            {},
+            'Hola mundo React'
+        );
+    }
+}
+
+const domHiContainer = document.querySelector('#hiReact');
+ReactDOM.render(nodeHi(HolaMundo), domHiContainer);
